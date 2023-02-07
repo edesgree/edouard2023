@@ -1,6 +1,4 @@
-* {
-  box-sizing: border-box;
-}
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600&display=swap');
 
 $green: #94d7a2;
 $pink: #f8bcbc;
@@ -13,12 +11,26 @@ $light-yellow: #fffad1;
 $grey: #888;
 $purple: rgb(147 30 140);
 $cyan: #00ffb8;
+
+$family-serif: 'Epilogue', sans-serif;
+$family-primary: $family-serif;
+
+// Import only what you need from Bulma
+@import 'bulma/sass/utilities/_all.sass';
+@import 'bulma/sass/base/_all.sass';
+@import 'bulma/sass/elements/button.sass';
+@import 'bulma/sass/elements/container.sass';
+@import 'bulma/sass/elements/title.sass';
+@import 'bulma/sass/form/_all.sass';
+@import 'bulma/sass/components/navbar.sass';
+@import 'bulma/sass/layout/hero.sass';
+@import 'bulma/sass/layout/section.sass';
+
 body {
   align-items: center;
   background: $dark-white;
-
   display: flex;
-  font-family: 'Karla', sans-serif;
+  font-family: $family-primary;
   justify-content: center;
   margin: 0;
   min-height: 100vh;
@@ -42,58 +54,4 @@ main {
 
 p {
   text-align: center;
-}
-button {
-  background-color: transparent;
-  border: solid 1px $dark-blue;
-
-  border-radius: 7px;
-  //box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.15);
-  cursor: pointer;
-  font-size: 1em;
-  font-weight: bold;
-  padding: 10px 20px;
-  &:hover {
-    background: $light-blue;
-  }
-  &.primary {
-    background: $purple;
-    border: none;
-    color: white;
-    &:hover {
-      background: $dark-blue;
-      color: white;
-    }
-  }
-  &.active {
-    background-color: $light-blue;
-    border: none;
-  }
-  &.desactive {
-    &,
-    &:hover {
-      background-color: transparent;
-      border-color: $light-blue;
-      color: $grey;
-    }
-
-    &.correct {
-      background-color: $green;
-      color: $dark-blue;
-    }
-    &.wrong {
-      background-color: $pink;
-    }
-  }
-}
-
-h1 {
-  background: -webkit-linear-gradient(left, $purple, $cyan);
-  background: -o-linear-gradient(right, $purple, $cyan);
-  background: -moz-linear-gradient(right, $purple, $cyan);
-  background: linear-gradient(to right, $purple, $cyan);
-  -webkit-background-clip: text;
-  font-size: 4em;
-  margin-top: 0;
-  -webkit-text-fill-color: transparent;
 }

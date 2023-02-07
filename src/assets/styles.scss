@@ -4,6 +4,7 @@ $white: #fff;
 $light-white: whitesmoke;
 $black: #2d2d2d;
 $light-grey: #f3f3f3;
+$grey: #ddd;
 $forest: #3a6b35;
 $sage: #cbd18f;
 $mustard: #e3b448;
@@ -41,11 +42,11 @@ body {
 
 main {
   align-items: center;
-  background-color: $light-white;
+  background-color: $white;
   border-radius: 15px;
-  -webkit-box-shadow: 0px 0px 114px 0px $forest;
-  -moz-box-shadow: 0px 0px 114px 0px $forest;
-  box-shadow: 0px 0px 114px 0px $forest;
+  -webkit-box-shadow: 0px 0px 114px 0px $grey;
+  -moz-box-shadow: 0px 0px 114px 0px $grey;
+  box-shadow: 0px 0px 114px 0px $grey;
   display: flex;
   flex-direction: column;
 
@@ -64,5 +65,8 @@ main {
       font-weight: bold;
       line-height: 30px;
     }
+  }
+  .sup-title {
+    color: $forest;
   }
 }

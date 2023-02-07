@@ -29,25 +29,25 @@ export default function Intro() {
       </section>
 
       <section className="level">
-        <div class="level-item has-text-centered">
+        <div className="level-item has-text-centered">
           <div>
             <img src={ItemGreen} alt="" />
-            <p class="heading">Tweets</p>
-            <p class="title">3,456</p>
+            <p className="heading">Tweets</p>
+            <p className="title">3,456</p>
           </div>
         </div>
-        <div class="level-item has-text-centered">
+        <div className="level-item has-text-centered">
           <div>
             <img src={ItemSage} alt="" />
-            <p class="heading">Tweets</p>
-            <p class="title">3,456</p>
+            <p className="heading">Tweets</p>
+            <p className="title">3,456</p>
           </div>
         </div>
-        <div class="level-item has-text-centered">
+        <div className="level-item has-text-centered">
           <div>
             <img src={ItemMustard} alt="" />
-            <p class="heading">Tweets</p>
-            <p class="title">3,456</p>
+            <p className="heading">Tweets</p>
+            <p className="title">3,456</p>
           </div>
         </div>
       </section>

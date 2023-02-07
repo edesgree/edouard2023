@@ -3,9 +3,9 @@ export default function Header() {
   const [menuIsActive, setMenuIsActive] = React.useState(false);
   return (
     <header>
-      <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-          <a class="navbar-item" href="/">
+      <nav className="navbar" role="navigation" aria-label="main navigation">
+        <div className="navbar-brand">
+          <a className="navbar-item" href="/">
             <span className="logo">{`<Ed/>`}</span>
           </a>
 
@@ -27,15 +27,15 @@ export default function Header() {
           id="main-navbar"
           class={`navbar-menu ${menuIsActive ? 'is-active' : ''}`}
         >
-          <div class="navbar-start">
-            <a class="navbar-item">About</a>
-            <a class="navbar-item">Work</a>
-            <a class="navbar-item">Lab</a>
-            <a class="navbar-item">Contact</a>
+          <div className="navbar-start">
+            <a className="navbar-item">About</a>
+            <a className="navbar-item">Work</a>
+            <a className="navbar-item">Lab</a>
+            <a className="navbar-item">Contact</a>
           </div>
 
-          <div class="navbar-end">
-            <div class="navbar-item">dark</div>
+          <div className="navbar-end">
+            <div className="navbar-item">dark</div>
           </div>
         </div>
       </nav>

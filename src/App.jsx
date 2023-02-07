@@ -1,4 +1,5 @@
 import React from 'react';
+import data from './assets/data';
 import Header from './components/Header';
 import Intro from './components/Intro';
 function App() {

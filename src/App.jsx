@@ -4,26 +4,30 @@ import Header from './components/Header';
 import Intro from './components/Intro';
 function App() {
   const [count, setCount] = React.useState(0);
-
+  const [lang, setLang] = React.useState('fr');
+  const handleTrad = () => {
+    lang === 'fr' ? setLang('en') : setLang('fr');
+  };
+  const data2 = { txt: { fr: 'bonjour', en: 'hello' } };
+  console.log(data2);
   return (
     <main className=" container is-max-desktop">
+      <a onClick={handleTrad}>lang {lang}</a>
+      ::test trad{data2.txt[lang]}
       <Header />
       <Intro />
       <h1 class="title">Bulma</h1>
-
       <p class="subtitle">
         Modern CSS framework based on{' '}
         <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">
           Flexbox
         </a>
       </p>
-
       <div class="field">
         <div class="control">
           <input class="input" type="text" placeholder="Input" />
         </div>
       </div>
-
       <div class="field">
         <p class="control">
           <span class="select">
@@ -33,7 +37,6 @@ function App() {
           </span>
         </p>
       </div>
-
       <div class="buttons">
         <a class="button is-primary">Primary</a>
         <a class="button is-link">Link</a>

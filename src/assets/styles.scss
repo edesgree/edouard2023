@@ -1,34 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600&display=swap');
 
-$green: #94d7a2;
-$pink: #f8bcbc;
-$blue: #4d5b9e;
-$dark-blue: #293264;
-$dark-white: #f5f7fb;
-$light-blue: #d6dbf5;
-$lighter-blue: #dbdef0;
-$light-yellow: #fffad1;
-$grey: #888;
-$purple: rgb(147 30 140);
-$cyan: #00ffb8;
+$white: #fff;
+$light-white: whitesmoke;
+$black: #2d2d2d;
+$light-grey: #f3f3f3;
+$forest: #3a6b35;
+$sage: #cbd18f;
+$mustard: #e3b448;
+$pumkin: #ff6250;
 
 $family-serif: 'Epilogue', sans-serif;
 $family-primary: $family-serif;
 
 // Import only what you need from Bulma
-@import 'bulma/sass/utilities/_all.sass';
-@import 'bulma/sass/base/_all.sass';
-@import 'bulma/sass/elements/button.sass';
-@import 'bulma/sass/elements/container.sass';
-@import 'bulma/sass/elements/title.sass';
-@import 'bulma/sass/form/_all.sass';
-@import 'bulma/sass/components/navbar.sass';
-@import 'bulma/sass/layout/hero.sass';
-@import 'bulma/sass/layout/section.sass';
-
+// @import 'bulma/sass/utilities/_all.sass';
+// @import 'bulma/sass/base/_all.sass';
+// @import 'bulma/sass/grid/_all.sass';
+// @import 'bulma/sass/elements/button.sass';
+// @import 'bulma/sass/elements/container.sass';
+// @import 'bulma/sass/elements/title.sass';
+// @import 'bulma/sass/form/_all.sass';
+// @import 'bulma/sass/components/navbar.sass';
+// @import 'bulma/sass/components/level.sass';
+// @import 'bulma/sass/layout/hero.sass';
+// @import 'bulma/sass/layout/section.sass';
+@import 'bulma/bulma.sass';
+* {
+  box-sizing: border-box;
+}
 body {
   align-items: center;
-  background: $dark-white;
+  background: $light-white;
+  color: $black;
   display: flex;
   font-family: $family-primary;
   justify-content: center;
@@ -38,20 +41,28 @@ body {
 
 main {
   align-items: center;
-  background-color: whitesmoke;
+  background-color: $light-white;
   border-radius: 15px;
-  -webkit-box-shadow: 0px 0px 114px 0px $light-blue;
-  -moz-box-shadow: 0px 0px 114px 0px $light-blue;
-  box-shadow: 0px 0px 114px 0px $light-blue;
+  -webkit-box-shadow: 0px 0px 114px 0px $forest;
+  -moz-box-shadow: 0px 0px 114px 0px $forest;
+  box-shadow: 0px 0px 114px 0px $forest;
   display: flex;
   flex-direction: column;
 
   min-height: 250px;
   min-width: 250px;
   padding: 20px;
-  text-align: center;
-}
+  .content {
+    max-width: 100%;
+  }
 
-p {
-  text-align: center;
+  header {
+    .logo {
+      color: $forest;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 30px;
+      font-weight: bold;
+      line-height: 30px;
+    }
+  }
 }

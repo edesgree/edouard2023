@@ -1,10 +1,13 @@
-import { useState } from 'react';
-
+import React from 'react';
+import Header from './components/Header';
+import Intro from './components/Intro';
 function App() {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = React.useState(0);
 
   return (
-    <main className="App columns">
+    <main className=" container is-max-desktop">
+      <Header />
+      <Intro />
       <h1 class="title">Bulma</h1>
 
       <p class="subtitle">
@@ -110,12 +113,7 @@ function App() {
           Nulla efficitur eleifend nisi, sit amet bibendum sapien fringilla ac.
           Mauris euismod metus a tellus laoreet, at elementum ex efficitur.
         </p>
-        <pre>
-          &lt;!DOCTYPE html&gt; &lt;html&gt; &lt;head&gt; &lt;title&gt;Hello
-          World&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;p&gt;Lorem ipsum
-          dolor sit amet, consectetur adipiscing elit. Donec viverra nec nulla
-          vitae mollis.&lt;/p&gt; &lt;/body&gt; &lt;/html&gt;
-        </pre>
+
         <p>
           Maecenas eleifend sollicitudin dui, faucibus sollicitudin augue cursus
           non. Ut finibus eleifend arcu ut vehicula. Mauris eu est maximus est

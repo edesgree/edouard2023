@@ -1,5 +1,6 @@
 import React from 'react';
 export default function Header() {
+  const [menuIsActive, setMenuIsActive] = React.useState(false);
   return (
     <header>
       <nav class="navbar" role="navigation" aria-label="main navigation">
@@ -9,11 +10,12 @@ export default function Header() {
           </a>
 
           <a
+            onClick={() => setMenuIsActive(!menuIsActive)}
             role="button"
-            class="navbar-burger"
+            class={`navbar-burger burger ${menuIsActive ? 'is-active' : ''}`}
             aria-label="menu"
             aria-expanded="false"
-            data-target="navbarBasicExample"
+            data-target="main-navbar"
           >
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
@@ -21,7 +23,10 @@ export default function Header() {
           </a>
         </div>
 
-        <div id="navbarBasicExample" class="navbar-menu">
+        <div
+          id="main-navbar"
+          class={`navbar-menu ${menuIsActive ? 'is-active' : ''}`}
+        >
           <div class="navbar-start">
             <a class="navbar-item">About</a>
             <a class="navbar-item">Work</a>

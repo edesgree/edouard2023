@@ -9,7 +9,8 @@ $forest: #3a6b35;
 $sage: #cbd18f;
 $mustard: #e3b448;
 $pumkin: #ff6250;
-
+$primary: $forest;
+$info: $sage;
 $family-serif: 'Epilogue', sans-serif;
 $family-primary: $family-serif;
 
@@ -61,7 +62,8 @@ main {
     max-width: 100%;
   }
 
-  header {
+  header.main-header {
+    width: 100%;
     .logo {
       color: $forest;
       font-family: 'Courier New', Courier, monospace;
@@ -69,11 +71,23 @@ main {
       font-weight: bold;
       line-height: 30px;
     }
+    .navbar {
+      width: 100%;
+    }
   }
   .sup-title {
     color: $forest;
   }
-
+  header.header-section {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    .title {
+      margin-bottom: 0;
+    }
+  }
   .project-list {
     display: grid;
     gap: 20px;
@@ -125,6 +139,21 @@ main {
     position: sticky;
     top: 0;
   }
+  .head-project {
+    .hero-body {
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}
+button.scrollup {
+  bottom: 40px;
+  cursor: pointer;
+  position: fixed;
+  right: 20px;
+  z-index: 1;
 }
 /*
 @keyframes slideAnimation {

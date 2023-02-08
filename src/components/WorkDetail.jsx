@@ -1,7 +1,7 @@
 import React from 'react';
 export default function WorkDetail(props) {
-  console.log('data', props.data);
-  const workElement = props.data.filter(
+  console.log('data', props.dataWorkDetail);
+  const workElement = props.dataWorkDetail.filter(
     (item) => item.id === props.currentProject
   )[0];
   console.log(workElement);
@@ -46,17 +46,8 @@ export default function WorkDetail(props) {
       </nav> */}
       <div className="hero is-small is-primary head-project">
         <div className="hero-body">
-          <div className="hero-body-inner">
-            <p className="title">{workElement.name}</p>
-            <p className="subtitle">{workElement.subtitle}</p>
-          </div>
-          <a
-            className="button is-light is-primary"
-            href="#topWork"
-            onClick={props.handleCloseProject}
-          >
-            Back
-          </a>
+          <p className="title">{workElement.name}</p>
+          <p className="subtitle">{workElement.subtitle}</p>
         </div>
       </div>
       <div className="columns">
@@ -69,11 +60,16 @@ export default function WorkDetail(props) {
       <div className="columns">
         <div className="columnsticky column is-4">
           <div className="block">
-            <h4 className="title  is-4"> Mon travail</h4>
+            <h4 className="title  is-4">
+              {props.dataText.workMyworkTitle[props.lang]}
+            </h4>
             <p>{workElement.mywork}</p>
           </div>
           <div className="block">
-            <h4 className="title  is-4">Technologies utilisées</h4>
+            <h4 className="title  is-4">
+              {' '}
+              {props.dataText.workTechUsedTitle[props.lang]}
+            </h4>
             <div className="tags">{techElements}</div>
           </div>
         </div>

@@ -15,7 +15,7 @@ export default function Work(props) {
     setCurrentProject(null);
     console.log('close');
   };
-  const workElements = props.data.map((item) => {
+  const workElements = props.dataWork.map((item) => {
     return (
       <li key={item.id} id={item.id} onClick={handleChoice} href="#topWork">
         <div className="media">
@@ -36,22 +36,26 @@ export default function Work(props) {
     <section className="section">
       <a id="topWork"></a>
       <header className="header-section">
-        <h2 className="is-2 title">Work</h2>
-        <a
-          className="button is-light is-info"
-          href="#topWork"
-          onClick={props.handleCloseProject}
-        >
-          Back
-        </a>
+        <h2 className="is-2 title">{props.dataText.workTitle[props.lang]}</h2>
+        {currentProject && (
+          <a
+            className="button is-light is-info"
+            href="#topWork"
+            onClick={props.handleCloseProject}
+          >
+            {props.dataText.labelBack[props.lang]}
+          </a>
+        )}
       </header>
 
       {!currentProject && <ul className="project-list">{workElements}</ul>}
       {currentProject && (
         <WorkDetail
-          data={props.data}
+          dataWorkDetail={props.dataWork}
+          dataText={props.dataText}
           currentProject={currentProject}
           handleCloseProject={handleCloseProject}
+          lang={props.lang}
         />
       )}
     </section>

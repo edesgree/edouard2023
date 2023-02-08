@@ -2,7 +2,7 @@ import React from 'react';
 export default function Header(props) {
   const [menuIsActive, setMenuIsActive] = React.useState(false);
 
-  const menuElements = props.menu.map((item) => {
+  const menuElements = props.dataMenu.map((item) => {
     return (
       <a key={item.id} className="navbar-item">
         {item.name[props.lang]}

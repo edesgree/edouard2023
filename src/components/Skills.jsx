@@ -1,6 +1,6 @@
 import React from 'react';
 export default function Skills(props) {
-  const skillsElements = props.data.map((item) => {
+  const skillsElements = props.dataSkills.map((item) => {
     return (
       <li key={item.id} id={item.id} data-tooltip={item.name}>
         <img
@@ -12,7 +12,7 @@ export default function Skills(props) {
   });
   return (
     <section className="section">
-      <h2 className="is-2 title">Skills</h2>
+      <h2 className="is-2 title">{props.dataText.skillsTitle[props.lang]}</h2>
       <ul className="skills-list">{skillsElements}</ul>
     </section>
   );

@@ -25,7 +25,7 @@ export default function ScrollButton(props) {
       onClick={scrollToTop}
       style={{ display: visible ? 'inline' : 'none' }}
     >
-      Up
+      {props.dataText.labelUp[props.lang]}
     </button>
   );
 }

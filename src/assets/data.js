@@ -14,6 +14,34 @@ const data = {
     introSubtitle: {
       fr: `Développeur Front-end | Designer web`,
       en: `Front-end developer | web designer`
+    },
+    skillsTitle: {
+      fr: `Connaissances`,
+      en: `Skills`
+    },
+    aboutTitle: {
+      fr: `À propos`,
+      en: `About me`
+    },
+    workTitle: {
+      fr: `Portfolio`,
+      en: `Work`
+    },
+    workMyworkTitle: {
+      fr: `Mon travail`,
+      en: `My contribution`
+    },
+    workTechUsedTitle: {
+      fr: `Technologies utilisées`,
+      en: `Techs`
+    },
+    labelBack: {
+      fr: `Retour`,
+      en: `Back`
+    },
+    labelUp: {
+      fr: `Haut`,
+      en: `Up`
     }
   },
   menu: [

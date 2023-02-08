@@ -10,13 +10,13 @@ export default function Intro(props) {
       <section className="section columns">
         <div className="column is-two-thirds">
           <h5 className="subtitle is-5 sup-title">
-            {props.data.introSubtitle[props.lang]}
+            {props.dataIntro.introSubtitle[props.lang]}
           </h5>
 
           <h1 className="title is-1 pre-line ">
-            {decode(props.data.introTitle[props.lang])}
+            {decode(props.dataIntro.introTitle[props.lang])}
           </h1>
-          <p>{props.data.introTxt[props.lang]}</p>
+          <p>{props.dataIntro.introTxt[props.lang]}</p>
         </div>
         <div className="column is-one-thirds">
           <img src={PhotoEd} width="205" alt="Edouard Desgrée" />

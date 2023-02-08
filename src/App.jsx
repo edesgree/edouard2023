@@ -16,11 +16,25 @@ function App() {
 
   return (
     <main className=" container is-max-desktop">
-      <Header menu={data.menu} lang={lang} handleTrad={handleTrad} />
-      <Intro data={data.common} lang={lang} handleTrad={handleTrad} />
-      <Skills data={data.skills} lang={lang} />
-      <Work data={data.work} lang={lang} handleTrad={handleTrad} />
-      <ScrollUpButton />
+      <Header dataMenu={data.menu} lang={lang} handleTrad={handleTrad} />
+      <Intro dataIntro={data.common} lang={lang} handleTrad={handleTrad} />
+      <Skills
+        dataSkills={data.skills}
+        dataText={data.common}
+        lang={lang}
+        handleTrad={handleTrad}
+      />
+      <Work
+        dataWork={data.work}
+        dataText={data.common}
+        lang={lang}
+        handleTrad={handleTrad}
+      />
+      <ScrollUpButton
+        lang={lang}
+        dataText={data.common}
+        handleTrad={handleTrad}
+      />
     </main>
   );
 }

@@ -46,7 +46,7 @@ body {
   white-space: pre-line;
 }
 main {
-  align-items: center;
+  align-items: stretch;
   background-color: $white;
   border-radius: 15px;
   -webkit-box-shadow: 0px 0px 114px 0px $grey;
@@ -140,12 +140,6 @@ main {
     top: 0;
   }
   .head-project {
-    .hero-body {
-      align-items: center;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-    }
   }
 }
 button.scrollup {

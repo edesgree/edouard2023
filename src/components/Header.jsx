@@ -1,6 +1,14 @@
 import React from 'react';
-export default function Header() {
+export default function Header(props) {
   const [menuIsActive, setMenuIsActive] = React.useState(false);
+
+  const menuElements = props.menu.map((item) => {
+    return (
+      <a key={item.id} className="navbar-item">
+        {item.name[props.lang]}
+      </a>
+    );
+  });
   return (
     <header>
       <nav className="navbar" role="navigation" aria-label="main navigation">
@@ -29,12 +37,7 @@ export default function Header() {
           id="main-navbar"
           className={`navbar-menu ${menuIsActive ? 'is-active' : ''}`}
         >
-          <div className="navbar-start">
-            <a className="navbar-item">About</a>
-            <a className="navbar-item">Work</a>
-            <a className="navbar-item">Lab</a>
-            <a className="navbar-item">Contact</a>
-          </div>
+          <div className="navbar-start">{menuElements}</div>
 
           <div className="navbar-end">
             <div className="navbar-item">dark</div>

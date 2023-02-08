@@ -117,3 +117,38 @@ main {
     }
   }
 }
+
+@keyframes slideAnimation {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.looper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.looper__innerList {
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+}
+
+.looper__listInstance {
+  animation: slideAnimation linear infinite;
+  display: flex;
+  width: max-content;
+}
+.looper__innerList[data-animate='true'] .looper__listInstance {
+  animation: slideAnimation linear infinite;
+}
+
+.looper__listInstance {
+  animation: none;
+  display: flex;
+  width: max-content;
+}

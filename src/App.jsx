@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Intro from './components/Intro';
 import Work from './components/Work';
 import Skills from './components/Skills';
+import InfiniteLooper from './components/InfiniteLooper';
 function App() {
   const [count, setCount] = React.useState(0);
   const [lang, setLang] = React.useState('fr');

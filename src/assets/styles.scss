@@ -69,4 +69,18 @@ main {
   .sup-title {
     color: $forest;
   }
+
+  .project-list {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2, 250px);
+    li {
+      .media {
+      }
+      .project-info {
+        background-color: $sage;
+        padding: 20px;
+      }
+    }
+  }
 }

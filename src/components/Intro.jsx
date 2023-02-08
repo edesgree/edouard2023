@@ -32,22 +32,31 @@ export default function Intro() {
         <div className="level-item has-text-centered">
           <div>
             <img src={ItemGreen} alt="" />
-            <p className="heading">Tweets</p>
-            <p className="title">3,456</p>
+            <h3 className="heading  is-3">Frontend development</h3>
+            <p className="">
+              This is a template Figma file, turned into code using Anima. Learn
+              more at AnimaApp.com
+            </p>
           </div>
         </div>
         <div className="level-item has-text-centered">
           <div>
             <img src={ItemSage} alt="" />
-            <p className="heading">Tweets</p>
-            <p className="title">3,456</p>
+            <h3 className="heading  is-3">UI/UX design</h3>
+            <p className="">
+              This is a template Figma file, turned into code using Anima. Learn
+              more at AnimaApp.com
+            </p>
           </div>
         </div>
         <div className="level-item has-text-centered">
           <div>
             <img src={ItemMustard} alt="" />
-            <p className="heading">Tweets</p>
-            <p className="title">3,456</p>
+            <h3 className="heading  is-3">Team player</h3>
+            <p className="">
+              This is a template Figma file, turned into code using Anima. Learn
+              more at AnimaApp.com
+            </p>
           </div>
         </div>
       </section>

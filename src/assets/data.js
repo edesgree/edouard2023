@@ -14,41 +14,54 @@ const data = {
     {
       id: nanoid(),
       name: 'Kanuk',
-      subtitle: '',
+      subtitle: 'Magento 2 frontend',
       date: '',
       description: ``,
       tech: ``,
-      images: ['image1', 'image2'],
+      images: {
+        cover: 'cover-kanuk.jpg',
+        others: ['image1', 'image2']
+      },
+
       url: ''
     },
     {
       id: nanoid(),
       name: 'Bench',
-      subtitle: '',
+      subtitle: 'Magento 2 frontend',
       date: '',
       description: ``,
       tech: ``,
-      images: ['image1', 'image2'],
+      images: {
+        cover: 'cover-bench.jpg',
+        others: ['image1', 'image2']
+      },
       url: ''
     },
     {
       id: nanoid(),
       name: 'Mobilia',
-      subtitle: '',
+      subtitle: 'Magento 2 frontend',
       date: '',
       description: ``,
       tech: ``,
-      images: ['image1', 'image2'],
+      images: {
+        cover: 'cover-mobilia.jpg',
+        others: ['image1', 'image2']
+      },
       url: ''
     },
     {
       id: nanoid(),
       name: 'Prana Organic',
-      subtitle: '',
+      subtitle: 'Magento 2 frontend',
       date: '',
       description: ``,
       tech: ``,
-      images: ['image1', 'image2'],
+      images: {
+        cover: 'cover-prana.jpg',
+        others: ['image1', 'image2']
+      },
       url: ''
     },
     {
@@ -61,7 +74,10 @@ const data = {
       <p>Mon travail était le développement front-end du site web, du magazine web ainsi que des gabarits webview pour les applications tablettes. J'ai également participé à la déclinaison graphique de maquettes en suivant la direction artistique.</p>`,
       mywork: `HTML, CSS, déclinaison de maquettes graphiques, création d'éléments graphiques</p>`,
       tech: 'HTML, LESS, JS, Bootstrap, templates TWIG.',
-      images: ['image1', 'image2'],
+      images: {
+        cover: 'cover-pecheurs.jpg',
+        others: ['image1', 'image2']
+      },
       url: 'https://ici.radio-canada.ca/tele/les-pecheurs/site'
     },
     {
@@ -72,7 +88,10 @@ const data = {
       description: `<p>Site de la compagnie DATSIT, spécialisée dans la production TV.</p><p>J'ai travaillé sur la conception UX et le design du site ainsi que sur l'intégration web responsive.</p>`,
       mywork: 'Design, HTML, CSS',
       tech: 'Photoshop, Axure, HTML, LESS, Bootstrap, jQuery, templates TWIG.',
-      images: ['image1', 'image2'],
+      images: {
+        cover: 'cover-datsit.jpg',
+        others: ['image1', 'image2']
+      },
       url: 'http://datsit.tv/'
     },
     {
@@ -87,7 +106,10 @@ const data = {
       tech: `HTML, LESS, SASS
 
       `,
-      images: ['image1', 'image2'],
+      images: {
+        cover: 'cover-bazzo.jpg',
+        others: ['image1', 'image2']
+      },
       url: ''
     },
     {
@@ -100,7 +122,10 @@ const data = {
       <p>Mon travail était le développement front-end du site web, du magazine web ainsi que du module de découverte "street-view" (utilisant l'api googlemaps).</p>`,
       mywork: `HTML, CSS, déclinaison de maquettes graphiques, création d'éléments graphiques en fausse 3D (pour le street-view 3D)`,
       tech: `Photoshop, HTML, LESS, JS, Bootstrap, templates TWIG.`,
-      images: ['image1', 'image2'],
+      images: {
+        cover: 'cover-ruptures.jpg',
+        others: ['image1', 'image2']
+      },
       url: ''
     },
     {
@@ -112,7 +137,10 @@ const data = {
         <p>J'ai travaillé sur l'intégration web du site. Le site est basé sur bootstrap et utilise la technologie Angular JS.</p>`,
       mywork: `HTML, CSS, déclinaison de maquettes graphiques, création d'éléments graphiques`,
       tech: `Photoshop, HTML, LESS, JS, Bootstrap, templates AngularJS`,
-      images: ['image1', 'image2'],
+      images: {
+        cover: 'cover-pharmachien.jpg',
+        others: ['image1', 'image2']
+      },
       url: ''
     },
     {
@@ -124,7 +152,10 @@ const data = {
       <p>J'ai travaillé sur le front-end developpement des différentes sections du site.</p>`,
       mywork: `Intégration HTML/CSS, responsive design`,
       tech: `HTML, LESS, jQuery, Bootstrap`,
-      images: ['image1', 'image2'],
+      images: {
+        cover: 'cover-cdf.jpg',
+        others: ['image1', 'image2']
+      },
       url: ''
     },
     {
@@ -136,7 +167,10 @@ const data = {
       <p>J'ai travaillé sur le développement front-end des différentes sections du site. (Présentation des émissions, grille de programmes, concours...).</p>`,
       mywork: `Intégration HTML/CSS, responsive design`,
       tech: `HTML, LESS, jQuery`,
-      images: ['image1', 'image2'],
+      images: {
+        cover: 'cover-explora.jpg',
+        others: ['image1', 'image2']
+      },
       url: ''
     },
     {
@@ -149,7 +183,10 @@ const data = {
       <p>Mon rôle fût la conception UX, la direction artistique ainsi que l'intégration de ces maquettes en HTML/CSS.</p>`,
       mywork: `UX/UI, direction artistique, HTML, CSS`,
       tech: `Photoshop, HTML, CSS, templates drupal.`,
-      images: ['image1', 'image2'],
+      images: {
+        cover: 'cover-ponts.jpg',
+        others: ['image1', 'image2']
+      },
       url: ''
     }
   ],
@@ -161,7 +198,10 @@ const data = {
       date: '15-01-2023',
       description: `The project is to create an app that can generate a resume in ReactJS. The page consist of several form elements that gets updated with user input. It is bootstraped with Vite.js.`,
       tech: `React, HTML, SCSS, Bulma`,
-      images: ['image1', 'image2'],
+      images: {
+        cover: 'cover-.jpg',
+        others: ['image1', 'image2']
+      },
       github: 'https://github.com/edesgree/react-cv-app',
       preview: 'https://velvety-treacle-40877e.netlify.app/'
     },
@@ -172,7 +212,10 @@ const data = {
       date: '01-01-2023',
       description: `The project is to build a little quizz app in react. It gets its questions from an API. It is bootstraped with Vite.js.`,
       tech: `React, HTML, SCSS, Bulma`,
-      images: ['image1', 'image2'],
+      images: {
+        cover: 'cover-.jpg',
+        others: ['image1', 'image2']
+      },
       github: 'https://github.com/edesgree/react-quizzy',
       preview: 'https://astonishing-custard-e140b8.netlify.app/'
     },
@@ -183,7 +226,10 @@ const data = {
       date: '',
       description: `The project is to build a game of tenzies. It is bootstraped with Vite.js.`,
       tech: `React, HTML, SCSS`,
-      images: ['image1', 'image2'],
+      images: {
+        cover: 'cover-.jpg',
+        others: ['image1', 'image2']
+      },
       github: 'https://github.com/edesgree/react-tenzies-game',
       preview: 'https://singular-concha-d934bf.netlify.app/'
     },
@@ -194,7 +240,10 @@ const data = {
       date: '01-10-2022',
       description: `The project is to create a digital version of the game Etch a Sketch only using HTML, CSS and Vanilla JS.`,
       tech: `HTML, CSS, Vanilla JS`,
-      images: ['image1', 'image2'],
+      images: {
+        cover: 'cover-.jpg',
+        others: ['image1', 'image2']
+      },
       github: 'https://github.com/edesgree/odin-etchasketch',
       preview: 'https://edesgree.github.io/odin-etchasketch/public/'
     },
@@ -205,7 +254,10 @@ const data = {
       date: '01-11-2022',
       description: `The project is to create a Tic Tac Toe game using HTML, CSS and Vanilla JS.`,
       tech: `HTML, CSS, Vanilla JS`,
-      images: ['image1', 'image2'],
+      images: {
+        cover: 'cover-.jpg',
+        others: ['image1', 'image2']
+      },
       github: 'https://github.com/edesgree/odin-tictactoe',
       preview: 'https://edesgree.github.io/odin-tictactoe/public/'
     }

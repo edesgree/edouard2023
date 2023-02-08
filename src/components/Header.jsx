@@ -12,7 +12,9 @@ export default function Header() {
           <a
             onClick={() => setMenuIsActive(!menuIsActive)}
             role="button"
-            class={`navbar-burger burger ${menuIsActive ? 'is-active' : ''}`}
+            className={`navbar-burger burger ${
+              menuIsActive ? 'is-active' : ''
+            }`}
             aria-label="menu"
             aria-expanded="false"
             data-target="main-navbar"
@@ -25,7 +27,7 @@ export default function Header() {
 
         <div
           id="main-navbar"
-          class={`navbar-menu ${menuIsActive ? 'is-active' : ''}`}
+          className={`navbar-menu ${menuIsActive ? 'is-active' : ''}`}
         >
           <div className="navbar-start">
             <a className="navbar-item">About</a>

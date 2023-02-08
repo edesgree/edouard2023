@@ -9,9 +9,9 @@ export default function Intro(props) {
     <div>
       <section className="section columns">
         <div className="column is-two-thirds">
-          <h5 className="subtitle is-5 sup-title">
+          <h2 className="subtitle is-5 sup-title is-spaced">
             {props.dataIntro.introSubtitle[props.lang]}
-          </h5>
+          </h2>
 
           <h1 className="title is-1 pre-line ">
             {decode(props.dataIntro.introTitle[props.lang])}

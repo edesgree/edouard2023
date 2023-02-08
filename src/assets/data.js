@@ -14,6 +14,7 @@ const data = {
     {
       id: nanoid(),
       name: 'Kanuk',
+      slug: 'kanuk',
       subtitle: 'Magento 2 frontend',
       date: '',
       description: ``,
@@ -28,6 +29,7 @@ const data = {
     {
       id: nanoid(),
       name: 'Bench',
+      slug: 'bench',
       subtitle: 'Magento 2 frontend',
       date: '',
       description: ``,
@@ -41,6 +43,7 @@ const data = {
     {
       id: nanoid(),
       name: 'Mobilia',
+      slug: 'mobilia',
       subtitle: 'Magento 2 frontend',
       date: '',
       description: ``,
@@ -54,6 +57,7 @@ const data = {
     {
       id: nanoid(),
       name: 'Prana Organic',
+      slug: 'prana',
       subtitle: 'Magento 2 frontend',
       date: '',
       description: ``,
@@ -67,6 +71,7 @@ const data = {
     {
       id: nanoid(),
       name: 'Les pêcheurs',
+      slug: 'pecheurs',
       subtitle: '',
       date: '',
       description: `<p><em>Les pêcheurs</em> est une émission humoristique de Martin Petit diffusée sur radio-canada.</p>
@@ -83,6 +88,7 @@ const data = {
     {
       id: nanoid(),
       name: 'Datsit',
+      slug: 'datsit',
       subtitle: '',
       date: '',
       description: `<p>Site de la compagnie DATSIT, spécialisée dans la production TV.</p><p>J'ai travaillé sur la conception UX et le design du site ainsi que sur l'intégration web responsive.</p>`,
@@ -97,6 +103,7 @@ const data = {
     {
       id: nanoid(),
       name: 'Bazzo',
+      slug: 'bazzo',
       subtitle: 'magazine tablette',
       date: '',
       description: `<p>BazzoMag est un mensuel numérique gratuit s’ajoutant à l’émission BazzoTV.</p>
@@ -115,6 +122,7 @@ const data = {
     {
       id: nanoid(),
       name: 'Ruptures',
+      slug: 'ruptures',
       subtitle: '',
       date: '',
       description: `<p>Ruptures est une série tv difusée sur radio-canada.</p>
@@ -131,6 +139,7 @@ const data = {
     {
       id: nanoid(),
       name: 'Le pharmachien',
+      slug: 'pharmachien',
       subtitle: '',
       date: '',
       description: `<p>Les aventures du Pharmachien est une émission TV de vulgarisation scientifique sur la santé.</p>
@@ -146,6 +155,7 @@ const data = {
     {
       id: nanoid(),
       name: 'Conseils de famille',
+      slug: 'cdf',
       subtitle: '',
       date: '',
       description: `<p>Le site de Conseils de famille présente le vlogue de Clovis, le personnage principal de la série. Les contenus du site sont diffusés en conjonction avec la chaîne YouTube officielle du personnage.</p>
@@ -161,6 +171,7 @@ const data = {
     {
       id: nanoid(),
       name: 'Explora TV',
+      slug: 'explora',
       subtitle: '',
       date: '',
       description: `<p>Site d'informations sur les programmes de la chaine Explora TV.</p>
@@ -176,6 +187,7 @@ const data = {
     {
       id: nanoid(),
       name: 'École des Ponts Paris Tech',
+      slug: 'ponts',
       subtitle: '',
       date: '',
       description: `<p>L'école des Ponts est une école d'ingénieurs française située près de Paris.</p>
@@ -194,6 +206,7 @@ const data = {
     {
       id: nanoid(),
       name: 'React CV App',
+      slug: 'cvapp',
       subtitle: 'React app',
       date: '15-01-2023',
       description: `The project is to create an app that can generate a resume in ReactJS. The page consist of several form elements that gets updated with user input. It is bootstraped with Vite.js.`,
@@ -208,6 +221,7 @@ const data = {
     {
       id: nanoid(),
       name: 'React Quizzy',
+      slug: 'quizzy',
       subtitle: 'React game',
       date: '01-01-2023',
       description: `The project is to build a little quizz app in react. It gets its questions from an API. It is bootstraped with Vite.js.`,
@@ -222,6 +236,7 @@ const data = {
     {
       id: nanoid(),
       name: 'React Tenzies game',
+      slug: 'tenzies',
       subtitle: 'React game',
       date: '',
       description: `The project is to build a game of tenzies. It is bootstraped with Vite.js.`,
@@ -236,6 +251,7 @@ const data = {
     {
       id: nanoid(),
       name: 'Etch a sketch',
+      slug: 'sketch',
       subtitle: 'JS game',
       date: '01-10-2022',
       description: `The project is to create a digital version of the game Etch a Sketch only using HTML, CSS and Vanilla JS.`,
@@ -250,6 +266,7 @@ const data = {
     {
       id: nanoid(),
       name: 'Tic tac toe',
+      slug: 'tictactoe',
       subtitle: 'JS game',
       date: '01-11-2022',
       description: `The project is to create a Tic Tac Toe game using HTML, CSS and Vanilla JS.`,

@@ -3,9 +3,12 @@ import React from 'react';
 export default function Work(props) {
   const workElements = props.data.map((item) => {
     return (
-      <li key={item.id} item={item}>
+      <li key={item.id} id={item.id}>
         <div className="media">
-          <img src={`src/assets/images/work/${item.images.cover}`} alt="" />
+          <img
+            src={`src/assets/images/work/${item.slug}/${item.images.cover}`}
+            alt={item.name}
+          />
         </div>
         <div className="project-info">
           <h4 className="is-4 title">{item.name}</h4>

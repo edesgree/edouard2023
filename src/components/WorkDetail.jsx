@@ -48,6 +48,7 @@ export default function WorkDetail(props) {
         <div className="hero-body">
           <p className="title">{workElement.name}</p>
           <p className="subtitle">{workElement.subtitle}</p>
+          <span className="tag is-light is-info">2020</span>
         </div>
       </div>
       <div className="columns">
@@ -67,7 +68,6 @@ export default function WorkDetail(props) {
           </div>
           <div className="block">
             <h4 className="title  is-4">
-              {' '}
               {props.dataText.workTechUsedTitle[props.lang]}
             </h4>
             <div className="tags">{techElements}</div>

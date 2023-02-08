@@ -92,8 +92,8 @@ const data = {
       description: ``,
       tech: ['Magento 2', 'SCSS', 'JS', 'Nwayo'],
       images: {
-        cover: 'cover-kanuk.jpg',
-        screens: ['image1', 'image2']
+        cover: 'cover-kanuk.webp',
+        screens: ['kanuk-home.webp', 'kanuk-cat.webp', 'kanuk-product.webp']
       },
 
       url: ''
@@ -107,8 +107,8 @@ const data = {
       description: ``,
       tech: ['Magento 2', 'SCSS', 'JS', 'Nwayo'],
       images: {
-        cover: 'cover-bench.jpg',
-        screens: ['image1', 'image2']
+        cover: 'cover-bench.webp',
+        screens: ['bench-home.webp', 'bench-cat.webp', 'bench-product.webp']
       },
       url: ''
     },
@@ -121,8 +121,12 @@ const data = {
       description: ``,
       tech: ['Magento 2', 'SCSS', 'JS', 'Nwayo'],
       images: {
-        cover: 'cover-mobilia.jpg',
-        screens: ['image1', 'image2']
+        cover: 'cover-mobilia.webp',
+        screens: [
+          'mobilia-home.webp',
+          'mobilia-cat.webp',
+          'mobilia-product.webp'
+        ]
       },
       url: ''
     },
@@ -135,8 +139,8 @@ const data = {
       description: ``,
       tech: ['Magento 2', 'SCSS', 'JS', 'Nwayo'],
       images: {
-        cover: 'cover-prana.jpg',
-        screens: ['image1', 'image2']
+        cover: 'cover-prana.webp',
+        screens: ['prana-home.webp', 'prana-product.webp']
       },
       url: ''
     },
@@ -152,13 +156,13 @@ const data = {
       mywork: `HTML, CSS, déclinaison de maquettes graphiques, création d'éléments graphiques`,
       tech: ['HTML', 'LESS', 'JS', 'Bootstrap', 'Templates TWIG'],
       images: {
-        cover: 'cover-pecheurs.jpg',
+        cover: 'cover-pecheurs.webp',
         screens: [
-          'pecheurs-desktop.jpg',
-          'peche-sugar-tablet.jpg',
-          'peche-nav-tablet.jpg',
-          'peche-home-tablet.jpg',
-          'peche-dessous-tablet.jpg'
+          'pecheurs-desktop.webp',
+          'peche-sugar-tablet.webp',
+          'peche-nav-tablet.webp',
+          'peche-home-tablet.webp',
+          'peche-dessous-tablet.webp'
         ]
       },
       url: 'https://ici.radio-canada.ca/tele/les-pecheurs/site'
@@ -181,8 +185,8 @@ const data = {
         'Templates TWIG'
       ],
       images: {
-        cover: 'cover-datsit.jpg',
-        screens: ['image1', 'image2']
+        cover: 'cover-datsit.webp',
+        screens: ['datsit-desktop.webp', 'datsit-tablet.webp']
       },
       url: 'http://datsit.tv/'
     },
@@ -198,8 +202,8 @@ const data = {
       mywork: `Intégration HTML/CSS`,
       tech: ['HTML', 'LESS', 'SASS'],
       images: {
-        cover: 'cover-bazzo.jpg',
-        screens: ['image1', 'image2']
+        cover: 'cover-bazzo.webp',
+        screens: ['bazzo-1.webp', 'bazzo-2.webp', 'bazzo-3.webp']
       },
       url: ''
     },
@@ -215,8 +219,14 @@ const data = {
       mywork: `HTML, CSS, déclinaison de maquettes graphiques, création d'éléments graphiques en fausse 3D (pour le street-view 3D)`,
       tech: ['Photoshop', 'HTML', 'LESS', 'JS', 'Bootstrap', 'Templates TWIG'],
       images: {
-        cover: 'cover-ruptures.jpg',
-        screens: ['image1', 'image2']
+        cover: 'cover-ruptures.webp',
+        screens: [
+          'ruptures-desktop.webp',
+          'ruptures-desktop2.webp',
+          'ruptures-desktop3.webp',
+          'ruptures-tablet.webp',
+          'ruptures-tablet2.webp'
+        ]
       },
       url: ''
     },
@@ -238,8 +248,12 @@ const data = {
         'Templates AngularJS'
       ],
       images: {
-        cover: 'cover-pharmachien.jpg',
-        screens: ['image1', 'image2']
+        cover: 'cover-pharmachien.webp',
+        screens: [
+          'pharmachien-desktop.webp',
+          'pharmachien-desktop2.webp',
+          'pharmachien-mobile.webp'
+        ]
       },
       url: ''
     },
@@ -254,8 +268,8 @@ const data = {
       mywork: `Intégration HTML/CSS, responsive design`,
       tech: ['HTML', 'LESS', 'jQuery', 'Bootstrap'],
       images: {
-        cover: 'cover-cdf.jpg',
-        screens: ['image1', 'image2']
+        cover: 'cover-cdf.webp',
+        screens: ['cdf-desktop.webp', 'cdf-desktop2.webp', 'cdf-mobile.webp']
       },
       url: ''
     },
@@ -270,8 +284,8 @@ const data = {
       mywork: `Intégration HTML/CSS, responsive design`,
       tech: ['HTML', 'LESS', 'jQuery'],
       images: {
-        cover: 'cover-explora.jpg',
-        screens: ['image1', 'image2']
+        cover: 'cover-explora.webp',
+        screens: ['explora-desktop1.webp', 'explora-mobile.webp']
       },
       url: ''
     },
@@ -287,8 +301,15 @@ const data = {
       mywork: `UX/UI, direction artistique, HTML, CSS`,
       tech: ['Photoshop', 'HTML', 'CSS', 'Templates Drupal'],
       images: {
-        cover: 'cover-ponts.jpg',
-        screens: ['image1', 'image2']
+        cover: 'cover-ponts.webp',
+        screens: [
+          'enpc-1.webp',
+          'enpc-2.webp',
+          'enpc-3.webp',
+          'enpc-4.webp',
+          'enpc-5.webp',
+          'enpc-6.webp'
+        ]
       },
       url: ''
     }
@@ -303,8 +324,8 @@ const data = {
       description: `The project is to create an app that can generate a resume in ReactJS. The page consist of several form elements that gets updated with user input. It is bootstraped with Vite.js.`,
       tech: ['React', 'HTML', 'SCSS', 'Bulma'],
       images: {
-        cover: 'cover-.jpg',
-        screens: ['image1', 'image2']
+        cover: 'cover-.webp',
+        screens: ['.webp', '.webp', '.webp']
       },
       github: 'https://github.com/edesgree/react-cv-app',
       preview: 'https://velvety-treacle-40877e.netlify.app/'
@@ -319,8 +340,8 @@ const data = {
 
       tech: ['React', 'HTML', 'SCSS', 'Bulma'],
       images: {
-        cover: 'cover-.jpg',
-        screens: ['image1', 'image2']
+        cover: 'cover-.webp',
+        screens: ['.webp', '.webp', '.webp']
       },
       github: 'https://github.com/edesgree/react-quizzy',
       preview: 'https://astonishing-custard-e140b8.netlify.app/'
@@ -335,8 +356,8 @@ const data = {
 
       tech: ['React', 'HTML', 'SCSS'],
       images: {
-        cover: 'cover-.jpg',
-        screens: ['image1', 'image2']
+        cover: 'cover-.webp',
+        screens: ['.webp', '.webp', '.webp']
       },
       github: 'https://github.com/edesgree/react-tenzies-game',
       preview: 'https://singular-concha-d934bf.netlify.app/'
@@ -351,8 +372,8 @@ const data = {
 
       tech: ['HTML', 'CSS', 'Vanilla JS'],
       images: {
-        cover: 'cover-.jpg',
-        screens: ['image1', 'image2']
+        cover: 'cover-.webp',
+        screens: ['.webp', '.webp', '.webp']
       },
       github: 'https://github.com/edesgree/odin-etchasketch',
       preview: 'https://edesgree.github.io/odin-etchasketch/public/'
@@ -366,8 +387,8 @@ const data = {
       description: `The project is to create a Tic Tac Toe game using HTML, CSS and Vanilla JS.`,
       tech: ['HTML', 'CSS', 'Vanilla JS'],
       images: {
-        cover: 'cover-.jpg',
-        screens: ['image1', 'image2']
+        cover: 'cover-.webp',
+        screens: ['.webp', '.webp', '.webp']
       },
       github: 'https://github.com/edesgree/odin-tictactoe',
       preview: 'https://edesgree.github.io/odin-tictactoe/public/'

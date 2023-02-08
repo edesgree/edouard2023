@@ -41,7 +41,7 @@ export default function Work(props) {
           <a
             className="button is-light is-info"
             href="#topWork"
-            onClick={props.handleCloseProject}
+            onClick={handleCloseProject}
           >
             {props.dataText.labelBack[props.lang]}
           </a>

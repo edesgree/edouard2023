@@ -10,7 +10,7 @@ export default function Header(props) {
     );
   });
   return (
-    <header>
+    <header className="main-header">
       <nav className="navbar" role="navigation" aria-label="main navigation">
         <div className="navbar-brand">
           <a className="navbar-item" href="/">
@@ -37,10 +37,11 @@ export default function Header(props) {
           id="main-navbar"
           className={`navbar-menu ${menuIsActive ? 'is-active' : ''}`}
         >
-          <div className="navbar-start">{menuElements}</div>
-
           <div className="navbar-end">
-            <div className="navbar-item">dark</div>
+            {menuElements}
+            <a className="navbar-item" onClick={props.handleTrad}>
+              {props.lang === 'fr' ? 'en' : 'fr'}
+            </a>
           </div>
         </div>
       </nav>

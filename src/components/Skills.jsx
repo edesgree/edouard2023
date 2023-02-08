@@ -11,7 +11,7 @@ export default function Skills(props) {
     );
   });
   return (
-    <section>
+    <section className="section">
       <h2 className="is-2 title">Skills</h2>
       <ul className="skills-list">{skillsElements}</ul>
     </section>

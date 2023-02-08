@@ -7,7 +7,7 @@ import { decode } from 'html-entities';
 export default function Intro(props) {
   return (
     <div>
-      <section className="columns">
+      <section className="section columns">
         <div className="column is-two-thirds">
           <h5 className="subtitle is-5 sup-title">
             {props.data.introSubtitle[props.lang]}
@@ -22,7 +22,7 @@ export default function Intro(props) {
           <img src={PhotoEd} width="205" alt="Edouard Desgrée" />
         </div>
       </section>
-
+      {/* 
       <section className="level">
         <div className="level-item has-text-centered">
           <div>
@@ -55,6 +55,7 @@ export default function Intro(props) {
           </div>
         </div>
       </section>
+      */}
     </div>
   );
 }

@@ -1,75 +1,84 @@
 import React from 'react';
-export default function WorkDetail() {
+export default function WorkDetail(props) {
+  console.log('data', props.data);
+  const workElement = props.data.filter(
+    (item) => item.id === props.currentProject
+  )[0];
+  console.log(workElement);
+  const techElements = workElement.tech.map((item, index) => {
+    return (
+      <span key={index} className="tag is-info">
+        {item}
+      </span>
+    );
+  });
+  const screensElements = workElement.images.screens.map((item, index) => {
+    return (
+      <div key={index}>
+        <img
+          src={`src/assets/images/work/${workElement.slug}/${item}`}
+          alt={`${workElement.name} ${workElement.subtitle}`}
+          className="img-responsive"
+        />
+      </div>
+    );
+  });
   return (
-    <section>
-      <h2 className="is-2 title">Les pêcheurs</h2>
+    <article>
+      {/* <nav className="navbar" role="navigation" aria-label="secondary navigation">
+        <div className="navbar-menu">
+          <div className="navbar-start">
+            <h2 className="navbar-item is-2 title"> {workElement.name}</h2>
+          </div>
+
+          <div className="navbar-end">
+            <div className="navbar-item">
+              <a
+                className="button is-light is-primary"
+                href="#topWork"
+                onClick={props.handleCloseProject}
+              >
+                Back
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav> */}
+      <div className="hero is-small is-primary head-project">
+        <div className="hero-body">
+          <div className="hero-body-inner">
+            <p className="title">{workElement.name}</p>
+            <p className="subtitle">{workElement.subtitle}</p>
+          </div>
+          <a
+            className="button is-light is-primary"
+            href="#topWork"
+            onClick={props.handleCloseProject}
+          >
+            Back
+          </a>
+        </div>
+      </div>
       <div className="columns">
-        <div className="columnsticky column is-4">
+        <div className="columnsticky column is-4 content">
           <h4 className="title  is-4">Resume</h4>
-          <p>
-            Les pêcheurs est une émission humoristique de Martin Petit diffusée
-            sur radio-canada.
-          </p>
-
-          <p>
-            J'ai travaillé sur le volet numérique de l'émission qui contient un
-            site web et un magazine numérique disponible sur iPad/android ainsi
-            qu'en version web.
-          </p>
-
-          <p>
-            Mon travail était le développement front-end du site web, du
-            magazine web ainsi que des gabarits webview pour les applications
-            tablettes. J'ai également participé à la déclinaison graphique de
-            maquettes en suivant la direction artistique.
-          </p>
+          <div dangerouslySetInnerHTML={{ __html: workElement.description }} />
         </div>
-        <div className=" column is-8">
-          <img
-            src="src/assets/images/work/pecheurs/pecheurs-desktop.jpg"
-            alt=""
-            className="img-responsive"
-          />
-          <img
-            src="src/assets/images/work/pecheurs/peche-sugar-tablet.jpg"
-            alt=""
-            className="img-responsive"
-          />
-        </div>
+        <div className=" column is-8">{screensElements.slice(0, 2)}</div>
       </div>
       <div className="columns">
         <div className="columnsticky column is-4">
           <div className="block">
             <h4 className="title  is-4"> Mon travail</h4>
-            <p>
-              HTML, CSS, déclinaison de maquettes graphiques, création
-              d'éléments graphiques
-            </p>
+            <p>{workElement.mywork}</p>
           </div>
           <div className="block">
             <h4 className="title  is-4">Technologies utilisées</h4>
-            <p>HTML, LESS, JS, Bootstrap, templates TWIG.</p>
+            <div className="tags">{techElements}</div>
           </div>
         </div>
-        <div className=" column is-8">
-          <img
-            src="src/assets/images/work/pecheurs/peche-nav-tablet.jpg"
-            alt=""
-            className="img-responsive"
-          />
-          <img
-            src="src/assets/images/work/pecheurs/peche-home-tablet.jpg"
-            alt=""
-            className="img-responsive"
-          />
-
-          <img
-            src="src/assets/images/work/pecheurs/peche-dessous-tablet.jpg"
-            alt=""
-            className="img-responsive"
-          />
-        </div>
+        <div className=" column is-8">{screensElements.slice(2)}</div>
       </div>
-    </section>
+    </article>
   );
 }

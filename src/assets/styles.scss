@@ -29,6 +29,9 @@ $family-primary: $family-serif;
 
 @import 'bulma/bulma.sass';
 @import 'bulma-tooltip';
+html {
+  scroll-behavior: smooth;
+}
 * {
   box-sizing: border-box;
 }

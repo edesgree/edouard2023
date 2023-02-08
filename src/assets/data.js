@@ -50,28 +50,32 @@ const data = {
       name: {
         fr: `À propos`,
         en: `About`
-      }
+      },
+      slug: 'about'
     },
     {
       id: nanoid(),
       name: {
         fr: `Portfolio`,
         en: `Work`
-      }
+      },
+      slug: 'work'
     },
     {
       id: nanoid(),
       name: {
         fr: `Labo`,
         en: `Lab`
-      }
+      },
+      slug: 'lab'
     },
     {
       id: nanoid(),
       name: {
         fr: `Contact`,
         en: `Contact`
-      }
+      },
+      slug: 'contact'
     }
   ],
   social: [

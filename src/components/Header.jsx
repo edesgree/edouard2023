@@ -1,21 +1,23 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 export default function Header(props) {
   const [menuIsActive, setMenuIsActive] = React.useState(false);
 
   const menuElements = props.dataMenu.map((item) => {
     return (
-      <a key={item.id} className="navbar-item">
+      <Link to={item.slug} key={item.id} className="navbar-item">
         {item.name[props.lang]}
-      </a>
+      </Link>
     );
   });
   return (
     <header className="main-header">
       <nav className="navbar" role="navigation" aria-label="main navigation">
         <div className="navbar-brand">
-          <a className="navbar-item" href="/">
+          <Link exact="true" to="/" className="navbar-item">
             <span className="logo">{`<Ed/>`}</span>
-          </a>
+          </Link>
 
           <a
             onClick={() => setMenuIsActive(!menuIsActive)}

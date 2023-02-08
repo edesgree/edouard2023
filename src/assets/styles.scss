@@ -25,7 +25,9 @@ $family-primary: $family-serif;
 // @import 'bulma/sass/components/level.sass';
 // @import 'bulma/sass/layout/hero.sass';
 // @import 'bulma/sass/layout/section.sass';
+
 @import 'bulma/bulma.sass';
+@import 'bulma-tooltip';
 * {
   box-sizing: border-box;
 }
@@ -75,11 +77,42 @@ main {
     gap: 20px;
     grid-template-columns: repeat(2, 250px);
     li {
+      display: flex;
+      flex-direction: column;
+      &:hover .media {
+        img {
+          transform: scale(1.15);
+        }
+      }
       .media {
+        overflow: hidden;
+        img {
+          height: 100%;
+          object-fit: cover;
+          transition: transform 0.8s ease;
+          width: 100%;
+        }
       }
       .project-info {
         background-color: $sage;
+        flex: 1;
         padding: 20px;
+      }
+    }
+  }
+  .skills-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    li {
+      &:hover {
+        img {
+          transform: scale(1.05);
+        }
+      }
+      img {
+        transition: transform 0.29s cubic-bezier(0.53, 1.53, 0.58, 1);
       }
     }
   }

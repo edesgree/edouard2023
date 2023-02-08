@@ -278,6 +278,30 @@ const data = {
       github: 'https://github.com/edesgree/odin-tictactoe',
       preview: 'https://edesgree.github.io/odin-tictactoe/public/'
     }
+  ],
+  skills: [
+    { id: nanoid(), name: 'Bootstrap', slug: 'bootstrap' },
+    { id: nanoid(), name: 'Confluence', slug: 'confluence' },
+    { id: nanoid(), name: 'Figma', slug: 'figma' },
+    { id: nanoid(), name: 'Flask', slug: 'flask' },
+    { id: nanoid(), name: 'Foundation', slug: 'foundation' },
+    { id: nanoid(), name: 'Git', slug: 'git' },
+    { id: nanoid(), name: 'HTML', slug: 'html' },
+    { id: nanoid(), name: 'Javascript', slug: 'js' },
+    { id: nanoid(), name: 'Jira', slug: 'jira' },
+    { id: nanoid(), name: 'LESS', slug: 'less' },
+    { id: nanoid(), name: 'Magento', slug: 'magento' },
+    { id: nanoid(), name: 'Photoshop', slug: 'psd' },
+    { id: nanoid(), name: 'PHP', slug: 'php' },
+    { id: nanoid(), name: 'Python', slug: 'python' },
+    { id: nanoid(), name: 'React', slug: 'react' },
+    { id: nanoid(), name: 'SASS', slug: 'sass' },
+    { id: nanoid(), name: 'Sketch', slug: 'sketch' },
+    { id: nanoid(), name: 'Trello', slug: 'trello' },
+    { id: nanoid(), name: 'Twig', slug: 'twig' },
+    { id: nanoid(), name: 'VSCode', slug: 'vscode' },
+    { id: nanoid(), name: 'W3C', slug: 'w3c' },
+    { id: nanoid(), name: 'Wordpress', slug: 'wordpress' }
   ]
 };
 

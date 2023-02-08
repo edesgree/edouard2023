@@ -3,25 +3,20 @@ import PhotoEd from '../assets/images/home-edouard.png';
 import ItemGreen from '../assets/images/item-green.svg';
 import ItemMustard from '../assets/images/item-mustard.svg';
 import ItemSage from '../assets/images/item-sage.svg';
-export default function Intro() {
+import { decode } from 'html-entities';
+export default function Intro(props) {
   return (
     <div>
       <section className="columns">
         <div className="column is-two-thirds">
           <h5 className="subtitle is-5 sup-title">
-            Front-end developer | web designer
+            {props.data.introSubtitle[props.lang]}
           </h5>
 
-          <h1 className="title is-1 ">
-            Hi 👋,
-            <br /> I'm Edouard.
+          <h1 className="title is-1 pre-line ">
+            {decode(props.data.introTitle[props.lang])}
           </h1>
-          <p>
-            I am a frontend developer with a strong background in UX/UI. I try
-            to make things simple and modern using best practices and newest
-            industry trends. I am always looking for new things to learn whether
-            it be in web development or my personal interests.
-          </p>
+          <p>{props.data.introTxt[props.lang]}</p>
         </div>
         <div className="column is-one-thirds">
           <img src={PhotoEd} width="205" alt="Edouard Desgrée" />

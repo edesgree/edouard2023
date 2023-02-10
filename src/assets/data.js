@@ -48,6 +48,10 @@ const data = {
       fr: `Haut`,
       en: `Up`
     },
+    labelSeeWork: {
+      fr: `Mon portfolio`,
+      en: `See my work`
+    },
     contactTitle: {
       fr: `Contactez-moi 👋\n⬇️`,
       en: `Say Hi 👋`

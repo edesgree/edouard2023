@@ -4,6 +4,8 @@ import ItemGreen from '../assets/images/item-green.svg';
 import ItemMustard from '../assets/images/item-mustard.svg';
 import ItemSage from '../assets/images/item-sage.svg';
 import { decode } from 'html-entities';
+import { NavLink } from 'react-router-dom';
+
 export default function Intro(props) {
   return (
     <div>
@@ -20,6 +22,11 @@ export default function Intro(props) {
         </div>
         <div className="column is-one-thirds">
           <img src={PhotoEd} alt={props.dataIntro.myName} />
+          <div className="block has-text-centered">
+            <NavLink exact="true" to="/work" className="button is-primary">
+              {props.dataIntro.labelSeeWork[props.lang]}
+            </NavLink>
+          </div>
         </div>
       </section>
 

@@ -25,25 +25,6 @@ export default function WorkDetail(props) {
   });
   return (
     <article>
-      {/* <nav className="navbar" role="navigation" aria-label="secondary navigation">
-        <div className="navbar-menu">
-          <div className="navbar-start">
-            <h2 className="navbar-item is-2 title"> {workElement.name}</h2>
-          </div>
-
-          <div className="navbar-end">
-            <div className="navbar-item">
-              <a
-                className="button is-light is-primary"
-                href="#topWork"
-                onClick={props.handleCloseProject}
-              >
-                Back
-              </a>
-            </div>
-          </div>
-        </div>
-      </nav> */}
       <div className="hero is-small is-primary head-project">
         <div className="hero-body">
           <p className="title">{workElement.name}</p>

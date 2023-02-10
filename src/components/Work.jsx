@@ -5,15 +5,10 @@ export default function Work(props) {
   const handleChoice = (event) => {
     event.preventDefault();
     setCurrentProject(event.currentTarget.id);
-    var get = document.getElementById('topWork');
-    console.log(event.target);
-    console.log(event.currentTarget);
-    console.log('current choice :', currentProject);
   };
   const handleCloseProject = (event) => {
     event.preventDefault();
     setCurrentProject(null);
-    console.log('close');
   };
   const workElements = props.dataWork.map((item) => {
     return (
@@ -38,13 +33,15 @@ export default function Work(props) {
       <header className="header-section">
         <h2 className="is-2 title">{props.dataText.workTitle[props.lang]}</h2>
         {currentProject && (
-          <a
-            className="button is-light is-info"
-            href="#topWork"
-            onClick={handleCloseProject}
-          >
-            {props.dataText.labelBack[props.lang]}
-          </a>
+          <>
+            <a
+              className="button is-light is-info"
+              href="#topWork"
+              onClick={handleCloseProject}
+            >
+              {props.dataText.labelBack[props.lang]}
+            </a>
+          </>
         )}
       </header>
 

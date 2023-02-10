@@ -4,6 +4,7 @@ import data from './assets/data';
 import Header from './components/Header';
 import Intro from './components/Intro';
 import Work from './components/Work';
+import Lab from './components/Lab';
 import About from './components/About';
 import Skills from './components/Skills';
 import WorkDetail from './components/WorkDetail';
@@ -45,6 +46,17 @@ function App() {
           element={
             <Work
               dataWork={data.work}
+              dataText={data.common}
+              lang={lang}
+              handleTrad={handleTrad}
+            />
+          }
+        />
+        <Route
+          path="/lab"
+          element={
+            <Lab
+              dataLab={data.lab}
               dataText={data.common}
               lang={lang}
               handleTrad={handleTrad}

@@ -27,6 +27,10 @@ const data = {
       fr: `Portfolio`,
       en: `Work`
     },
+    labTitle: {
+      fr: `Labo`,
+      en: `Lab`
+    },
     workMyworkTitle: {
       fr: `Mon travail`,
       en: `My contribution`
@@ -94,6 +98,7 @@ const data = {
       subtitle: 'Magento 2 frontend',
       date: '',
       description: ``,
+      mywork: ``,
       tech: ['Magento 2', 'SCSS', 'JS', 'Nwayo'],
       images: {
         cover: 'cover-kanuk.webp',
@@ -109,6 +114,7 @@ const data = {
       subtitle: 'Magento 2 frontend',
       date: '',
       description: ``,
+      mywork: ``,
       tech: ['Magento 2', 'SCSS', 'JS', 'Nwayo'],
       images: {
         cover: 'cover-bench.webp',
@@ -123,6 +129,7 @@ const data = {
       subtitle: 'Magento 2 frontend',
       date: '',
       description: ``,
+      mywork: ``,
       tech: ['Magento 2', 'SCSS', 'JS', 'Nwayo'],
       images: {
         cover: 'cover-mobilia.webp',
@@ -141,6 +148,7 @@ const data = {
       subtitle: 'Magento 2 frontend',
       date: '',
       description: ``,
+      mywork: ``,
       tech: ['Magento 2', 'SCSS', 'JS', 'Nwayo'],
       images: {
         cover: 'cover-prana.webp',
@@ -326,10 +334,11 @@ const data = {
       subtitle: 'React app',
       date: '15-01-2023',
       description: `The project is to create an app that can generate a resume in ReactJS. The page consist of several form elements that gets updated with user input. It is bootstraped with Vite.js.`,
+      mywork: ``,
       tech: ['React', 'HTML', 'SCSS', 'Bulma'],
       images: {
-        cover: 'cover-.webp',
-        screens: ['.webp', '.webp', '.webp']
+        cover: 'cvapp-cover.webp',
+        screens: ['cvapp-screenshot.webp']
       },
       github: 'https://github.com/edesgree/react-cv-app',
       preview: 'https://velvety-treacle-40877e.netlify.app/'
@@ -341,11 +350,11 @@ const data = {
       subtitle: 'React game',
       date: '01-01-2023',
       description: `The project is to build a little quizz app in react. It gets its questions from an API. It is bootstraped with Vite.js.`,
-
+      mywork: ``,
       tech: ['React', 'HTML', 'SCSS', 'Bulma'],
       images: {
-        cover: 'cover-.webp',
-        screens: ['.webp', '.webp', '.webp']
+        cover: 'quizzy-cover.webp',
+        screens: ['quizzy-screenshot.webp']
       },
       github: 'https://github.com/edesgree/react-quizzy',
       preview: 'https://astonishing-custard-e140b8.netlify.app/'
@@ -357,11 +366,11 @@ const data = {
       subtitle: 'React game',
       date: '',
       description: `The project is to build a game of tenzies. It is bootstraped with Vite.js.`,
-
+      mywork: ``,
       tech: ['React', 'HTML', 'SCSS'],
       images: {
-        cover: 'cover-.webp',
-        screens: ['.webp', '.webp', '.webp']
+        cover: 'tenzies-cover.webp',
+        screens: ['tenzies-screenshot.webp']
       },
       github: 'https://github.com/edesgree/react-tenzies-game',
       preview: 'https://singular-concha-d934bf.netlify.app/'
@@ -369,15 +378,15 @@ const data = {
     {
       id: nanoid(),
       name: 'Etch a sketch',
-      slug: 'sketch',
+      slug: 'etch',
       subtitle: 'JS game',
       date: '01-10-2022',
       description: `The project is to create a digital version of the game Etch a Sketch only using HTML, CSS and Vanilla JS.`,
-
+      mywork: ``,
       tech: ['HTML', 'CSS', 'Vanilla JS'],
       images: {
-        cover: 'cover-.webp',
-        screens: ['.webp', '.webp', '.webp']
+        cover: 'etch-cover.webp',
+        screens: ['etch-screenshot.webp']
       },
       github: 'https://github.com/edesgree/odin-etchasketch',
       preview: 'https://edesgree.github.io/odin-etchasketch/public/'
@@ -389,13 +398,30 @@ const data = {
       subtitle: 'JS game',
       date: '01-11-2022',
       description: `The project is to create a Tic Tac Toe game using HTML, CSS and Vanilla JS.`,
+      mywork: ``,
       tech: ['HTML', 'CSS', 'Vanilla JS'],
       images: {
-        cover: 'cover-.webp',
-        screens: ['.webp', '.webp', '.webp']
+        cover: 'tictactoe-cover.webp',
+        screens: ['tictactoe-screenshot.webp']
       },
       github: 'https://github.com/edesgree/odin-tictactoe',
       preview: 'https://edesgree.github.io/odin-tictactoe/public/'
+    },
+    {
+      id: nanoid(),
+      name: 'Weather app',
+      slug: 'weather',
+      subtitle: 'Rect weather app',
+      date: '01-11-2022',
+      description: `This project is to create an weather app using different API. The app return a weather forecast for a user provided city name.`,
+      mywork: ``,
+      tech: ['Vanilla JS', 'Async/await', 'API calls'],
+      images: {
+        cover: 'weather-cover.webp',
+        screens: ['weather-screenshot.webp']
+      },
+      github: 'https://github.com/edesgree/odin-weather-app',
+      preview: 'https://edesgree.github.io/odin-weather-app/dist/'
     }
   ],
   skills: [

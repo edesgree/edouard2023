@@ -6,8 +6,8 @@ import Intro from './components/Intro';
 import Work from './components/Work';
 import Lab from './components/Lab';
 import About from './components/About';
+import Contact from './components/Contact';
 import Skills from './components/Skills';
-import WorkDetail from './components/WorkDetail';
 import InfiniteLooper from './components/InfiniteLooper';
 import ScrollUpButton from './components/ScrollUpButton';
 
@@ -63,7 +63,20 @@ function App() {
             />
           }
         />
-        <Route path="/about" element={<About />} />
+        <Route
+          path="/about"
+          element={<About lang={lang} handleTrad={handleTrad} />}
+        />
+        <Route
+          path="/contact"
+          element={
+            <Contact
+              dataText={data.common}
+              lang={lang}
+              handleTrad={handleTrad}
+            />
+          }
+        />
       </Routes>
 
       <ScrollUpButton

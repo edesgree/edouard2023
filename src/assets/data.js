@@ -1,7 +1,7 @@
 import { nanoid } from 'nanoid';
 const data = {
   common: {
-    test: 'test',
+    contactEmail: 'edouard@desgree.com',
     mainTitle: { fr: 'bonjour', en: 'hello' },
     introTxt: {
       fr: `Je suis développeur front-end avec une expertise en UX/UI. Je tiens à trouver des solutions simples et modernes en utilisant les meilleures pratiques et les dernières tendances de l'industrie. Je suis curieux et aime apprendre en permanence que ce soit en web ou pour mes interêts personnel.`,
@@ -46,6 +46,10 @@ const data = {
     labelUp: {
       fr: `Haut`,
       en: `Up`
+    },
+    contactTitle: {
+      fr: `Contactez-moi 👋\n⬇️`,
+      en: `Say Hi 👋`
     }
   },
   menu: [

@@ -14,7 +14,7 @@ export default function Contact(props) {
           >
             <symbol id="s-text">
               <text text-anchor="middle" x="50%" y="80%">
-                edouard@desgree.com
+                {props.dataText.contactEmail}
               </text>
             </symbol>
 

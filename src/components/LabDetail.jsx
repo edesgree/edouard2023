@@ -1,4 +1,5 @@
 import React from 'react';
+
 export default function LabDetail(props) {
   console.log('data', props.dataLabDetail);
   const labElement = props.dataLabDetail.filter(

@@ -1,5 +1,7 @@
 import React from 'react';
 import LabDetail from './LabDetail';
+import IconGrid from '../assets/icons/icon-grid.svg';
+
 export default function Lab(props) {
   const [currentProject, setCurrentProject] = React.useState(null);
   const handleChoice = (event) => {
@@ -39,7 +41,12 @@ export default function Lab(props) {
               href="#topLab"
               onClick={handleCloseProject}
             >
-              {props.dataText.labelBack[props.lang]}
+              <span class="icon-text">
+                <span>{props.dataText.labelBack[props.lang]}</span>
+                <span class="icon">
+                  <img src={IconGrid} />
+                </span>
+              </span>
             </a>
           </>
         )}

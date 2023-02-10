@@ -19,35 +19,32 @@ export default function Intro(props) {
           <p>{props.dataIntro.introTxt[props.lang]}</p>
         </div>
         <div className="column is-one-thirds">
-          <img src={PhotoEd} width="205" alt="Edouard Desgrée" />
+          <img src={PhotoEd} alt={props.dataIntro.myName} />
         </div>
       </section>
-      {/* 
-      <section className="level">
-        <div className="level-item has-text-centered">
-          <div>
+
+      <section className="section">
+        <div className="level">
+          <div className="level-item has-text-centered">
             <img src={ItemGreen} alt="" />
-            <h3 className="heading  is-3">Frontend development</h3>
+            <h3 className="title is-5">Frontend development</h3>
             <p className="">
               This is a template Figma file, turned into code using Anima. Learn
               more at AnimaApp.com
             </p>
           </div>
-        </div>
-        <div className="level-item has-text-centered">
-          <div>
+
+          <div className="level-item has-text-centered">
             <img src={ItemSage} alt="" />
-            <h3 className="heading  is-3">UI/UX design</h3>
+            <h3 className="title is-5">UI/UX design</h3>
             <p className="">
               This is a template Figma file, turned into code using Anima. Learn
               more at AnimaApp.com
             </p>
           </div>
-        </div>
-        <div className="level-item has-text-centered">
-          <div>
+          <div className="level-item has-text-centered">
             <img src={ItemMustard} alt="" />
-            <h3 className="heading  is-3">Team player</h3>
+            <h3 className="title is-5">Team player</h3>
             <p className="">
               This is a template Figma file, turned into code using Anima. Learn
               more at AnimaApp.com
@@ -55,7 +52,6 @@ export default function Intro(props) {
           </div>
         </div>
       </section>
-      */}
     </div>
   );
 }

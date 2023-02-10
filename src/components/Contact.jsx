@@ -2,8 +2,8 @@ import React from 'react';
 export default function Contact(props) {
   return (
     <>
-      <section class="hero">
-        <div class="hero-body">
+      <section className="hero">
+        <div className="hero-body">
           <h1 className="title has-text-centered is-1 pre-line ">
             {props.dataText.contactTitle[props.lang]}
           </h1>
@@ -13,17 +13,17 @@ export default function Contact(props) {
             xmlns="http://www.w3.org/2000/svg"
           >
             <symbol id="s-text">
-              <text text-anchor="middle" x="50%" y="80%">
+              <text textAnchor="middle" x="50%" y="80%">
                 {props.dataText.contactEmail}
               </text>
             </symbol>
 
-            <g class="g-ants">
-              <use xlinkHref="#s-text" class="letter"></use>
-              <use xlinkHref="#s-text" class="letter"></use>
-              <use xlinkHref="#s-text" class="letter"></use>
-              <use xlinkHref="#s-text" class="letter"></use>
-              <use xlinkHref="#s-text" class="letter"></use>
+            <g className="g-ants">
+              <use xlinkHref="#s-text" className="letter"></use>
+              <use xlinkHref="#s-text" className="letter"></use>
+              <use xlinkHref="#s-text" className="letter"></use>
+              <use xlinkHref="#s-text" className="letter"></use>
+              <use xlinkHref="#s-text" className="letter"></use>
             </g>
           </svg>
         </div>

@@ -1,6 +1,7 @@
 import { nanoid } from 'nanoid';
 const data = {
   common: {
+    myName: 'Edouard Desgrée',
     contactEmail: 'edouard@desgree.com',
     mainTitle: { fr: 'bonjour', en: 'hello' },
     introTxt: {
@@ -56,14 +57,6 @@ const data = {
     {
       id: nanoid(),
       name: {
-        fr: `À propos`,
-        en: `About`
-      },
-      slug: 'about'
-    },
-    {
-      id: nanoid(),
-      name: {
         fr: `Portfolio`,
         en: `Work`
       },
@@ -76,6 +69,14 @@ const data = {
         en: `Lab`
       },
       slug: 'lab'
+    },
+    {
+      id: nanoid(),
+      name: {
+        fr: `À propos`,
+        en: `About`
+      },
+      slug: 'about'
     },
     {
       id: nanoid(),

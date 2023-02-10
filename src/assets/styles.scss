@@ -230,3 +230,58 @@ button.scrollup {
   width: max-content;
 }
 */
+/*CONTACT*/
+// animation text
+
+svg.textContact {
+  display: flex;
+  font-family: $family-primary;
+  font-size: 3em;
+  height: 100%;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100%;
+
+  text {
+    letter-spacing: 10px;
+  }
+  .letter {
+    animation: stroke-offset 5.5s infinite linear;
+    fill: none;
+    stroke: white;
+    stroke-dasharray: 6% 29%;
+    stroke-dashoffset: 0%;
+    stroke-width: 2px;
+
+    &:nth-child(1) {
+      animation-delay: -1;
+      stroke: #f39c12;
+    }
+
+    &:nth-child(2) {
+      animation-delay: -2s;
+      stroke: $grey;
+    }
+
+    &:nth-child(3) {
+      animation-delay: -3s;
+      stroke: $forest;
+    }
+
+    &:nth-child(4) {
+      animation-delay: -4s;
+      stroke: $mustard;
+    }
+
+    &:nth-child(5) {
+      animation-delay: -5s;
+      stroke: $sage;
+    }
+  }
+}
+
+@keyframes stroke-offset {
+  100% {
+    stroke-dashoffset: -35%;
+  }
+}

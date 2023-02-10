@@ -28,9 +28,17 @@ const data = {
       fr: `Portfolio`,
       en: `Work`
     },
+    workSubTitle: {
+      fr: `Une collection de mes derniers projets`,
+      en: `A collection of my recent work`
+    },
     labTitle: {
       fr: `Labo`,
       en: `Lab`
+    },
+    labSubTitle: {
+      fr: `Des petits projets perso en React et Vanilla JS`,
+      en: `Some small personal projects in React and Vanilla JS`
     },
     workMyworkTitle: {
       fr: `Mon travail`,
@@ -114,7 +122,7 @@ const data = {
         screens: ['kanuk-home.webp', 'kanuk-cat.webp', 'kanuk-product.webp']
       },
 
-      url: ''
+      url: 'https://www.kanuk.com/fr_ca/'
     },
     {
       id: nanoid(),
@@ -129,7 +137,7 @@ const data = {
         cover: 'cover-bench.webp',
         screens: ['bench-home.webp', 'bench-cat.webp', 'bench-product.webp']
       },
-      url: ''
+      url: 'https://bench.ca/'
     },
     {
       id: nanoid(),
@@ -148,7 +156,7 @@ const data = {
           'mobilia-product.webp'
         ]
       },
-      url: ''
+      url: 'https://mobilia.ca/'
     },
     {
       id: nanoid(),
@@ -163,7 +171,7 @@ const data = {
         cover: 'cover-prana.webp',
         screens: ['prana-home.webp', 'prana-product.webp']
       },
-      url: ''
+      url: 'https://pranafoods.ca/'
     },
     {
       id: nanoid(),
@@ -195,7 +203,7 @@ const data = {
       subtitle: '',
       date: '',
       description: `<p>Site de la compagnie DATSIT, spécialisée dans la production TV.</p><p>J'ai travaillé sur la conception UX et le design du site ainsi que sur l'intégration web responsive.</p>`,
-      mywork: 'Design, HTML, CSS',
+      mywork: 'UX/UI Design, HTML, CSS',
       tech: [
         'Photoshop',
         'Axure',

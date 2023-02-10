@@ -1,5 +1,7 @@
 import React from 'react';
 import WorkDetail from './WorkDetail';
+import IconGrid from '../assets/icons/icon-grid.svg';
+
 import { Route, Routes } from 'react-router-dom';
 
 export default function Work(props) {
@@ -33,7 +35,10 @@ export default function Work(props) {
     <section className="section">
       <a id="topWork"></a>
       <header className="header-section">
-        <h2 className="is-2 title">{props.dataText.workTitle[props.lang]}</h2>
+        <div>
+          <h2 className="is-2 title">{props.dataText.workTitle[props.lang]}</h2>
+          <p className="block">{props.dataText.workSubTitle[props.lang]}</p>
+        </div>
         {currentProject && (
           <>
             <a
@@ -41,7 +46,12 @@ export default function Work(props) {
               href="#topWork"
               onClick={handleCloseProject}
             >
-              {props.dataText.labelBack[props.lang]}
+              <span className="icon-text">
+                <span>{props.dataText.labelBack[props.lang]}</span>
+                <span className="icon">
+                  <img src={IconGrid} />
+                </span>
+              </span>
             </a>
           </>
         )}

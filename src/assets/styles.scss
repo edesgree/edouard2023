@@ -164,6 +164,9 @@ main {
         .media img {
           transform: scale(1.15);
         }
+        .project-info {
+          background-color: darken($sage, 20%);
+        }
       }
       .media {
         overflow: hidden;
@@ -178,6 +181,7 @@ main {
         background-color: $sage;
         flex: 1;
         padding: 20px;
+        transition: background-color 0.8s ease;
       }
     }
   }

@@ -33,7 +33,11 @@ export default function Lab(props) {
     <section className="section">
       <a id="topLab"></a>
       <header className="header-section">
-        <h2 className="is-2 title">{props.dataText.labTitle[props.lang]}</h2>
+        <div>
+          <h2 className="is-2 title">{props.dataText.labTitle[props.lang]}</h2>
+          <p className="block">{props.dataText.labSubTitle[props.lang]}</p>
+        </div>
+
         {currentProject && (
           <>
             <a
@@ -41,9 +45,9 @@ export default function Lab(props) {
               href="#topLab"
               onClick={handleCloseProject}
             >
-              <span class="icon-text">
+              <span className="icon-text">
                 <span>{props.dataText.labelBack[props.lang]}</span>
-                <span class="icon">
+                <span className="icon">
                   <img src={IconGrid} />
                 </span>
               </span>

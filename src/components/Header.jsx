@@ -1,23 +1,23 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 export default function Header(props) {
   const [menuIsActive, setMenuIsActive] = React.useState(false);
 
   const menuElements = props.dataMenu.map((item) => {
     return (
-      <Link to={item.slug} key={item.id} className="navbar-item">
+      <NavLink to={item.slug} key={item.id} className="navbar-item">
         {item.name[props.lang]}
-      </Link>
+      </NavLink>
     );
   });
   return (
     <header className="main-header">
       <nav className="navbar" role="navigation" aria-label="main navigation">
         <div className="navbar-brand">
-          <Link exact="true" to="/" className="navbar-item">
+          <NavLink exact="true" to="/" className="navbar-item">
             <span className="logo">{`<Ed/>`}</span>
-          </Link>
+          </NavLink>
 
           <a
             onClick={() => setMenuIsActive(!menuIsActive)}
@@ -41,7 +41,10 @@ export default function Header(props) {
         >
           <div className="navbar-end">
             {menuElements}
-            <a className="navbar-item" onClick={props.handleTrad}>
+            <a
+              className="button is-primary is-inverted"
+              onClick={props.handleTrad}
+            >
               {props.lang === 'fr' ? 'en' : 'fr'}
             </a>
           </div>

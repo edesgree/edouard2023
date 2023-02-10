@@ -10,10 +10,12 @@ $sage: #cbd18f;
 $mustard: #e3b448;
 $pumkin: #ff6250;
 $primary: $forest;
+$secondary: $sage;
 $info: $sage;
 $family-serif: 'Epilogue', sans-serif;
 $family-primary: $family-serif;
-
+$navbar-item-active-color: $primary;
+$navbar-item-active-background-color: $secondary;
 // Import only what you need from Bulma
 // @import 'bulma/sass/utilities/_all.sass';
 // @import 'bulma/sass/base/_all.sass';
@@ -77,6 +79,44 @@ main {
     }
     .navbar {
       width: 100%;
+      .navbar-menu {
+        align-items: center;
+        .navbar-end {
+          gap: 20px;
+          .navbar-item {
+            font-size: 1.25rem;
+            line-height: 1;
+            padding: 0;
+            position: relative;
+            white-space: nowrap;
+            &:active,
+            &:hover,
+            &:focus {
+              background: none;
+              color: $primary;
+            }
+            &:after {
+              background-color: $primary;
+              border-radius: 9999px;
+              bottom: -4px;
+              content: '';
+              display: block;
+              height: 3px;
+              left: 0;
+              position: absolute;
+              transform: scaleX(0);
+              transform-origin: center left;
+              transition-duration: 0.4s;
+              transition-property: transform;
+              width: 100%;
+            }
+            &:hover:after,
+            &.active:after {
+              transform: scaleX(1);
+            }
+          }
+        }
+      }
     }
   }
   .sup-title {

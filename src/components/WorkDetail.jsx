@@ -25,7 +25,7 @@ export default function WorkDetail(props) {
   });
   return (
     <article>
-      <div className="hero is-small is-primary head-project">
+      <div className="content hero is-small is-primary head-project">
         <div className="hero-body">
           <p className="title">{workElement.name}</p>
           <p className="subtitle">{workElement.subtitle}</p>
@@ -35,7 +35,10 @@ export default function WorkDetail(props) {
       <div className="columns">
         <div className="columnsticky column is-4 content">
           <h4 className="title  is-4">Resume</h4>
-          <div dangerouslySetInnerHTML={{ __html: workElement.description }} />
+          <div
+            className="content"
+            dangerouslySetInnerHTML={{ __html: workElement.description }}
+          />
         </div>
         <div className=" column is-8">{screensElements.slice(0, 2)}</div>
       </div>

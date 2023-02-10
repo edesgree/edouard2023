@@ -1,5 +1,7 @@
 import React from 'react';
 import WorkDetail from './WorkDetail';
+import { Route, Routes } from 'react-router-dom';
+
 export default function Work(props) {
   const [currentProject, setCurrentProject] = React.useState(null);
   const handleChoice = (event) => {
@@ -47,13 +49,15 @@ export default function Work(props) {
 
       {!currentProject && <ul className="project-list">{workElements}</ul>}
       {currentProject && (
-        <WorkDetail
-          dataWorkDetail={props.dataWork}
-          dataText={props.dataText}
-          currentProject={currentProject}
-          handleCloseProject={handleCloseProject}
-          lang={props.lang}
-        />
+        <>
+          <WorkDetail
+            dataWorkDetail={props.dataWork}
+            dataText={props.dataText}
+            currentProject={currentProject}
+            handleCloseProject={handleCloseProject}
+            lang={props.lang}
+          />
+        </>
       )}
     </section>
   );

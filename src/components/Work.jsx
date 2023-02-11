@@ -3,8 +3,6 @@ import WorkDetail from './WorkDetail';
 import IconGrid from '../assets/icons/icon-grid.svg';
 import { motion, useIsPresent, useScroll, useSpring } from 'framer-motion';
 
-import { Route, Routes } from 'react-router-dom';
-
 export default function Work(props) {
   const [currentProject, setCurrentProject] = React.useState(null);
   const handleChoice = (event) => {
@@ -40,6 +38,7 @@ export default function Work(props) {
       </motion.li>
     );
   });
+  // use for the transition (big empty colored div#privacy-screen)
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
@@ -47,6 +46,7 @@ export default function Work(props) {
     restDelta: 0.001
   });
   const isPresent = useIsPresent();
+
   return (
     <motion.section className="section">
       <a id="topWork"></a>

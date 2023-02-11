@@ -10,6 +10,7 @@ $mustard: #e3b448;
 $pumkin: #ff6250;
 $primary: $forest;
 $secondary: $sage;
+$vibrant: $pumkin;
 $info: $sage;
 $family-serif: 'Outfit', sans-serif;
 $family-primary: $family-serif;
@@ -202,6 +203,9 @@ main {
       align-items: flex-start;
       display: flex;
       justify-content: space-between;
+      .button .icon img {
+        display: block;
+      }
     }
   }
   //SKILLS LIST (ICONS)
@@ -330,7 +334,7 @@ svg.textContact {
 }
 
 .privacy-screen {
-  background-color: $primary;
+  background-color: $vibrant;
   bottom: 0;
   left: 0;
   position: fixed;

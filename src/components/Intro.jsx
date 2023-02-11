@@ -10,11 +10,11 @@ const IconsServices = [ItemGreen, ItemMustard, ItemSage];
 export default function Intro(props) {
   const servicesElements = props.dataIntro.services.map((item, index) => {
     return (
-      <>
+      <React.Fragment key={index}>
         <img src={IconsServices[index]} alt="" />
         <h3 className="title is-5">{item.title[props.lang]}</h3>
         <p>{item.text[props.lang]}</p>
-      </>
+      </React.Fragment>
     );
   });
   return (

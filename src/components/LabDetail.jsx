@@ -38,12 +38,16 @@ export default function LabDetail(props) {
             <div className="buttons has-addons">
               <button className="button is-info is-small">
                 <span className="icon is-small">
-                  <img src={IconGithub} />
+                  <a href={labElement.github} target="_blank">
+                    <img src={IconGithub} alt="github" />
+                  </a>
                 </span>
               </button>
               <button className="button is-info is-small">
                 <span className="icon is-small">
-                  <img src={IconExternalLink} />
+                  <a href={labElement.preview} target="_blank">
+                    <img src={IconExternalLink} alt="link" />
+                  </a>
                 </span>
               </button>
             </div>

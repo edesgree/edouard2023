@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap');
+$tablet: 769px;
+
 $white: #fff;
 $light-white: whitesmoke;
 $black: #2d2d2d;
@@ -14,6 +16,7 @@ $vibrant: $pumkin;
 $info: $sage;
 $family-serif: 'Outfit', sans-serif;
 $family-primary: $family-serif;
+$navbar-breakpoint: $tablet;
 $navbar-item-active-color: $primary;
 $navbar-item-active-background-color: $secondary;
 $body-size: 20px;
@@ -94,7 +97,7 @@ main {
         .navbar-end {
           gap: 20px;
 
-          @include touch {
+          @include mobile {
             align-items: stretch;
             display: flex;
             flex-direction: column;

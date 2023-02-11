@@ -39,7 +39,7 @@ function App() {
             handleTrad={handleTrad}
             anim={animShowContentVariant}
           />
-          <Test />
+
           <Skills
             dataSkills={data.skills}
             dataText={data.common}

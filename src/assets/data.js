@@ -745,6 +745,14 @@ const data = {
     }
   ],
   skills: [
+    { id: nanoid(), name: 'HTML', slug: 'html', icon: skillsIconhtml },
+    { id: nanoid(), name: 'SASS', slug: 'sass', icon: skillsIconsass },
+    { id: nanoid(), name: 'Javascript', slug: 'js', icon: skillsIconjs },
+    { id: nanoid(), name: 'React', slug: 'react', icon: skillsIconreact },
+    { id: nanoid(), name: 'Git', slug: 'git', icon: skillsIcongit },
+    { id: nanoid(), name: 'Figma', slug: 'figma', icon: skillsIconfigma },
+    { id: nanoid(), name: 'Sketch', slug: 'sketch', icon: skillsIconsketch },
+    { id: nanoid(), name: 'Photoshop', slug: 'psd', icon: skillsIconpsd },
     {
       id: nanoid(),
       name: 'Bootstrap',
@@ -753,39 +761,33 @@ const data = {
     },
     {
       id: nanoid(),
-      name: 'Confluence',
-      slug: 'confluence',
-      icon: skillsIconconfluence
-    },
-    { id: nanoid(), name: 'Figma', slug: 'figma', icon: skillsIconfigma },
-    { id: nanoid(), name: 'Flask', slug: 'flask', icon: skillsIconflask },
-    {
-      id: nanoid(),
       name: 'Foundation',
       slug: 'foundation',
       icon: skillsIconfoundation
     },
-    { id: nanoid(), name: 'Git', slug: 'git', icon: skillsIcongit },
-    { id: nanoid(), name: 'HTML', slug: 'html', icon: skillsIconhtml },
-    { id: nanoid(), name: 'Javascript', slug: 'js', icon: skillsIconjs },
-    { id: nanoid(), name: 'Jira', slug: 'jira', icon: skillsIconjira },
-    { id: nanoid(), name: 'LESS', slug: 'less', icon: skillsIconless },
-    { id: nanoid(), name: 'Magento', slug: 'magento', icon: skillsIconmagento },
-    { id: nanoid(), name: 'Photoshop', slug: 'psd', icon: skillsIconpsd },
-    { id: nanoid(), name: 'PHP', slug: 'php', icon: skillsIconphp },
-    { id: nanoid(), name: 'Python', slug: 'python', icon: skillsIconpython },
-    { id: nanoid(), name: 'React', slug: 'react', icon: skillsIconreact },
-    { id: nanoid(), name: 'SASS', slug: 'sass', icon: skillsIconsass },
-    { id: nanoid(), name: 'Sketch', slug: 'sketch', icon: skillsIconsketch },
-    { id: nanoid(), name: 'Trello', slug: 'trello', icon: skillsIcontrello },
-    { id: nanoid(), name: 'Twig', slug: 'twig', icon: skillsIcontwig },
-    { id: nanoid(), name: 'VSCode', slug: 'vscode', icon: skillsIconvscode },
-    { id: nanoid(), name: 'W3C', slug: 'w3c', icon: skillsIconw3c },
     {
       id: nanoid(),
       name: 'Wordpress',
       slug: 'wordpress',
       icon: skillsIconwordpres
+    },
+    { id: nanoid(), name: 'Magento', slug: 'magento', icon: skillsIconmagento },
+    { id: nanoid(), name: 'LESS', slug: 'less', icon: skillsIconless },
+
+    { id: nanoid(), name: 'Flask', slug: 'flask', icon: skillsIconflask },
+    { id: nanoid(), name: 'Twig', slug: 'twig', icon: skillsIcontwig },
+    { id: nanoid(), name: 'PHP', slug: 'php', icon: skillsIconphp },
+    { id: nanoid(), name: 'Python', slug: 'python', icon: skillsIconpython },
+
+    { id: nanoid(), name: 'VSCode', slug: 'vscode', icon: skillsIconvscode },
+    { id: nanoid(), name: 'W3C', slug: 'w3c', icon: skillsIconw3c },
+    { id: nanoid(), name: 'Jira', slug: 'jira', icon: skillsIconjira },
+    { id: nanoid(), name: 'Trello', slug: 'trello', icon: skillsIcontrello },
+    {
+      id: nanoid(),
+      name: 'Confluence',
+      slug: 'confluence',
+      icon: skillsIconconfluence
     }
   ]
 };

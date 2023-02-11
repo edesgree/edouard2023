@@ -54,12 +54,16 @@ export default function WorkDetail(props) {
             <p className="subtitle">{workElement.subtitle}</p>
           </div>
           {workElement.url && (
-            <button className="button is-info is-small">
+            <a
+              href={workElement.url}
+              target="_blank"
+              className="button is-info is-small"
+            >
               <span>Visit</span>
               <span className="icon is-small">
                 <img src={IconExternalLink} />
               </span>
-            </button>
+            </a>
           )}
         </div>
       </div>

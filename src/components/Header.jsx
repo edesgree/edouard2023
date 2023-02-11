@@ -1,9 +1,10 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import useComponentVisible from '../hooks/UseComponentVisible';
 
 export default function Header(props) {
-  const [menuIsActive, setMenuIsActive] = React.useState(false);
-
+  const { ref, isComponentVisible, setIsComponentVisible } =
+    useComponentVisible(false);
   const menuElements = props.dataMenu.map((item) => {
     return (
       <NavLink to={item.slug} key={item.id} className="navbar-item">
@@ -13,17 +14,22 @@ export default function Header(props) {
   });
   return (
     <header className="main-header">
-      <nav className="navbar" role="navigation" aria-label="main navigation">
+      <nav
+        className="navbar"
+        ref={ref}
+        role="navigation"
+        aria-label="main navigation"
+      >
         <div className="navbar-brand">
           <NavLink exact="true" to="/" className="navbar-item">
             <span className="logo">{`<Ed/>`}</span>
           </NavLink>
 
           <a
-            onClick={() => setMenuIsActive(!menuIsActive)}
+            onClick={() => setIsComponentVisible(!isComponentVisible)}
             role="button"
             className={`navbar-burger burger ${
-              menuIsActive ? 'is-active' : ''
+              isComponentVisible ? 'is-active' : ''
             }`}
             aria-label="menu"
             aria-expanded="false"
@@ -37,7 +43,7 @@ export default function Header(props) {
 
         <div
           id="main-navbar"
-          className={`navbar-menu ${menuIsActive ? 'is-active' : ''}`}
+          className={`navbar-menu ${isComponentVisible ? 'is-active' : ''}`}
         >
           <div className="navbar-end">
             {menuElements}

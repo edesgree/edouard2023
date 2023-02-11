@@ -87,6 +87,17 @@ main {
         align-items: center;
         .navbar-end {
           gap: 20px;
+
+          @include touch {
+            align-items: flex-start;
+            display: flex;
+            flex-direction: column;
+            padding: 0 20px;
+            button {
+              padding-left: 0;
+            }
+          }
+
           .navbar-item {
             font-size: 1.25rem;
             line-height: 1;

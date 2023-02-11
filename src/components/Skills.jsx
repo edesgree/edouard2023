@@ -12,7 +12,7 @@ export default function Skills(props) {
   });
   return (
     <section className="section">
-      <h2 className="is-2 title">{props.dataText.skillsTitle[props.lang]}</h2>
+      <h2 className="is-3 title">{props.dataText.skillsTitle[props.lang]}</h2>
       <ul className="skills-list">{skillsElements}</ul>
     </section>
   );

@@ -3,23 +3,26 @@ import IconExternalLink from '../assets/icons/icon-external.svg';
 import IconGithub from '../assets/icons/icon-github.svg';
 import { motion, useAnimation } from 'framer-motion';
 export default function LabDetail(props) {
-  console.log('data', props.dataLabDetail);
-  const labElement = props.dataLabDetail.filter(
+  // get corresponding data for this project
+  const labElement = props.dataLabDetail.find(
     (item) => item.id === props.currentProject
-  )[0];
-  console.log(labElement);
-  const techElements = labElement.tech.map((item, index) => {
+  );
+
+  // get tech used for this project
+  const techElements = labElement.tech.map((techItem, index) => {
     return (
       <span key={index} className="tag is-info">
-        {item}
+        {techItem}
       </span>
     );
   });
-  const screensElements = labElement.images.screens.map((item, index) => {
+
+  // get screenshots images
+  const screensElements = labElement.images.screens.map((screenItem, index) => {
     return (
       <div key={index}>
         <img
-          src={`src/assets/images/lab/${labElement.slug}/${item}`}
+          src={`src/assets/images/lab/${labElement.slug}/${screenItem}`}
           alt={`${labElement.name} ${labElement.subtitle}`}
           className="img-responsive"
         />
@@ -63,7 +66,9 @@ export default function LabDetail(props) {
           <div className="content">
             <div
               className="content"
-              dangerouslySetInnerHTML={{ __html: labElement.description }}
+              dangerouslySetInnerHTML={{
+                __html: labElement.description[props.lang]
+              }}
             />
             {labElement.mywork && (
               <div className="block">
@@ -74,7 +79,7 @@ export default function LabDetail(props) {
               </div>
             )}
 
-            {techElements && (
+            {techElements.length > 0 && (
               <div className="block">
                 <h4 className="title  is-4">
                   {props.dataText.workTechUsedTitle[props.lang]}

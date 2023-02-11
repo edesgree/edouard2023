@@ -440,6 +440,11 @@ svg.textContact {
   z-index: 50;
 }
 
+//svg
+svg:focus {
+  outline: none;
+}
+
 //dark mode button
 .theme-btn-wrap {
   background-color: $pumkin;

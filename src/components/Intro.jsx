@@ -21,7 +21,7 @@ export default function Intro(props) {
           <p>{props.dataIntro.introTxt[props.lang]}</p>
         </div>
         <div className="column is-one-thirds">
-          <img src={PhotoEd} alt={props.dataIntro.myName} />
+          <img className="mb-4" src={PhotoEd} alt={props.dataIntro.myName} />
           <div className="block has-text-centered">
             <NavLink exact="true" to="/work" className="button is-primary">
               {props.dataIntro.labelSeeWork[props.lang]}

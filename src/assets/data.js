@@ -217,7 +217,7 @@ const data = {
         cover: 'cover-datsit.webp',
         screens: ['datsit-desktop.webp', 'datsit-tablet.webp']
       },
-      url: 'http://datsit.tv/'
+      url: ''
     },
     {
       id: nanoid(),
@@ -340,7 +340,7 @@ const data = {
           'enpc-6.webp'
         ]
       },
-      url: ''
+      url: 'https://ecoledesponts.fr/'
     }
   ],
   lab: [

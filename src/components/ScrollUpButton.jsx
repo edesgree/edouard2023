@@ -14,7 +14,7 @@ export default function ScrollButton(props) {
   const [visible, setVisible] = React.useState(false);
   // Show button when page is scrolled upto given distance
   const toggleVisibility = () => {
-    if (window.pageYOffset > 800) {
+    if (window.pageYOffset > 500) {
       setVisible(true);
     } else {
       setVisible(false);

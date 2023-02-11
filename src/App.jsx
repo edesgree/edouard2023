@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Intro from './components/Intro';
 import Work from './components/Work';
 import Lab from './components/Lab';
+import Test from './components/Test';
 import About from './components/About';
 import Contact from './components/Contact';
 import Skills from './components/Skills';
@@ -38,6 +39,7 @@ function App() {
             handleTrad={handleTrad}
             anim={animShowContentVariant}
           />
+          <Test />
           <Skills
             dataSkills={data.skills}
             dataText={data.common}

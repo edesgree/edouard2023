@@ -468,3 +468,32 @@ svg.textContact {
     background-image: url('src/assets/icons/sun.svg');
   }
 }
+
+.letest {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+  .list {
+    display: flex;
+    height: 50%;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .item {
+    align-items: center;
+    background-color: lightgray;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
+
+  .selected {
+    transform: scale(1.5);
+  }
+}

@@ -1,10 +1,10 @@
 import React from 'react';
+import IconExternalLink from '../assets/icons/icon-external.svg';
 export default function WorkDetail(props) {
-  console.log('data', props.dataWorkDetail);
   const workElement = props.dataWorkDetail.filter(
     (item) => item.id === props.currentProject
   )[0];
-  console.log(workElement);
+  console.log('workElement', workElement);
   const techElements = workElement.tech.map((item, index) => {
     return (
       <span key={index} className="tag is-info">
@@ -23,13 +23,29 @@ export default function WorkDetail(props) {
       </div>
     );
   });
+  const coverCSS = {
+    backgroundImage: `url(src/assets/images/work/${workElement.slug}/${workElement.images.cover})`,
+    backgroundSize: 'cover'
+  };
   return (
     <article>
-      <div className="content hero is-small is-primary head-project">
+      <div
+        className="content hero is-small is-primary head-project"
+        style={coverCSS}
+      >
         <div className="hero-body">
-          <p className="title">{workElement.name}</p>
-          <p className="subtitle">{workElement.subtitle}</p>
-          <span className="tag is-light is-info">2020</span>
+          <div>
+            <p className="title">{workElement.name}</p>
+            <p className="subtitle">{workElement.subtitle}</p>
+          </div>
+          {workElement.url && (
+            <button class="button is-info is-small">
+              <span>Visit</span>
+              <span class="icon is-small">
+                <img src={IconExternalLink} />
+              </span>
+            </button>
+          )}
         </div>
       </div>
       <div className="columns">
@@ -50,12 +66,23 @@ export default function WorkDetail(props) {
             </h4>
             <p>{workElement.mywork}</p>
           </div>
-          <div className="block">
-            <h4 className="title  is-4">
-              {props.dataText.workTechUsedTitle[props.lang]}
-            </h4>
-            <div className="tags">{techElements}</div>
-          </div>
+          {workElement.date && (
+            <div className="block">
+              <h4 className="title  is-4">
+                {props.dataText.workTechUsedTitle[props.lang]}
+              </h4>
+              <div className="tags">{techElements}</div>
+            </div>
+          )}
+
+          {workElement.date && (
+            <div className="block">
+              <div className="tags has-addons">
+                <span className="tag is-dark">Date</span>
+                <span className="tag is-light">{workElement.date}</span>
+              </div>
+            </div>
+          )}
         </div>
         <div className=" column is-8">{screensElements.slice(2)}</div>
       </div>

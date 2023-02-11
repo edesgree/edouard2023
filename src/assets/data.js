@@ -112,8 +112,8 @@ const data = {
       id: nanoid(),
       name: 'Kanuk',
       slug: 'kanuk',
-      subtitle: 'Magento 2 frontend',
-      date: '',
+      subtitle: 'Magento 2 ecommerce',
+      date: '2020',
       description: ``,
       mywork: ``,
       tech: ['Magento 2', 'SCSS', 'JS', 'Nwayo'],
@@ -128,8 +128,8 @@ const data = {
       id: nanoid(),
       name: 'Bench',
       slug: 'bench',
-      subtitle: 'Magento 2 frontend',
-      date: '',
+      subtitle: 'Magento 2 ecommerce',
+      date: '2020',
       description: ``,
       mywork: ``,
       tech: ['Magento 2', 'SCSS', 'JS', 'Nwayo'],
@@ -143,8 +143,8 @@ const data = {
       id: nanoid(),
       name: 'Mobilia',
       slug: 'mobilia',
-      subtitle: 'Magento 2 frontend',
-      date: '',
+      subtitle: 'Magento 2 ecommerce',
+      date: '2019',
       description: ``,
       mywork: ``,
       tech: ['Magento 2', 'SCSS', 'JS', 'Nwayo'],
@@ -162,8 +162,8 @@ const data = {
       id: nanoid(),
       name: 'Prana Organic',
       slug: 'prana',
-      subtitle: 'Magento 2 frontend',
-      date: '',
+      subtitle: 'Magento 2 ecommerce',
+      date: '2019',
       description: ``,
       mywork: ``,
       tech: ['Magento 2', 'SCSS', 'JS', 'Nwayo'],
@@ -178,7 +178,7 @@ const data = {
       name: 'Les pêcheurs',
       slug: 'pecheurs',
       subtitle: 'Website & tablet app',
-      date: '',
+      date: '2019',
       description: `<p><em>Les pêcheurs</em> est une émission humoristique de Martin Petit diffusée sur radio-canada.</p>
       <p>J'ai travaillé sur le volet numérique de l'émission qui contient un site web et un magazine numérique disponible sur iPad/android ainsi qu'en version web. </p>
       <p>Mon travail était le développement front-end du site web, du magazine web ainsi que des gabarits webview pour les applications tablettes. J'ai également participé à la déclinaison graphique de maquettes en suivant la direction artistique.</p>`,
@@ -200,7 +200,7 @@ const data = {
       id: nanoid(),
       name: 'Datsit',
       slug: 'datsit',
-      subtitle: '',
+      subtitle: 'Corporate website',
       date: '',
       description: `<p>Site de la compagnie DATSIT, spécialisée dans la production TV.</p><p>J'ai travaillé sur la conception UX et le design du site ainsi que sur l'intégration web responsive.</p>`,
       mywork: 'UX/UI Design, HTML, CSS',
@@ -223,8 +223,8 @@ const data = {
       id: nanoid(),
       name: 'Bazzo',
       slug: 'bazzo',
-      subtitle: 'magazine tablette',
-      date: '',
+      subtitle: 'Tablet magazine',
+      date: '2018',
       description: `<p>BazzoMag est un mensuel numérique gratuit s’ajoutant à l’émission BazzoTV.</p>
       <p>Le magazine est disponible sur tablettes iOS et Android. J'ai travaillé sur le développement front-end des différentes maquettes du magazine.</p>
       <p>Les applications sont natives (iOS, Android) et utilisent des webviews pour afficher les templates HTML.</p>`,
@@ -240,7 +240,7 @@ const data = {
       id: nanoid(),
       name: 'Ruptures',
       slug: 'ruptures',
-      subtitle: '',
+      subtitle: 'Web magazine & Tablet game',
       date: '',
       description: `<p>Ruptures est une série tv difusée sur radio-canada.</p>
       <p>J'ai travaillé sur le volet numérique de l'émission qui contient un site web, un magazine web ainsi qu'une expérience de découverte intéractive (type street view).</p>
@@ -263,7 +263,7 @@ const data = {
       id: nanoid(),
       name: 'Le pharmachien',
       slug: 'pharmachien',
-      subtitle: '',
+      subtitle: 'Responsive Website',
       date: '',
       description: `<p>Les aventures du Pharmachien est une émission TV de vulgarisation scientifique sur la santé.</p>
         <p>J'ai travaillé sur l'intégration web du site. Le site est basé sur bootstrap et utilise la technologie Angular JS.</p>`,
@@ -290,8 +290,8 @@ const data = {
       id: nanoid(),
       name: 'Conseils de famille',
       slug: 'cdf',
-      subtitle: '',
-      date: '',
+      subtitle: 'Web & mobile site',
+      date: '2017',
       description: `<p>Le site de Conseils de famille présente le vlogue de Clovis, le personnage principal de la série. Les contenus du site sont diffusés en conjonction avec la chaîne YouTube officielle du personnage.</p>
       <p>J'ai travaillé sur le front-end developpement des différentes sections du site.</p>`,
       mywork: `Intégration HTML/CSS, responsive design`,
@@ -306,8 +306,8 @@ const data = {
       id: nanoid(),
       name: 'Explora TV',
       slug: 'explora',
-      subtitle: '',
-      date: '',
+      subtitle: 'TV channel website',
+      date: '2017',
       description: `<p>Site d'informations sur les programmes de la chaine Explora TV.</p>
       <p>J'ai travaillé sur le développement front-end des différentes sections du site. (Présentation des émissions, grille de programmes, concours...).</p>`,
       mywork: `Intégration HTML/CSS, responsive design`,
@@ -322,8 +322,8 @@ const data = {
       id: nanoid(),
       name: 'École des Ponts Paris Tech',
       slug: 'ponts',
-      subtitle: '',
-      date: '',
+      subtitle: 'School website',
+      date: '2011',
       description: `<p>L'école des Ponts est une école d'ingénieurs française située près de Paris.</p>
       <p>J'ai travaillé sur la refonte de leur site principal ainsi que sur différents sites de l'école (intranet, bibliothèque, associations, newsletters ...).</p>
       <p>Mon rôle fût la conception UX, la direction artistique ainsi que l'intégration de ces maquettes en HTML/CSS.</p>`,
@@ -346,12 +346,11 @@ const data = {
   lab: [
     {
       id: nanoid(),
-      name: 'React CV App',
+      name: 'CV Generator',
       slug: 'cvapp',
       subtitle: 'React app',
       date: '15-01-2023',
       description: `The project is to create an app that can generate a resume in ReactJS. The page consist of several form elements that gets updated with user input. It is bootstraped with Vite.js.`,
-      mywork: ``,
       tech: ['React', 'HTML', 'SCSS', 'Bulma'],
       images: {
         cover: 'cvapp-cover.webp',
@@ -362,12 +361,11 @@ const data = {
     },
     {
       id: nanoid(),
-      name: 'React Quizzy',
+      name: 'Quizzy',
       slug: 'quizzy',
-      subtitle: 'React game',
+      subtitle: 'React quiz app',
       date: '01-01-2023',
       description: `The project is to build a little quizz app in react. It gets its questions from an API. It is bootstraped with Vite.js.`,
-      mywork: ``,
       tech: ['React', 'HTML', 'SCSS', 'Bulma'],
       images: {
         cover: 'quizzy-cover.webp',
@@ -378,12 +376,11 @@ const data = {
     },
     {
       id: nanoid(),
-      name: 'React Tenzies game',
+      name: 'Tenzies',
       slug: 'tenzies',
-      subtitle: 'React game',
-      date: '',
+      subtitle: 'React rolling dice game',
+      date: '01-01-2023',
       description: `The project is to build a game of tenzies. It is bootstraped with Vite.js.`,
-      mywork: ``,
       tech: ['React', 'HTML', 'SCSS'],
       images: {
         cover: 'tenzies-cover.webp',
@@ -394,12 +391,11 @@ const data = {
     },
     {
       id: nanoid(),
-      name: 'Etch a sketch',
+      name: 'Etch-a-sketch',
       slug: 'etch',
-      subtitle: 'JS game',
+      subtitle: 'Drawing game in JS',
       date: '01-10-2022',
       description: `The project is to create a digital version of the game Etch a Sketch only using HTML, CSS and Vanilla JS.`,
-      mywork: ``,
       tech: ['HTML', 'CSS', 'Vanilla JS'],
       images: {
         cover: 'etch-cover.webp',
@@ -410,12 +406,11 @@ const data = {
     },
     {
       id: nanoid(),
-      name: 'Tic tac toe',
+      name: 'Tic Tac Toe',
       slug: 'tictactoe',
       subtitle: 'JS game',
       date: '01-11-2022',
       description: `The project is to create a Tic Tac Toe game using HTML, CSS and Vanilla JS.`,
-      mywork: ``,
       tech: ['HTML', 'CSS', 'Vanilla JS'],
       images: {
         cover: 'tictactoe-cover.webp',
@@ -429,9 +424,8 @@ const data = {
       name: 'Weather app',
       slug: 'weather',
       subtitle: 'Rect weather app',
-      date: '01-11-2022',
+      date: '02-10-2022',
       description: `This project is to create an weather app using different API. The app return a weather forecast for a user provided city name.`,
-      mywork: ``,
       tech: ['Vanilla JS', 'Async/await', 'API calls'],
       images: {
         cover: 'weather-cover.webp',

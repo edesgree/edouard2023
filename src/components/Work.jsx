@@ -25,7 +25,7 @@ export default function Work(props) {
         </div>
         <div className="project-info">
           <h4 className="is-4 title">{item.name}</h4>
-          <span>{item.subtitle}</span>
+          <p className="subtitle is-6">{item.subtitle}</p>
         </div>
       </li>
     );

@@ -1,4 +1,6 @@
 import React from 'react';
+import IconExternalLink from '../assets/icons/icon-external.svg';
+import IconGithub from '../assets/icons/icon-github.svg';
 
 export default function LabDetail(props) {
   console.log('data', props.dataLabDetail);
@@ -28,9 +30,24 @@ export default function LabDetail(props) {
     <article>
       <div className="content hero is-small is-primary head-project">
         <div className="hero-body">
-          <p className="title">{labElement.name}</p>
-          <p className="subtitle">{labElement.subtitle}</p>
-          <span className="tag is-light is-info">2020</span>
+          <div>
+            <p className="title">{labElement.name}</p>
+            <p className="subtitle">{labElement.subtitle}</p>
+          </div>
+          {labElement.preview && (
+            <div class="buttons has-addons">
+              <button class="button is-info is-small">
+                <span class="icon is-small">
+                  <img src={IconGithub} />
+                </span>
+              </button>
+              <button class="button is-info is-small">
+                <span class="icon is-small">
+                  <img src={IconExternalLink} />
+                </span>
+              </button>
+            </div>
+          )}
         </div>
       </div>
       <div className="columns">

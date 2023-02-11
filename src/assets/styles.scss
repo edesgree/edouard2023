@@ -185,6 +185,13 @@ main {
       }
     }
   }
+  .head-project {
+    .hero-body {
+      align-items: flex-start;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
   //SKILLS LIST (ICONS)
   .skills-list {
     display: flex;

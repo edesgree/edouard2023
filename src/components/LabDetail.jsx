@@ -35,7 +35,7 @@ export default function LabDetail(props) {
             <p className="subtitle">{labElement.subtitle}</p>
           </div>
           {labElement.preview && (
-            <div className="buttons has-addons">
+            <div className="buttons has-addons project-buttons-links">
               <button className="button is-info is-small">
                 <span className="icon is-small">
                   <a href={labElement.github} target="_blank">

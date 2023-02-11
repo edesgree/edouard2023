@@ -134,6 +134,9 @@ main {
           }
         }
       }
+      .navbar-burger span {
+        height: 2px;
+      }
     }
   }
   .sup-title {
@@ -169,6 +172,12 @@ main {
     display: grid;
     gap: 20px;
     grid-template-columns: repeat(3, 1fr);
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include mobile {
+      grid-template-columns: repeat(1, 1fr);
+    }
     li {
       display: flex;
       flex-direction: column;
@@ -203,8 +212,7 @@ main {
       align-items: flex-start;
       display: flex;
       justify-content: space-between;
-      .button .icon img {
-        display: block;
+      .project-buttons-links {
       }
     }
   }
@@ -239,6 +247,19 @@ button.scrollup {
   position: fixed;
   right: 20px;
   z-index: 1;
+}
+
+//animation on hover of buttons
+.button {
+  &:hover .icon {
+    transform: scale(1.1);
+  }
+  .icon {
+    transition: transform 0.1s ease-out;
+    img {
+      display: block;
+    }
+  }
 }
 /*
 @keyframes slideAnimation {

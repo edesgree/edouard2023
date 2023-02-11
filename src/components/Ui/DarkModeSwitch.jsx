@@ -1,27 +1,22 @@
 import { motion } from 'framer-motion';
 import React, { useState } from 'react';
-//import { RiMoonClearFill, RiSunFill } from 'react-icons/ri';
-import IconDark from '../../assets/icons/moon.svg';
-import IconLight from '../../assets/icons/sun.svg';
-export default function DarkModeSwitch() {
-  const [isOn, setIsOn] = useState(() => {
+import IconSun from './IconSun';
+import IconMoon from './IconMoon';
+import { transitionSpring } from './constants';
+
+export default function DarkModeSwitch2() {
+  const [darkMode, setDarkMode] = useState(() => {
     if (localStorage.getItem('theme') === 'light') {
       return true;
     } else {
       return false;
     }
   });
-  console.log('dark mode:', isOn);
-  console.log('IconDark:', IconDark);
-  const toggleSwitch = () => setIsOn(!isOn);
+  console.log('dark mode:', darkMode);
+  console.log('iconmoon:', IconMoon);
+  const toggleSwitch = () => setDarkMode(!darkMode);
 
-  const spring = {
-    type: 'spring',
-    stiffness: 700,
-    damping: 30
-  };
-
-  if (isOn) {
+  if (darkMode) {
     document.body.classList.remove('dark');
     localStorage.setItem('theme', 'light');
   } else {
@@ -38,24 +33,17 @@ export default function DarkModeSwitch() {
   } else {
     document.body.classList.remove('dark');
   }
-  let result = isOn ? IconLight : IconDark;
 
   return (
-    <div
+    <button
       onClick={toggleSwitch}
-      className={`flex-start flex h-[50px] w-[100px] rounded-[50px] bg-zinc-100 p-[5px] shadow-inner hover:cursor-pointer dark:bg-zinc-700 ${
-        isOn && 'place-content-end'
-      }`}
+      className="button is-primary is-inverted is-small"
     >
-      <motion.div
-        className="flex h-[40px] w-[40px] items-center justify-center rounded-full bg-black/90"
-        layout
-        transition={spring}
-      >
-        <motion.div whileTap={{ rotate: 360 }}>
-          <img src={result} />
+      <span className="icon is-small">
+        <motion.div className="icon-svg" transition={transitionSpring}>
+          {darkMode ? <IconSun /> : <IconMoon />}
         </motion.div>
-      </motion.div>
-    </div>
+      </span>
+    </button>
   );
 }

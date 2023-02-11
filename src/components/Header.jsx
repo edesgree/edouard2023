@@ -1,10 +1,9 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import useComponentVisible from '../hooks/UseComponentVisible';
-import IconDark from '../assets/icons/moon.svg';
-import IconLight from '../assets/icons/sun.svg';
+
 import DarkModeSwitch from './Ui/DarkModeSwitch';
-import DarkModeSwitch2 from './Ui/DarkModeSwitch2';
+
 export default function Header(props) {
   const { ref, isComponentVisible, setIsComponentVisible } =
     useComponentVisible(false);
@@ -65,14 +64,7 @@ export default function Header(props) {
                 </button>
               </p>
               <p className="control">
-                <button className="button is-primary is-inverted is-small">
-                  <span className="icon is-small">
-                    <DarkModeSwitch />
-                  </span>
-                </button>
-              </p>
-              <p className="control">
-                <DarkModeSwitch2 />
+                <DarkModeSwitch />
               </p>
             </div>
           </div>

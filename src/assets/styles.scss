@@ -142,6 +142,9 @@ main {
               transform: scaleX(1);
             }
           }
+          .icon-svg {
+            display: flex;
+          }
         }
       }
       .navbar-burger span {

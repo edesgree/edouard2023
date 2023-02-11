@@ -26,6 +26,10 @@ export default function LabDetail(props) {
       </div>
     );
   });
+  React.useEffect(() => {
+    // scroll to top when rendering (because page might be scroll down at the time of the rendering of this component)
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <motion.article animate="visible" initial="hidden" variants={props.anim}>
       <div className="content hero is-small is-primary head-project">

@@ -28,6 +28,10 @@ export default function WorkDetail(props) {
     backgroundImage: `url(src/assets/images/work/${workElement.slug}/${workElement.images.cover})`,
     backgroundSize: 'cover'
   };
+  React.useEffect(() => {
+    // scroll to top when rendering (because page might be scroll down at the time of the rendering of this component)
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <motion.article animate="visible" initial="hidden" variants={props.anim}>
       <div

@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
+// scroll up transition when changing routes
 
 export default function ScrollToTop({ children }) {
   const { pathname } = useLocation();

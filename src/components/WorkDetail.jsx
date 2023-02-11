@@ -25,8 +25,12 @@ export default function WorkDetail(props) {
   const screensElements = workElement.images.screens.map((screen, index) => {
     return (
       <div key={index}>
+        {screen.title && (
+          <h5 className="separator-title has-text-centered">{screen.title}</h5>
+        )}
+
         <img
-          src={`${screen}`}
+          src={`${screen.image}`}
           alt={`${workElement.name} ${workElement.subtitle}`}
           className="img-responsive"
         />

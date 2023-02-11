@@ -282,7 +282,11 @@ const data = {
       tech: ['Magento 2', 'SCSS', 'JS', 'Nwayo', 'Foundation'],
       images: {
         cover: workKanukCover,
-        screens: [workKanukHome, workKanukCat, workKanukProduct]
+        screens: [
+          { image: workKanukHome, title: '' },
+          { image: workKanukCat, title: 'Category page' },
+          { image: workKanukProduct, title: 'Product page' }
+        ]
       },
       companyId: 'abso',
       url: 'https://www.kanuk.com/fr_ca/'
@@ -314,7 +318,11 @@ const data = {
       tech: ['Magento 2', 'SCSS', 'JS', 'Nwayo', 'Foundation'],
       images: {
         cover: workBenchCover,
-        screens: [workBenchHome, workBenchCat, workBenchProduct]
+        screens: [
+          { image: workBenchHome, title: 'Home page' },
+          { image: workBenchCat, title: 'Category page' },
+          { image: workBenchProduct, title: 'Product page' }
+        ]
       },
       companyId: 'abso',
       url: 'https://bench.ca/'
@@ -338,7 +346,11 @@ const data = {
       tech: ['Magento 2', 'SCSS', 'JS', 'Nwayo', 'Foundation'],
       images: {
         cover: workMobiliaCover,
-        screens: [workMobiliaHome, workMobiliaCat, workMobiliaProduct]
+        screens: [
+          { image: workMobiliaHome, title: 'Home page' },
+          { image: workMobiliaCat, title: 'Category page' },
+          { image: workMobiliaProduct, title: 'Product page' }
+        ]
       },
       companyId: 'abso',
       url: 'https://mobilia.ca/'
@@ -360,7 +372,10 @@ const data = {
       tech: ['Magento 2', 'SCSS', 'JS', 'Nwayo', 'Foundation'],
       images: {
         cover: workPranaCover,
-        screens: [workPranaHome, workPranaProduct]
+        screens: [
+          { image: workPranaHome, title: 'Home page' },
+          { image: workPranaProduct, title: 'Product page' }
+        ]
       },
       url: 'https://pranafoods.ca/'
     },
@@ -388,11 +403,11 @@ const data = {
       images: {
         cover: workPecheursCover,
         screens: [
-          workPecheursDesktop,
-          workPecheursTablet1,
-          workPecheursTablet2,
-          workPecheursTablet3,
-          workPecheursTablet4
+          { image: workPecheursDesktop, title: '' },
+          { image: workPecheursTablet1, title: '' },
+          { image: workPecheursTablet2, title: '' },
+          { image: workPecheursTablet3, title: '' },
+          { image: workPecheursTablet4, title: '' }
         ]
       },
       companyId: 'version10',
@@ -421,7 +436,10 @@ const data = {
       ],
       images: {
         cover: workDatsitCover,
-        screens: [workDatsitDesktop, workDatsitTablet]
+        screens: [
+          { image: workDatsitDesktop, title: '' },
+          { image: workDatsitTablet, title: '' }
+        ]
       },
       companyId: 'version10',
       url: ''
@@ -445,7 +463,11 @@ const data = {
       tech: ['HTML', 'LESS', 'SASS'],
       images: {
         cover: workBazzoCover,
-        screens: [workBazzo1, workBazzo2, workBazzo3]
+        screens: [
+          { image: workBazzo1, title: '' },
+          { image: workBazzo2, title: '' },
+          { image: workBazzo3, title: '' }
+        ]
       },
       companyId: 'version10',
       url: ''
@@ -473,11 +495,11 @@ const data = {
       images: {
         cover: workRupturesCover,
         screens: [
-          workRupturesDesktop,
-          workRupturesDesktop2,
-          workRupturesDesktop3,
-          workRupturesTablet,
-          workRupturesTablet2
+          { image: workRupturesDesktop, title: '' },
+          { image: workRupturesDesktop2, title: '' },
+          { image: workRupturesDesktop3, title: '' },
+          { image: workRupturesTablet, title: '' },
+          { image: workRupturesTablet2, title: '' }
         ]
       },
       companyId: 'version10',
@@ -510,9 +532,9 @@ const data = {
       images: {
         cover: workPharmachienCover,
         screens: [
-          workPharmachienDesktop,
-          workPharmachienDesktop2,
-          workPharmachienMobile
+          { image: workPharmachienDesktop, title: '' },
+          { image: workPharmachienDesktop2, title: '' },
+          { image: workPharmachienMobile, title: '' }
         ]
       },
       companyId: 'version10',
@@ -538,7 +560,11 @@ const data = {
       tech: ['HTML', 'LESS', 'jQuery', 'Bootstrap'],
       images: {
         cover: workCdfCover,
-        screens: [workCdfDesktop, workCdfDesktop2, workCdfMobile]
+        screens: [
+          { image: workCdfDesktop, title: '' },
+          { image: workCdfDesktop2, title: '' },
+          { image: workCdfMobile, title: '' }
+        ]
       },
       url: ''
     },
@@ -562,7 +588,10 @@ const data = {
       tech: ['HTML', 'LESS', 'jQuery'],
       images: {
         cover: workExploraCover,
-        screens: [workExploraDesktop1, workExploraMobile]
+        screens: [
+          { image: workExploraDesktop1, title: '' },
+          { image: workExploraMobile, title: '' }
+        ]
       },
       url: ''
     },
@@ -589,12 +618,12 @@ const data = {
       images: {
         cover: workPontsCover,
         screens: [
-          workPonts1,
-          workPonts2,
-          workPonts3,
-          workPonts4,
-          workPonts5,
-          workPonts6
+          { image: workPonts1, title: '' },
+          { image: workPonts2, title: '' },
+          { image: workPonts3, title: '' },
+          { image: workPonts4, title: '' },
+          { image: workPonts5, title: '' },
+          { image: workPonts6, title: '' }
         ]
       },
       companyId: 'comptoirs',

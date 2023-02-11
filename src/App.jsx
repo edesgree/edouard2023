@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useLocation, useRoutes } from 'react-router-dom';
 import data from './assets/data';
 import Header from './components/Header';
 import Intro from './components/Intro';
@@ -26,79 +26,80 @@ function App() {
     visible: { opacity: 1, transition: { duration: 0.8 } },
     hidden: { opacity: 0 }
   };
+  const page = useRoutes([
+    {
+      path: '/',
+      element: (
+        <>
+          <Intro
+            dataIntro={data.common}
+            lang={lang}
+            handleTrad={handleTrad}
+            anim={animShowContentVariant}
+          />
+          <Skills
+            dataSkills={data.skills}
+            dataText={data.common}
+            lang={lang}
+            handleTrad={handleTrad}
+          />
+        </>
+      )
+    },
+    {
+      path: '/work',
+      element: (
+        <Work
+          dataWork={data.work}
+          dataText={data.common}
+          lang={lang}
+          handleTrad={handleTrad}
+          anim={animShowContentVariant}
+        />
+      )
+    },
+    {
+      path: '/lab',
+      element: (
+        <Lab
+          dataLab={data.lab}
+          dataText={data.common}
+          lang={lang}
+          handleTrad={handleTrad}
+          anim={animShowContentVariant}
+        />
+      )
+    },
+    {
+      path: '/about',
+      element: (
+        <About
+          lang={lang}
+          handleTrad={handleTrad}
+          anim={animShowContentVariant}
+        />
+      )
+    },
+    {
+      path: '/contact',
+      element: (
+        <Contact
+          dataText={data.common}
+          lang={lang}
+          handleTrad={handleTrad}
+          anim={animShowContentVariant}
+        />
+      )
+    }
+  ]);
+  const location = useLocation();
+  if (!page) return null;
   return (
     <main className=" container is-max-desktop">
       <Header dataMenu={data.menu} lang={lang} handleTrad={handleTrad} />
-
-      <Routes>
-        <Route
-          exact
-          path="/"
-          element={
-            <>
-              <Intro
-                dataIntro={data.common}
-                lang={lang}
-                handleTrad={handleTrad}
-                anim={animShowContentVariant}
-              />
-              <Skills
-                dataSkills={data.skills}
-                dataText={data.common}
-                lang={lang}
-                handleTrad={handleTrad}
-              />
-            </>
-          }
-        />
-
-        <Route
-          path="/work"
-          element={
-            <Work
-              dataWork={data.work}
-              dataText={data.common}
-              lang={lang}
-              handleTrad={handleTrad}
-              anim={animShowContentVariant}
-            />
-          }
-        />
-        <Route
-          path="/lab"
-          element={
-            <Lab
-              dataLab={data.lab}
-              dataText={data.common}
-              lang={lang}
-              handleTrad={handleTrad}
-              anim={animShowContentVariant}
-            />
-          }
-        />
-        <Route
-          path="/about"
-          element={
-            <About
-              lang={lang}
-              handleTrad={handleTrad}
-              anim={animShowContentVariant}
-            />
-          }
-        />
-        <Route
-          path="/contact"
-          element={
-            <Contact
-              dataText={data.common}
-              lang={lang}
-              handleTrad={handleTrad}
-              anim={animShowContentVariant}
-            />
-          }
-        />
-      </Routes>
-
+      <AnimatePresence mode="wait" initial={false}>
+        {React.cloneElement(page, { key: location.pathname })}
+      </AnimatePresence>
       <ScrollUpButton
         lang={lang}
         dataText={data.common}

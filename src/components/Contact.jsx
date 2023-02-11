@@ -3,7 +3,6 @@ import { motion, useAnimation } from 'framer-motion';
 export default function Contact(props) {
   return (
     <>
-      {' '}
       <motion.section
         className="hero"
         animate="visible"

@@ -85,6 +85,7 @@ main {
       width: 100%;
       .navbar-menu {
         align-items: center;
+
         .navbar-end {
           gap: 20px;
 
@@ -93,7 +94,7 @@ main {
             display: flex;
             flex-direction: column;
             padding: 0 20px;
-            button {
+            .button {
               padding-left: 0;
             }
           }

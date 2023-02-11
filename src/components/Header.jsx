@@ -1,13 +1,17 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import useComponentVisible from '../hooks/UseComponentVisible';
-
 export default function Header(props) {
   const { ref, isComponentVisible, setIsComponentVisible } =
     useComponentVisible(false);
   const menuElements = props.dataMenu.map((item) => {
     return (
-      <NavLink to={item.slug} key={item.id} className="navbar-item">
+      <NavLink
+        to={item.slug}
+        key={item.id}
+        onClick={() => setIsComponentVisible(!isComponentVisible)}
+        className="navbar-item"
+      >
         {item.name[props.lang]}
       </NavLink>
     );

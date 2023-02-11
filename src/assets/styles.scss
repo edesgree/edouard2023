@@ -353,7 +353,7 @@ svg.textContact {
     stroke-dashoffset: -35%;
   }
 }
-
+// color transition between pages
 .privacy-screen {
   background-color: $vibrant;
   bottom: 0;
@@ -362,4 +362,33 @@ svg.textContact {
   right: 0;
   top: 0;
   z-index: 50;
+}
+
+//dark mode button
+.theme-btn-wrap {
+  background-color: $pumkin;
+  border-radius: 35px;
+  height: 40px;
+  padding: 6px;
+  position: absolute;
+  right: -6px;
+  top: -16px;
+  width: 40px;
+  z-index: 40;
+  &:hover {
+    background-color: lighten($pumkin, 5%);
+    cursor: pointer;
+  }
+  span.theme-btn {
+    background-size: cover;
+    display: block;
+    height: 16px;
+    width: 16px;
+  }
+  &.dark span.theme-btn {
+    background-image: url('src/assets/icons/moon.svg');
+  }
+  &.light span.theme-btn {
+    background-image: url('src/assets/icons/sun.svg');
+  }
 }

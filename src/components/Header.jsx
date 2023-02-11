@@ -1,6 +1,8 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import useComponentVisible from '../hooks/UseComponentVisible';
+import IconDark from '../assets/icons/moon.svg';
+import IconLight from '../assets/icons/sun.svg';
 export default function Header(props) {
   const { ref, isComponentVisible, setIsComponentVisible } =
     useComponentVisible(false);
@@ -51,15 +53,29 @@ export default function Header(props) {
         >
           <div className="navbar-end">
             {menuElements}
-            <a
-              className="button is-primary is-inverted"
-              onClick={props.handleTrad}
-            >
-              {props.lang === 'fr' ? 'en' : 'fr'}
-            </a>
+            <div class="field has-addons">
+              <p class="control">
+                <button
+                  className="button is-small is-primary is-inverted"
+                  onClick={props.handleTrad}
+                >
+                  <span>{props.lang === 'fr' ? 'en' : 'fr'}</span>
+                </button>
+              </p>
+              <p class="control">
+                <button className="button is-primary is-inverted is-small">
+                  <span className="icon is-small">
+                    <img src={IconDark} alt="dark" />
+                  </span>
+                </button>
+              </p>
+            </div>
           </div>
         </div>
       </nav>
+      <div className="theme-btn-wrap light">
+        <span className="theme-btn "></span>
+      </div>
     </header>
   );
 }

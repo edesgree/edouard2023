@@ -17,7 +17,16 @@ export default function Work(props) {
   };
   const workElements = props.dataWork.map((item) => {
     return (
-      <li key={item.id} id={item.id} onClick={handleChoice} href="#topWork">
+      <motion.li
+        initial={{ scale: 0, opacity: 0 }}
+        transition={{ duration: 0.5 }}
+        whileInView={{ scale: 1, opacity: 1 }}
+        viewport={{ once: true }}
+        key={item.id}
+        id={item.id}
+        onClick={handleChoice}
+        href="#topWork"
+      >
         <div className="media">
           <img
             src={`src/assets/images/work/${item.slug}/${item.images.cover}`}
@@ -28,12 +37,12 @@ export default function Work(props) {
           <h4 className="is-4 title">{item.name}</h4>
           <p className="subtitle is-6">{item.subtitle}</p>
         </div>
-      </li>
+      </motion.li>
     );
   });
 
   return (
-    <section className="section">
+    <motion.section className="section">
       <a id="topWork"></a>
       <header className="header-section">
         <div>
@@ -80,6 +89,6 @@ export default function Work(props) {
           />
         </>
       )}
-    </section>
+    </motion.section>
   );
 }

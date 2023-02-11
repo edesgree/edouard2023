@@ -17,7 +17,7 @@ function App() {
     lang === 'fr' ? setLang('en') : setLang('fr');
   };
   const animShowContentVariant = {
-    visible: { opacity: 1, transition: { duration: 0.5 } },
+    visible: { opacity: 1, transition: { duration: 0.8 } },
     hidden: { opacity: 0 }
   };
   return (

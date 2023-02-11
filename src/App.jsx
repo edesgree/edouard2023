@@ -10,9 +10,15 @@ import Contact from './components/Contact';
 import Skills from './components/Skills';
 import InfiniteLooper from './components/InfiniteLooper';
 import ScrollUpButton from './components/ScrollUpButton';
-import { motion, useAnimation } from 'framer-motion';
+import {
+  motion,
+  useAnimation,
+  AnimatePresence,
+  useIsPresent
+} from 'framer-motion';
 function App() {
   const [lang, setLang] = React.useState('fr');
+  const isPresent = useIsPresent();
   const handleTrad = () => {
     lang === 'fr' ? setLang('en') : setLang('fr');
   };
@@ -97,6 +103,13 @@ function App() {
         lang={lang}
         dataText={data.common}
         handleTrad={handleTrad}
+      />
+      <motion.div
+        initial={{ scaleX: 1 }}
+        animate={{ scaleX: 0, transition: { duration: 0.5, ease: 'circOut' } }}
+        exit={{ scaleX: 1, transition: { duration: 0.5, ease: 'circIn' } }}
+        style={{ originX: isPresent ? 0 : 1 }}
+        className="privacy-screen"
       />
     </main>
   );

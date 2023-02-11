@@ -1,7 +1,7 @@
 import React from 'react';
 import IconExternalLink from '../assets/icons/icon-external.svg';
 import IconGithub from '../assets/icons/icon-github.svg';
-
+import { motion, useAnimation } from 'framer-motion';
 export default function LabDetail(props) {
   console.log('data', props.dataLabDetail);
   const labElement = props.dataLabDetail.filter(
@@ -27,7 +27,7 @@ export default function LabDetail(props) {
     );
   });
   return (
-    <article>
+    <motion.article animate="visible" initial="hidden" variants={props.anim}>
       <div className="content hero is-small is-primary head-project">
         <div className="hero-body">
           <div>
@@ -35,14 +35,14 @@ export default function LabDetail(props) {
             <p className="subtitle">{labElement.subtitle}</p>
           </div>
           {labElement.preview && (
-            <div class="buttons has-addons">
-              <button class="button is-info is-small">
-                <span class="icon is-small">
+            <div className="buttons has-addons">
+              <button className="button is-info is-small">
+                <span className="icon is-small">
                   <img src={IconGithub} />
                 </span>
               </button>
-              <button class="button is-info is-small">
-                <span class="icon is-small">
+              <button className="button is-info is-small">
+                <span className="icon is-small">
                   <img src={IconExternalLink} />
                 </span>
               </button>
@@ -78,6 +78,6 @@ export default function LabDetail(props) {
         </div>
         <div className=" column is-8">{screensElements}</div>
       </div>
-    </article>
+    </motion.article>
   );
 }

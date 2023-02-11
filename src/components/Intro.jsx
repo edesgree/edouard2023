@@ -5,10 +5,10 @@ import ItemMustard from '../assets/images/item-mustard.svg';
 import ItemSage from '../assets/images/item-sage.svg';
 import { decode } from 'html-entities';
 import { NavLink } from 'react-router-dom';
-
+import { motion, useAnimation } from 'framer-motion';
 export default function Intro(props) {
   return (
-    <div>
+    <motion.div animate="visible" initial="hidden" variants={props.anim}>
       <section className="section columns">
         <div className="column is-two-thirds">
           <h2 className="subtitle is-5 sup-title is-spaced">
@@ -59,6 +59,6 @@ export default function Intro(props) {
           </div>
         </div>
       </section>
-    </div>
+    </motion.div>
   );
 }

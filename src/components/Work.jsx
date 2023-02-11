@@ -1,6 +1,7 @@
 import React from 'react';
 import WorkDetail from './WorkDetail';
 import IconGrid from '../assets/icons/icon-grid.svg';
+import { motion, useAnimation } from 'framer-motion';
 
 import { Route, Routes } from 'react-router-dom';
 
@@ -57,7 +58,16 @@ export default function Work(props) {
         )}
       </header>
 
-      {!currentProject && <ul className="project-list">{workElements}</ul>}
+      {!currentProject && (
+        <motion.ul
+          animate="visible"
+          initial="hidden"
+          variants={props.anim}
+          className="project-list"
+        >
+          {workElements}
+        </motion.ul>
+      )}
       {currentProject && (
         <>
           <WorkDetail
@@ -66,6 +76,7 @@ export default function Work(props) {
             currentProject={currentProject}
             handleCloseProject={handleCloseProject}
             lang={props.lang}
+            anim={props.anim}
           />
         </>
       )}

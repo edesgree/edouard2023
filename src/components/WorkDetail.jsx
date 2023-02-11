@@ -1,5 +1,6 @@
 import React from 'react';
 import IconExternalLink from '../assets/icons/icon-external.svg';
+import { motion, useAnimation } from 'framer-motion';
 export default function WorkDetail(props) {
   const workElement = props.dataWorkDetail.filter(
     (item) => item.id === props.currentProject
@@ -28,7 +29,7 @@ export default function WorkDetail(props) {
     backgroundSize: 'cover'
   };
   return (
-    <article>
+    <motion.article animate="visible" initial="hidden" variants={props.anim}>
       <div
         className="content hero is-small is-primary head-project"
         style={coverCSS}
@@ -39,9 +40,9 @@ export default function WorkDetail(props) {
             <p className="subtitle">{workElement.subtitle}</p>
           </div>
           {workElement.url && (
-            <button class="button is-info is-small">
+            <button className="button is-info is-small">
               <span>Visit</span>
-              <span class="icon is-small">
+              <span className="icon is-small">
                 <img src={IconExternalLink} />
               </span>
             </button>
@@ -86,6 +87,6 @@ export default function WorkDetail(props) {
         </div>
         <div className=" column is-8">{screensElements.slice(2)}</div>
       </div>
-    </article>
+    </motion.article>
   );
 }

@@ -1,8 +1,15 @@
 import React from 'react';
+import { motion, useAnimation } from 'framer-motion';
 export default function Contact(props) {
   return (
     <>
-      <section className="hero">
+      {' '}
+      <motion.section
+        className="hero"
+        animate="visible"
+        initial="hidden"
+        variants={props.anim}
+      >
         <div className="hero-body">
           <h1 className="title has-text-centered is-1 pre-line ">
             {props.dataText.contactTitle[props.lang]}
@@ -27,7 +34,7 @@ export default function Contact(props) {
             </g>
           </svg>
         </div>
-      </section>
+      </motion.section>
     </>
   );
 }

@@ -1,7 +1,8 @@
 import React from 'react';
-export default function About() {
+import { motion, useAnimation } from 'framer-motion';
+export default function About(props) {
   return (
-    <section>
+    <motion.section animate="visible" initial="hidden" variants={props.anim}>
       <h2 className="is-2 title">About</h2>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam iusto
@@ -9,6 +10,6 @@ export default function About() {
         voluptate, fugiat molestias necessitatibus, reiciendis animi quibusdam
         temporibus voluptatum hic!
       </p>
-    </section>
+    </motion.section>
   );
 }

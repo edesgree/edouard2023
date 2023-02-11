@@ -1,7 +1,7 @@
 import React from 'react';
 import LabDetail from './LabDetail';
 import IconGrid from '../assets/icons/icon-grid.svg';
-
+import { motion, useAnimation } from 'framer-motion';
 export default function Lab(props) {
   const [currentProject, setCurrentProject] = React.useState(null);
   const handleChoice = (event) => {
@@ -56,7 +56,16 @@ export default function Lab(props) {
         )}
       </header>
 
-      {!currentProject && <ul className="project-list">{labElements}</ul>}
+      {!currentProject && (
+        <motion.ul
+          animate="visible"
+          initial="hidden"
+          variants={props.anim}
+          className="project-list"
+        >
+          {labElements}
+        </motion.ul>
+      )}
       {currentProject && (
         <LabDetail
           dataLabDetail={props.dataLab}
@@ -64,6 +73,7 @@ export default function Lab(props) {
           currentProject={currentProject}
           handleCloseProject={handleCloseProject}
           lang={props.lang}
+          anim={props.anim}
         />
       )}
     </section>

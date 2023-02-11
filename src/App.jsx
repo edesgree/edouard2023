@@ -10,16 +10,20 @@ import Contact from './components/Contact';
 import Skills from './components/Skills';
 import InfiniteLooper from './components/InfiniteLooper';
 import ScrollUpButton from './components/ScrollUpButton';
-
+import { motion, useAnimation } from 'framer-motion';
 function App() {
   const [lang, setLang] = React.useState('fr');
   const handleTrad = () => {
     lang === 'fr' ? setLang('en') : setLang('fr');
   };
-
+  const animShowContentVariant = {
+    visible: { opacity: 1, transition: { duration: 0.5 } },
+    hidden: { opacity: 0 }
+  };
   return (
     <main className=" container is-max-desktop">
       <Header dataMenu={data.menu} lang={lang} handleTrad={handleTrad} />
+
       <Routes>
         <Route
           exact
@@ -30,6 +34,7 @@ function App() {
                 dataIntro={data.common}
                 lang={lang}
                 handleTrad={handleTrad}
+                anim={animShowContentVariant}
               />
               <Skills
                 dataSkills={data.skills}
@@ -49,6 +54,7 @@ function App() {
               dataText={data.common}
               lang={lang}
               handleTrad={handleTrad}
+              anim={animShowContentVariant}
             />
           }
         />
@@ -60,12 +66,19 @@ function App() {
               dataText={data.common}
               lang={lang}
               handleTrad={handleTrad}
+              anim={animShowContentVariant}
             />
           }
         />
         <Route
           path="/about"
-          element={<About lang={lang} handleTrad={handleTrad} />}
+          element={
+            <About
+              lang={lang}
+              handleTrad={handleTrad}
+              anim={animShowContentVariant}
+            />
+          }
         />
         <Route
           path="/contact"
@@ -74,6 +87,7 @@ function App() {
               dataText={data.common}
               lang={lang}
               handleTrad={handleTrad}
+              anim={animShowContentVariant}
             />
           }
         />

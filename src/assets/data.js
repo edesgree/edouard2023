@@ -65,6 +65,28 @@ import labTictactoeCover from './images/lab/tictactoe/tictactoe-cover.webp';
 import labTictactoeScreenshot from './images/lab/tictactoe/tictactoe-screenshot.webp';
 import labWeatherCover from './images/lab/weather/weather-cover.webp';
 import labWeatherScreenshot from './images/lab/weather/weather-screenshot.webp';
+import skillsIconbootstrap from './icons/skills/icon-bootstrap.svg';
+import skillsIconconfluence from './icons/skills/icon-confluence.svg';
+import skillsIconfigma from './icons/skills/icon-figma.svg';
+import skillsIconflask from './icons/skills/icon-flask.svg';
+import skillsIconfoundation from './icons/skills/icon-foundation.svg';
+import skillsIcongit from './icons/skills/icon-git.svg';
+import skillsIconhtml from './icons/skills/icon-html.svg';
+import skillsIconjs from './icons/skills/icon-js.svg';
+import skillsIconjira from './icons/skills/icon-jira.svg';
+import skillsIconless from './icons/skills/icon-less.svg';
+import skillsIconmagento from './icons/skills/icon-magento.svg';
+import skillsIconpsd from './icons/skills/icon-psd.svg';
+import skillsIconphp from './icons/skills/icon-php.svg';
+import skillsIconpython from './icons/skills/icon-python.svg';
+import skillsIconreact from './icons/skills/icon-react.svg';
+import skillsIconsass from './icons/skills/icon-sass.svg';
+import skillsIconsketch from './icons/skills/icon-sketch.svg';
+import skillsIcontrello from './icons/skills/icon-trello.svg';
+import skillsIcontwig from './icons/skills/icon-twig.svg';
+import skillsIconvscode from './icons/skills/icon-vscode.svg';
+import skillsIconw3c from './icons/skills/icon-w3c.svg';
+import skillsIconwordpres from './icons/skills/icon-wordpress.svg';
 
 const data = {
   common: {
@@ -697,28 +719,48 @@ const data = {
     }
   ],
   skills: [
-    { id: nanoid(), name: 'Bootstrap', slug: 'bootstrap' },
-    { id: nanoid(), name: 'Confluence', slug: 'confluence' },
-    { id: nanoid(), name: 'Figma', slug: 'figma' },
-    { id: nanoid(), name: 'Flask', slug: 'flask' },
-    { id: nanoid(), name: 'Foundation', slug: 'foundation' },
-    { id: nanoid(), name: 'Git', slug: 'git' },
-    { id: nanoid(), name: 'HTML', slug: 'html' },
-    { id: nanoid(), name: 'Javascript', slug: 'js' },
-    { id: nanoid(), name: 'Jira', slug: 'jira' },
-    { id: nanoid(), name: 'LESS', slug: 'less' },
-    { id: nanoid(), name: 'Magento', slug: 'magento' },
-    { id: nanoid(), name: 'Photoshop', slug: 'psd' },
-    { id: nanoid(), name: 'PHP', slug: 'php' },
-    { id: nanoid(), name: 'Python', slug: 'python' },
-    { id: nanoid(), name: 'React', slug: 'react' },
-    { id: nanoid(), name: 'SASS', slug: 'sass' },
-    { id: nanoid(), name: 'Sketch', slug: 'sketch' },
-    { id: nanoid(), name: 'Trello', slug: 'trello' },
-    { id: nanoid(), name: 'Twig', slug: 'twig' },
-    { id: nanoid(), name: 'VSCode', slug: 'vscode' },
-    { id: nanoid(), name: 'W3C', slug: 'w3c' },
-    { id: nanoid(), name: 'Wordpress', slug: 'wordpress' }
+    {
+      id: nanoid(),
+      name: 'Bootstrap',
+      slug: 'bootstrap',
+      icon: skillsIconbootstrap
+    },
+    {
+      id: nanoid(),
+      name: 'Confluence',
+      slug: 'confluence',
+      icon: skillsIconconfluence
+    },
+    { id: nanoid(), name: 'Figma', slug: 'figma', icon: skillsIconfigma },
+    { id: nanoid(), name: 'Flask', slug: 'flask', icon: skillsIconflask },
+    {
+      id: nanoid(),
+      name: 'Foundation',
+      slug: 'foundation',
+      icon: skillsIconfoundation
+    },
+    { id: nanoid(), name: 'Git', slug: 'git', icon: skillsIcongit },
+    { id: nanoid(), name: 'HTML', slug: 'html', icon: skillsIconhtml },
+    { id: nanoid(), name: 'Javascript', slug: 'js', icon: skillsIconjs },
+    { id: nanoid(), name: 'Jira', slug: 'jira', icon: skillsIconjira },
+    { id: nanoid(), name: 'LESS', slug: 'less', icon: skillsIconless },
+    { id: nanoid(), name: 'Magento', slug: 'magento', icon: skillsIconmagento },
+    { id: nanoid(), name: 'Photoshop', slug: 'psd', icon: skillsIconpsd },
+    { id: nanoid(), name: 'PHP', slug: 'php', icon: skillsIconphp },
+    { id: nanoid(), name: 'Python', slug: 'python', icon: skillsIconpython },
+    { id: nanoid(), name: 'React', slug: 'react', icon: skillsIconreact },
+    { id: nanoid(), name: 'SASS', slug: 'sass', icon: skillsIconsass },
+    { id: nanoid(), name: 'Sketch', slug: 'sketch', icon: skillsIconsketch },
+    { id: nanoid(), name: 'Trello', slug: 'trello', icon: skillsIcontrello },
+    { id: nanoid(), name: 'Twig', slug: 'twig', icon: skillsIcontwig },
+    { id: nanoid(), name: 'VSCode', slug: 'vscode', icon: skillsIconvscode },
+    { id: nanoid(), name: 'W3C', slug: 'w3c', icon: skillsIconw3c },
+    {
+      id: nanoid(),
+      name: 'Wordpress',
+      slug: 'wordpress',
+      icon: skillsIconwordpres
+    }
   ]
 };
 

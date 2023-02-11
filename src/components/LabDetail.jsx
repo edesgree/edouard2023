@@ -22,7 +22,7 @@ export default function LabDetail(props) {
     return (
       <div key={index}>
         <img
-          src={`src/assets/images/lab/${labElement.slug}/${screenItem}`}
+          src={`${screenItem}`}
           alt={`${labElement.name} ${labElement.subtitle}`}
           className="img-responsive"
         />

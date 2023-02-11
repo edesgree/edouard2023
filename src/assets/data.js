@@ -1,4 +1,71 @@
+import React from 'react';
 import { nanoid } from 'nanoid';
+
+import workKanukCover from './images/work/kanuk/cover-kanuk.webp';
+import workKanukHome from './images/work/kanuk/kanuk-home.webp';
+import workKanukCat from './images/work/kanuk/kanuk-cat.webp';
+import workKanukProduct from './images/work/kanuk/kanuk-product.webp';
+import workBenchCover from './images/work/bench/cover-bench.webp';
+import workBenchHome from './images/work/bench/bench-home.webp';
+import workBenchCat from './images/work/bench/bench-cat.webp';
+import workBenchProduct from './images/work/bench/bench-product.webp';
+import workMobiliaCover from './images/work/mobilia/cover-mobilia.webp';
+import workMobiliaHome from './images/work/mobilia/mobilia-home.webp';
+import workMobiliaCat from './images/work/mobilia/mobilia-cat.webp';
+import workMobiliaProduct from './images/work/mobilia/mobilia-product.webp';
+import workPranaCover from './images/work/prana/cover-prana.webp';
+import workPranaHome from './images/work/prana/prana-home.webp';
+import workPranaProduct from './images/work/prana/prana-product.webp';
+import workPecheursCover from './images/work/pecheurs/cover-pecheurs.webp';
+import workPecheursDesktop from './images/work/pecheurs/pecheurs-desktop.webp';
+import workPecheursTablet1 from './images/work/pecheurs/peche-sugar-tablet.webp';
+import workPecheursTablet2 from './images/work/pecheurs/peche-nav-tablet.webp';
+import workPecheursTablet3 from './images/work/pecheurs/peche-home-tablet.webp';
+import workPecheursTablet4 from './images/work/pecheurs/peche-dessous-tablet.webp';
+import workDatsitCover from './images/work/datsit/cover-datsit.webp';
+import workDatsitDesktop from './images/work/datsit/datsit-desktop.webp';
+import workDatsitTablet from './images/work/datsit/datsit-tablet.webp';
+import workBazzoCover from './images/work/bazzo/cover-bazzo.webp';
+import workBazzo1 from './images/work/bazzo/bazzo-1.webp';
+import workBazzo2 from './images/work/bazzo/bazzo-2.webp';
+import workBazzo3 from './images/work/bazzo/bazzo-3.webp';
+import workRupturesCover from './images/work/ruptures/cover-ruptures.webp';
+import workRupturesDesktop from './images/work/ruptures/ruptures-desktop.webp';
+import workRupturesDesktop2 from './images/work/ruptures/ruptures-desktop2.webp';
+import workRupturesDesktop3 from './images/work/ruptures/ruptures-desktop3.webp';
+import workRupturesTablet from './images/work/ruptures/ruptures-tablet.webp';
+import workRupturesTablet2 from './images/work/ruptures/ruptures-tablet2.webp';
+import workPharmachienCover from './images/work/pharmachien/cover-pharmachien.webp';
+import workPharmachienDesktop from './images/work/pharmachien/pharmachien-desktop.webp';
+import workPharmachienDesktop2 from './images/work/pharmachien/pharmachien-desktop2.webp';
+import workPharmachienMobile from './images/work/pharmachien/pharmachien-mobile.webp';
+import workCdfCover from './images/work/cdf/cover-cdf.webp';
+import workCdfDesktop from './images/work/cdf/cdf-desktop.webp';
+import workCdfDesktop2 from './images/work/cdf/cdf-desktop2.webp';
+import workCdfMobile from './images/work/cdf/cdf-mobile.webp';
+import workExploraCover from './images/work/explora/cover-explora.webp';
+import workExploraDesktop1 from './images/work/explora/explora-desktop1.webp';
+import workExploraMobile from './images/work/explora/explora-mobile.webp';
+import workPontsCover from './images/work/ponts/cover-ponts.webp';
+import workPonts1 from './images/work/ponts/enpc-1.webp';
+import workPonts2 from './images/work/ponts/enpc-2.webp';
+import workPonts3 from './images/work/ponts/enpc-3.webp';
+import workPonts4 from './images/work/ponts/enpc-4.webp';
+import workPonts5 from './images/work/ponts/enpc-5.webp';
+import workPonts6 from './images/work/ponts/enpc-6.webp';
+import labCvappCover from './images/lab/cvapp/cvapp-cover.webp';
+import labCvappScreenshot from './images/lab/cvapp/cvapp-screenshot.webp';
+import labQuizzyCover from './images/lab/quizzy/quizzy-cover.webp';
+import labQuizzyScreenshot from './images/lab/quizzy/quizzy-screenshot.webp';
+import labTenziesCover from './images/lab/tenzies/tenzies-cover.webp';
+import labTenziesScreenshot from './images/lab/tenzies/tenzies-screenshot.webp';
+import labEtchCover from './images/lab/etch/etch-cover.webp';
+import labEtchScreenshot from './images/lab/etch/etch-screenshot.webp';
+import labTictactoeCover from './images/lab/tictactoe/tictactoe-cover.webp';
+import labTictactoeScreenshot from './images/lab/tictactoe/tictactoe-screenshot.webp';
+import labWeatherCover from './images/lab/weather/weather-cover.webp';
+import labWeatherScreenshot from './images/lab/weather/weather-screenshot.webp';
+
 const data = {
   common: {
     myName: 'Edouard Desgrée',
@@ -192,8 +259,8 @@ const data = {
       },
       tech: ['Magento 2', 'SCSS', 'JS', 'Nwayo', 'Foundation'],
       images: {
-        cover: 'cover-kanuk.webp',
-        screens: ['kanuk-home.webp', 'kanuk-cat.webp', 'kanuk-product.webp']
+        cover: workKanukCover,
+        screens: [workKanukHome, workKanukCat, workKanukProduct]
       },
       companyId: 'abso',
       url: 'https://www.kanuk.com/fr_ca/'
@@ -224,8 +291,8 @@ const data = {
       },
       tech: ['Magento 2', 'SCSS', 'JS', 'Nwayo', 'Foundation'],
       images: {
-        cover: 'cover-bench.webp',
-        screens: ['bench-home.webp', 'bench-cat.webp', 'bench-product.webp']
+        cover: workBenchCover,
+        screens: [workBenchHome, workBenchCat, workBenchProduct]
       },
       companyId: 'abso',
       url: 'https://bench.ca/'
@@ -248,12 +315,8 @@ const data = {
       },
       tech: ['Magento 2', 'SCSS', 'JS', 'Nwayo', 'Foundation'],
       images: {
-        cover: 'cover-mobilia.webp',
-        screens: [
-          'mobilia-home.webp',
-          'mobilia-cat.webp',
-          'mobilia-product.webp'
-        ]
+        cover: workMobiliaCover,
+        screens: [workMobiliaHome, workMobiliaCat, workMobiliaProduct]
       },
       companyId: 'abso',
       url: 'https://mobilia.ca/'
@@ -274,8 +337,8 @@ const data = {
       },
       tech: ['Magento 2', 'SCSS', 'JS', 'Nwayo', 'Foundation'],
       images: {
-        cover: 'cover-prana.webp',
-        screens: ['prana-home.webp', 'prana-product.webp']
+        cover: workPranaCover,
+        screens: [workPranaHome, workPranaProduct]
       },
       url: 'https://pranafoods.ca/'
     },
@@ -301,13 +364,13 @@ const data = {
       },
       tech: ['HTML', 'LESS', 'JS', 'Bootstrap', 'Photoshop', 'Templates TWIG'],
       images: {
-        cover: 'cover-pecheurs.webp',
+        cover: workPecheursCover,
         screens: [
-          'pecheurs-desktop.webp',
-          'peche-sugar-tablet.webp',
-          'peche-nav-tablet.webp',
-          'peche-home-tablet.webp',
-          'peche-dessous-tablet.webp'
+          workPecheursDesktop,
+          workPecheursTablet1,
+          workPecheursTablet2,
+          workPecheursTablet3,
+          workPecheursTablet4
         ]
       },
       companyId: 'version10',
@@ -335,8 +398,8 @@ const data = {
         'Templates TWIG'
       ],
       images: {
-        cover: 'cover-datsit.webp',
-        screens: ['datsit-desktop.webp', 'datsit-tablet.webp']
+        cover: workDatsitCover,
+        screens: [workDatsitDesktop, workDatsitTablet]
       },
       companyId: 'version10',
       url: ''
@@ -359,8 +422,8 @@ const data = {
       mywork: { fr: `Intégration HTML/CSS`, en: `PSD to HTML/CSS` },
       tech: ['HTML', 'LESS', 'SASS'],
       images: {
-        cover: 'cover-bazzo.webp',
-        screens: ['bazzo-1.webp', 'bazzo-2.webp', 'bazzo-3.webp']
+        cover: workBazzoCover,
+        screens: [workBazzo1, workBazzo2, workBazzo3]
       },
       companyId: 'version10',
       url: ''
@@ -386,13 +449,13 @@ const data = {
       },
       tech: ['Photoshop', 'HTML', 'LESS', 'JS', 'Bootstrap', 'Templates TWIG'],
       images: {
-        cover: 'cover-ruptures.webp',
+        cover: workRupturesCover,
         screens: [
-          'ruptures-desktop.webp',
-          'ruptures-desktop2.webp',
-          'ruptures-desktop3.webp',
-          'ruptures-tablet.webp',
-          'ruptures-tablet2.webp'
+          workRupturesDesktop,
+          workRupturesDesktop2,
+          workRupturesDesktop3,
+          workRupturesTablet,
+          workRupturesTablet2
         ]
       },
       companyId: 'version10',
@@ -423,11 +486,11 @@ const data = {
         'Templates AngularJS'
       ],
       images: {
-        cover: 'cover-pharmachien.webp',
+        cover: workPharmachienCover,
         screens: [
-          'pharmachien-desktop.webp',
-          'pharmachien-desktop2.webp',
-          'pharmachien-mobile.webp'
+          workPharmachienDesktop,
+          workPharmachienDesktop2,
+          workPharmachienMobile
         ]
       },
       companyId: 'version10',
@@ -452,8 +515,8 @@ const data = {
       },
       tech: ['HTML', 'LESS', 'jQuery', 'Bootstrap'],
       images: {
-        cover: 'cover-cdf.webp',
-        screens: ['cdf-desktop.webp', 'cdf-desktop2.webp', 'cdf-mobile.webp']
+        cover: workCdfCover,
+        screens: [workCdfDesktop, workCdfDesktop2, workCdfMobile]
       },
       url: ''
     },
@@ -476,8 +539,8 @@ const data = {
       },
       tech: ['HTML', 'LESS', 'jQuery'],
       images: {
-        cover: 'cover-explora.webp',
-        screens: ['explora-desktop1.webp', 'explora-mobile.webp']
+        cover: workExploraCover,
+        screens: [workExploraDesktop1, workExploraMobile]
       },
       url: ''
     },
@@ -502,14 +565,14 @@ const data = {
       },
       tech: ['Photoshop', 'HTML', 'CSS', 'Templates Drupal'],
       images: {
-        cover: 'cover-ponts.webp',
+        cover: workPontsCover,
         screens: [
-          'enpc-1.webp',
-          'enpc-2.webp',
-          'enpc-3.webp',
-          'enpc-4.webp',
-          'enpc-5.webp',
-          'enpc-6.webp'
+          workPonts1,
+          workPonts2,
+          workPonts3,
+          workPonts4,
+          workPonts5,
+          workPonts6
         ]
       },
       companyId: 'comptoirs',
@@ -530,8 +593,8 @@ const data = {
 
       tech: ['React', 'HTML', 'SCSS', 'Bulma', 'Vite'],
       images: {
-        cover: 'cvapp-cover.webp',
-        screens: ['cvapp-screenshot.webp']
+        cover: labCvappCover,
+        screens: [labCvappScreenshot]
       },
       github: 'https://github.com/edesgree/react-cv-app',
       preview: 'https://velvety-treacle-40877e.netlify.app/'
@@ -549,8 +612,8 @@ const data = {
 
       tech: ['React', 'HTML', 'SCSS', 'Bulma', 'Vite'],
       images: {
-        cover: 'quizzy-cover.webp',
-        screens: ['quizzy-screenshot.webp']
+        cover: labQuizzyCover,
+        screens: [labQuizzyScreenshot]
       },
       github: 'https://github.com/edesgree/react-quizzy',
       preview: 'https://astonishing-custard-e140b8.netlify.app/'
@@ -568,8 +631,8 @@ const data = {
 
       tech: ['React', 'HTML', 'SCSS', 'Vite'],
       images: {
-        cover: 'tenzies-cover.webp',
-        screens: ['tenzies-screenshot.webp']
+        cover: labTenziesCover,
+        screens: [labTenziesScreenshot]
       },
       github: 'https://github.com/edesgree/react-tenzies-game',
       preview: 'https://singular-concha-d934bf.netlify.app/'
@@ -587,8 +650,8 @@ const data = {
 
       tech: ['HTML', 'CSS', 'Vanilla JS'],
       images: {
-        cover: 'etch-cover.webp',
-        screens: ['etch-screenshot.webp']
+        cover: labEtchCover,
+        screens: [labEtchScreenshot]
       },
       github: 'https://github.com/edesgree/odin-etchasketch',
       preview: 'https://edesgree.github.io/odin-etchasketch/public/'
@@ -606,8 +669,8 @@ const data = {
 
       tech: ['HTML', 'CSS', 'Vanilla JS'],
       images: {
-        cover: 'tictactoe-cover.webp',
-        screens: ['tictactoe-screenshot.webp']
+        cover: labTictactoeCover,
+        screens: [labTictactoeScreenshot]
       },
       github: 'https://github.com/edesgree/odin-tictactoe',
       preview: 'https://edesgree.github.io/odin-tictactoe/public/'
@@ -626,8 +689,8 @@ const data = {
       },
       tech: ['Vanilla JS', 'Async/await', 'API calls', 'Giphy'],
       images: {
-        cover: 'weather-cover.webp',
-        screens: ['weather-screenshot.webp']
+        cover: labWeatherCover,
+        screens: [labWeatherScreenshot]
       },
       github: 'https://github.com/edesgree/odin-weather-app',
       preview: 'https://edesgree.github.io/odin-weather-app/dist/'

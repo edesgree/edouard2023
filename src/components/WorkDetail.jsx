@@ -26,7 +26,7 @@ export default function WorkDetail(props) {
     return (
       <div key={index}>
         <img
-          src={`src/assets/images/work/${workElement.slug}/${screen}`}
+          src={`${screen}`}
           alt={`${workElement.name} ${workElement.subtitle}`}
           className="img-responsive"
         />
@@ -35,7 +35,7 @@ export default function WorkDetail(props) {
   });
   // custom css for header
   const coverCSS = {
-    backgroundImage: `url(src/assets/images/work/${workElement.slug}/${workElement.images.cover})`,
+    backgroundImage: `url(${workElement.images.cover})`,
     backgroundSize: 'cover'
   };
   React.useEffect(() => {

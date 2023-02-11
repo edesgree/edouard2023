@@ -26,10 +26,7 @@ export default function Work(props) {
         href="#topWork"
       >
         <div className="media">
-          <img
-            src={`src/assets/images/work/${item.slug}/${item.images.cover}`}
-            alt={item.name}
-          />
+          <img src={`${item.images.cover}`} alt={item.name} />
         </div>
         <div className="project-info">
           <h4 className="is-4 title">{item.name}</h4>

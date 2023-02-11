@@ -16,10 +16,7 @@ export default function Lab(props) {
     return (
       <li key={item.id} id={item.id} onClick={handleChoice} href="#topLab">
         <div className="media">
-          <img
-            src={`src/assets/images/lab/${item.slug}/${item.images.cover}`}
-            alt={item.name}
-          />
+          <img src={`${item.images.cover}`} alt={item.name} />
         </div>
         <div className="project-info">
           <h4 className="is-4 title">{item.name}</h4>

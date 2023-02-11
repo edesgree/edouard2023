@@ -120,7 +120,7 @@ const data = {
     },
     workMyworkTitle: {
       fr: `Mon travail`,
-      en: `My contribution`
+      en: `What i did`
     },
     workTechUsedTitle: {
       fr: `Technologies utilisées`,
@@ -163,7 +163,7 @@ const data = {
   home: {
     introTxt: {
       fr: `Je suis développeur front-end avec une expertise en UX/UI. Je tiens à trouver des solutions simples et modernes en utilisant les meilleures pratiques et les dernières tendances de l'industrie. Je suis curieux et aime apprendre en permanence que ce soit en web ou pour mes interêts personnels.`,
-      en: `I am a frontend developer with a strong background in UX/UI. I try to make things simple and modern using best practices and newest industry trends. I am always looking for new things to learn whether it be in web development or my personal interests.  `
+      en: `I am a frontend developer with a strong background in UX/UI. I try to make things simple and modern using best practices and newest industry trends. I am always looking for new things to learn whether it be in web development or my personal interests. `
     },
     introTitle: {
       fr: `Salut 👋,\n moi c'est Edouard.`,
@@ -203,7 +203,7 @@ const data = {
         },
         text: {
           fr: `Je suis un joueur d'équipe et mes connaissances multidisciplinaires m'aide à collaborer efficacement avec les différents métiers.`,
-          en: `My experience in code and design help me collaborate efficiently whitin my team`
+          en: `My experience in code and design help me collaborate efficiently whithin my team`
         },
         icon: 'ItemSage'
       }
@@ -270,20 +270,20 @@ const data = {
       },
       mywork: {
         fr: `
-        <p>Mon rôle était d'intégrer les différentes templates sur Magento en suivant les designs ainsi que les différents éléments interactifs (panier d'achat, page produit, image viewer...).</p>
+        <p>Mon rôle était d'intégrer les différentes templates sur Magento en suivant les designs ainsi que les différents éléments intéractifs (panier d'achat, page produit, image viewer...).</p>
         <p>J'ai aussi travaillé en UX/UI et décliné certaines sections en suivant la charte graphique (avec Sketch app).</p>
       `,
         en: `
-        <p>My role was to integrate the different templates in Magento by following the designs as well as the different interactive elements (shopping cart, product page, category page, image viewer...).
+        <p>My role was to integrate the different templates in Magento by following the designs as well as working on the different interactive elements (shopping cart, product page, category page, image viewer...).
         </p>
-        <p>I also worked did some UX/UI creating various pages based on the art direction (using Sketch app).</p>
+        <p>I also did some UX/UI, creating various pages based on the art direction (using Sketch app).</p>
         `
       },
       tech: ['Magento 2', 'SCSS', 'JS', 'Nwayo', 'Foundation'],
       images: {
         cover: workKanukCover,
         screens: [
-          { image: workKanukHome, title: '' },
+          { image: workKanukHome, title: 'Home page' },
           { image: workKanukCat, title: 'Category page' },
           { image: workKanukProduct, title: 'Product page' }
         ]
@@ -300,9 +300,7 @@ const data = {
       description: {
         fr: `
         <p>Bench est une marque britannique de vêtements vendue dans le monde entier.<br/>
-        Nous avont récupérer le site Magento2 et l'avons fait évoluer jusqu'à sa version récente en y ajoutant différents composants au fil du temps.</p>
-      
-      
+        Nous avont récupéré le site Magento2 et l'avons fait évoluer jusqu'à sa version récente en y ajoutant différents composants au fil du temps.</p>
       `,
         en: `<p>Bench is a British clothing brand sold worldwide.<br/>
         We took over the Magento2 site and evolved it to its recent version by adding different components over time.</p>`
@@ -310,10 +308,10 @@ const data = {
       mywork: {
         fr: `
         <p>Mon role était de travailler sur le suivi frontend du site. En créant des nouvelles templates Magento, en préparant le site pour des évènements ponctuels (soldes, blackfriday...), en conseillant le client sur des solutions (design et frontend). J'ai travaillé conjointement avec le client (anglais) pour mener à terme ce projet.(projet SCRUM)</p>
-        <p>J'ai également formé le client à l'utilisation de Magento2 concernant l'affichage du contenu dans le site.</p>`,
+        <p>J'ai également formé le client à l'utilisation de Magento 2 concernant l'affichage du contenu dans le site.</p>`,
         en: `
         <p>My role was to work on the frontend of the site. By creating new Magento templates, by preparing the site for one-off events (sales, blackfriday...), by advising the client on solutions (design and frontend). I worked jointly with the client (English) to complete this project. (SCRUM project)</p>
-        <p>I also did client formation on Magento and how to use it</p>`
+        <p>I also did client training on Magento and how to use it.</p>`
       },
       tech: ['Magento 2', 'SCSS', 'JS', 'Nwayo', 'Foundation'],
       images: {
@@ -340,8 +338,8 @@ const data = {
         <p>We worked on the complete redesign of the site and the transition from Magento 1 to Magento 2.</p>`
       },
       mywork: {
-        fr: `<p>Mon rôle était de travailler sur les différents éléments front end du site et de m'assurer de la qualité générale aux différentes mises en ligne.</p>`,
-        en: `<p>My role was to work on the various front-end elements of the site and to ensure the general quality of the various uploads.</p>`
+        fr: `<p>Mon rôle était de travailler sur les différents éléments front end du site et de m'assurer du controle qualité durant les différentes mises en ligne.</p>`,
+        en: `<p>My role was to work on the various front-end elements of the site and to ensure the general quality of the site during the various deployments.</p>`
       },
       tech: ['Magento 2', 'SCSS', 'JS', 'Nwayo', 'Foundation'],
       images: {
@@ -389,14 +387,13 @@ const data = {
         fr: `<p><em>Les pêcheurs</em> est une émission humoristique de Martin Petit diffusée sur radio-canada.</p>
       <p>J'ai travaillé sur le volet numérique de l'émission qui contient un site web et un magazine numérique disponible sur iPad/android ainsi qu'en version web. </p>`,
         en: `<p><em>Les Pêcheurs</em> is a comedy show by Martin Petit broadcast on radio-canada.</p>
-        
         <p>I worked on the digital part of the show which contains a website and a digital magazine available on iPad/android/web. </p>
         <p>Applications are native (iOS, Android) and use webviews to display HTML templates.</p>
         `
       },
       mywork: {
         fr: `<p>Mon travail était le développement front-end du site web, du magazine web ainsi que des gabarits webview pour les applications tablettes. J'ai également participé à la déclinaison graphique de maquettes en suivant la direction artistique.</p>`,
-        en: `        <p>My work was the front-end development of the website, the web magazine as well as webview templates for tablet applications. I also participated in UI design of most of the pages based on the art direction.</p>
+        en: `<p>My work was the front-end development of the website, the web magazine as well as webview templates for tablet applications. I also participated in UI design of most of the pages based on the art direction.</p>
         `
       },
       tech: ['HTML', 'LESS', 'JS', 'Bootstrap', 'Photoshop', 'Templates TWIG'],
@@ -452,7 +449,7 @@ const data = {
       date: '2018',
       description: {
         fr: `<p>BazzoMag est un mensuel numérique gratuit s’ajoutant à l’émission BazzoTV.</p>
-      <p>Le magazine est disponible sur tablettes iOS et Android. J'ai travaillé sur le développement front-end des différentes maquettes du magazine.</p>
+      <p>Le magazine est disponible sur tablettes iOS et Android. J'ai travaillé sur le développement front-end des différentes templates du magazine.</p>
       <p>Les applications sont natives (iOS, Android) et utilisent des webviews pour afficher les templates HTML.</p>`,
         en: `<p>BazzoMag is a free digital monthly supplement to the BazzoTV show.</p>
         <p>The magazine is available on iOS and Android tablets. I worked on the front-end development of the different magazine layouts.</p>
@@ -480,10 +477,10 @@ const data = {
       date: '2018',
       description: {
         fr: `<p><em>Ruptures</em> est une série tv difusée sur radio-canada.</p>
-      <p>J'ai travaillé sur le volet numérique de l'émission qui contient un site web, un magazine web ainsi qu'une expérience de découverte intéractive (type street view).</p>
+      <p>J'ai travaillé sur le volet numérique de l'émission qui contient un site web, un magazine web ainsi qu'une expérience de découverte intéractive (type Google Street View).</p>
       <p>Mon travail était le développement front-end du site web, du magazine web ainsi que du module de découverte "street-view" (utilisant l'api googlemaps).</p>`,
         en: `<p><em>Ruptures</em> is a tv series broadcast on radio-canada.</p>
-        <p>I worked on the digital components of the show which contains a website, a web magazine as well as an interactive discovery experience (street view type).</p>
+        <p>I worked on the digital components of the show which contains a website, a web magazine as well as an interactive discovery experience (Google Street View type).</p>
         <p>My work was the front-end development of the website, the web magazine as well as the "street-view" discovery module (using the googlemaps api).</p>`
       },
 
@@ -548,7 +545,7 @@ const data = {
       date: '2017',
       description: {
         fr: `<p>Le site de <em>Conseils de famille</em> présente le vlogue de Clovis, le personnage principal de la série. Les contenus du site sont diffusés en conjonction avec la chaîne YouTube officielle du personnage.</p>
-      <p>J'ai travaillé sur le front-end developpement des différentes sections du site.</p>`,
+      <p>J'ai travaillé sur le développement front-end des différentes sections du site.</p>`,
         en: `<p>The <em>Conseils de famille</em> website presents the vlog of Clovis, the main character of the series. Site content is released in conjunction with the character's official YouTube channel.</p>
         <p>I worked on the front-end development of the different sections of the site.</p>`
       },
@@ -638,8 +635,8 @@ const data = {
       subtitle: 'React app',
       date: '15-01-2023',
       description: {
-        fr: `Le projet consiste à créer une application en ReactJS capable de générer un CV . La page se compose de plusieurs éléments de contenu qui sont mise à jour en temps réel avec l'entrée de données dans le formulaire par l'utilisateur. Il est installé avec <a href="https://vitejs.dev/" target="_blank">Vite.js</a>.`,
-        en: `The project is to create an app in ReactJS that can generate a resume . The page consist of several form elements that gets updated with user input. It is bootstraped with <a href="https://vitejs.dev/" target="_blank">Vite.js</a>.`
+        fr: `Le projet consiste à créer une application en <a href="https://reactjs.org/" target="_blank">ReactJS</a> capable de générer un CV . La page se compose de plusieurs éléments de contenu qui sont mise à jour en temps réel avec l'entrée de données dans le formulaire par l'utilisateur. Il est installé avec <a href="https://vitejs.dev/" target="_blank">Vite.js</a>.`,
+        en: `The project is to create an app in <a href="https://reactjs.org/" target="_blank">ReactJS</a> that can generate a resume . The page consist of several content elements that gets updated with user input. It is bootstraped with <a href="https://vitejs.dev/" target="_blank">Vite.js</a>.`
       },
 
       tech: ['React', 'HTML', 'SCSS', 'Bulma', 'Vite'],
@@ -657,8 +654,8 @@ const data = {
       subtitle: 'React quiz app',
       date: '01-01-2023',
       description: {
-        fr: `Le projet est de construire une petite application de quizz en ReactJS. On récupère les questions à partir d'une API. Il est installé avec <a href="https://vitejs.dev/" target="_blank">Vite.js</a>. `,
-        en: `The project is to build a little quizz app in ReactJS. It gets its questions from an API. It is bootstraped with <a href="https://vitejs.dev/" target="_blank">Vite.js</a>.`
+        fr: `Le projet est de construire une petite application de quizz en <a href="https://reactjs.org/" target="_blank">ReactJS</a>. On récupère les questions à partir d'une API. Il est installé avec <a href="https://vitejs.dev/" target="_blank">Vite.js</a>. `,
+        en: `The project is to build a little quizz app in <a href="https://reactjs.org/" target="_blank">ReactJS</a>. It gets its questions from an API. It is bootstraped with <a href="https://vitejs.dev/" target="_blank">Vite.js</a>.`
       },
 
       tech: ['React', 'HTML', 'SCSS', 'Bulma', 'Vite'],
@@ -676,8 +673,8 @@ const data = {
       subtitle: 'React rolling dice game',
       date: '01-01-2023',
       description: {
-        fr: `Le projet est de construire un jeu de tenzies en utilisant ReactJS`,
-        en: `The project is to build a game of tenzies. It is bootstraped with <a href="https://vitejs.dev/" target="_blank">Vite.js</a>.`
+        fr: `Le projet est de construire un jeu de tenzies en utilisant <a href="https://reactjs.org/" target="_blank">ReactJS</a>`,
+        en: `The project is to build a game of tenzies using <a href="https://reactjs.org/" target="_blank">ReactJS</a>. It is bootstraped with <a href="https://vitejs.dev/" target="_blank">Vite.js</a>.`
       },
 
       tech: ['React', 'HTML', 'SCSS', 'Vite'],

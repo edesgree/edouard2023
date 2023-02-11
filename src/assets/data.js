@@ -162,7 +162,7 @@ const data = {
   },
   home: {
     introTxt: {
-      fr: `Je suis développeur front-end avec une expertise en UX/UI. Je tiens à trouver des solutions simples et modernes en utilisant les meilleures pratiques et les dernières tendances de l'industrie. Je suis curieux et aime apprendre en permanence que ce soit en web ou pour mes interêts personnel.`,
+      fr: `Je suis développeur front-end avec une expertise en UX/UI. Je tiens à trouver des solutions simples et modernes en utilisant les meilleures pratiques et les dernières tendances de l'industrie. Je suis curieux et aime apprendre en permanence que ce soit en web ou pour mes interêts personnels.`,
       en: `I am a frontend developer with a strong background in UX/UI. I try to make things simple and modern using best practices and newest industry trends. I am always looking for new things to learn whether it be in web development or my personal interests.  `
     },
     introTitle: {

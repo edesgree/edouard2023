@@ -255,6 +255,21 @@ main {
   .separator-title {
     background: $secondary;
     border-radius: 4px 4px 0 0;
+    margin-bottom: 20px;
+    position: relative;
+    &:after {
+      $arrow-size: 10px;
+      border-left: $arrow-size solid transparent;
+      border-right: $arrow-size solid transparent;
+      border-top: $arrow-size solid $secondary;
+      bottom: -$arrow-size;
+      clear: both;
+      content: '';
+      height: 0;
+      left: calc(50% - ($arrow-size / 2));
+      position: absolute;
+      width: 0;
+    }
   }
   //SKILLS LIST (ICONS)
   .skills-list {
@@ -275,7 +290,7 @@ main {
   }
 
   .columnsticky {
-    @include desktop {
+    @include tablet {
       align-self: flex-start;
       position: -webkit-sticky;
       position: sticky;

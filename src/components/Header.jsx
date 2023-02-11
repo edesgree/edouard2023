@@ -53,8 +53,8 @@ export default function Header(props) {
         >
           <div className="navbar-end">
             {menuElements}
-            <div class="field has-addons">
-              <p class="control">
+            <div className="field has-addons">
+              <p className="control">
                 <button
                   className="button is-small is-primary is-inverted"
                   onClick={props.handleTrad}
@@ -62,7 +62,7 @@ export default function Header(props) {
                   <span>{props.lang === 'fr' ? 'en' : 'fr'}</span>
                 </button>
               </p>
-              <p class="control">
+              <p className="control">
                 <button className="button is-primary is-inverted is-small">
                   <span className="icon is-small">
                     <img src={IconDark} alt="dark" />
@@ -73,9 +73,6 @@ export default function Header(props) {
           </div>
         </div>
       </nav>
-      <div className="theme-btn-wrap light">
-        <span className="theme-btn "></span>
-      </div>
     </header>
   );
 }

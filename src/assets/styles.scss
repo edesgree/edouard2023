@@ -152,10 +152,26 @@ main {
       margin-bottom: 0;
     }
   }
+  //HOMEPAGE
+  .section-presentation {
+    .col-photo {
+      @include mobile {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
   //INTRO
   .level {
-    align-items: stretch;
+    display: grid;
     gap: 20px;
+
+    @include tablet {
+      align-items: start;
+      grid-auto-columns: 1fr;
+      grid-auto-flow: column;
+    }
     .level-item {
       align-content: space-between;
       display: grid;
@@ -167,6 +183,25 @@ main {
       }
     }
   }
+  .services-list {
+    display: grid;
+    gap: 20px;
+    justify-items: center;
+
+    @include tablet {
+      align-items: start;
+      grid-auto-flow: column;
+      grid-template: repeat(3, auto) / repeat(3, 1fr);
+    }
+    .title {
+      margin-bottom: 0;
+      text-align: center;
+    }
+    p {
+      text-align: center;
+    }
+  }
+
   // WORK AND LAB
   .project-list {
     display: grid;
@@ -212,8 +247,6 @@ main {
       align-items: flex-start;
       display: flex;
       justify-content: space-between;
-      .project-buttons-links {
-      }
     }
   }
   //SKILLS LIST (ICONS)

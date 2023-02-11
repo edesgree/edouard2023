@@ -32,7 +32,8 @@ function App() {
       element: (
         <>
           <Intro
-            dataIntro={data.common}
+            dataCommon={data.common}
+            dataIntro={data.home}
             lang={lang}
             handleTrad={handleTrad}
             anim={animShowContentVariant}

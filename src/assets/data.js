@@ -4,18 +4,7 @@ const data = {
     myName: 'Edouard Desgrée',
     contactEmail: 'edouard@desgree.com',
     mainTitle: { fr: 'bonjour', en: 'hello' },
-    introTxt: {
-      fr: `Je suis développeur front-end avec une expertise en UX/UI. Je tiens à trouver des solutions simples et modernes en utilisant les meilleures pratiques et les dernières tendances de l'industrie. Je suis curieux et aime apprendre en permanence que ce soit en web ou pour mes interêts personnel.`,
-      en: `I am a frontend developer with a strong background in UX/UI. I try to make things simple and modern using best practices and newest industry trends. I am always looking for new things to learn whether it be in web development or my personal interests.  `
-    },
-    introTitle: {
-      fr: `Salut 👋,\n moi c'est Edouard.`,
-      en: `Hi 👋,\n I'm Edouard.`
-    },
-    introSubtitle: {
-      fr: `Développeur Front-end | Designer web`,
-      en: `Front-end developer | web designer`
-    },
+
     skillsTitle: {
       fr: `Connaissances`,
       en: `Skills`
@@ -64,6 +53,55 @@ const data = {
       fr: `Contactez-moi 👋\n⬇️`,
       en: `Say Hi 👋`
     }
+  },
+  home: {
+    introTxt: {
+      fr: `Je suis développeur front-end avec une expertise en UX/UI. Je tiens à trouver des solutions simples et modernes en utilisant les meilleures pratiques et les dernières tendances de l'industrie. Je suis curieux et aime apprendre en permanence que ce soit en web ou pour mes interêts personnel.`,
+      en: `I am a frontend developer with a strong background in UX/UI. I try to make things simple and modern using best practices and newest industry trends. I am always looking for new things to learn whether it be in web development or my personal interests.  `
+    },
+    introTitle: {
+      fr: `Salut 👋,\n moi c'est Edouard.`,
+      en: `Hi 👋,\n I'm Edouard.`
+    },
+    introSubtitle: {
+      fr: `Développeur Front-end | Designer web`,
+      en: `Front-end developer | web designer`
+    },
+    services: [
+      {
+        title: {
+          fr: `Développement Frontend `,
+          en: `Frontend development`
+        },
+        text: {
+          fr: `Je conçois des expériences intéractives en utilisant les derniers outils et standards web`,
+          en: `I implement visuals and interactive elements using latest web tech and trends`
+        },
+        icon: 'ItemSage'
+      },
+      {
+        title: {
+          fr: `Design UI/UX`,
+          en: `UI/UX Design`
+        },
+        text: {
+          fr: `Je crée mes propres solutions design pour afficher des interfaces visuelles riches et cohérentes.`,
+          en: `I focus on designing user-friendly interfaces using my creativity and technical skills`
+        },
+        icon: 'ItemSage'
+      },
+      {
+        title: {
+          fr: `Travail en équipe`,
+          en: `Team player`
+        },
+        text: {
+          fr: `Je suis un joueur d'équipe et mes connaissances multidisciplinaires m'aide à collaborer efficacement avec les différents métiers.`,
+          en: `My experience in code and design help me collaborate efficiently whitin my team`
+        },
+        icon: 'ItemSage'
+      }
+    ]
   },
   menu: [
     {

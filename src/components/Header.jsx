@@ -14,7 +14,7 @@ export default function Header(props) {
         onClick={() => setIsComponentVisible(!isComponentVisible)}
         className="navbar-item"
       >
-        {item.name[props.lang]}
+        <span>{item.name[props.lang]}</span>
       </NavLink>
     );
   });

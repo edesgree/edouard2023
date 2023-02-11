@@ -91,7 +91,7 @@ main {
           gap: 20px;
 
           @include touch {
-            align-items: flex-start;
+            align-items: stretch;
             display: flex;
             flex-direction: column;
             padding: 0 20px;
@@ -112,23 +112,26 @@ main {
               background: none;
               color: $primary;
             }
-            &:after {
-              background-color: $primary;
-              border-radius: 9999px;
-              bottom: -4px;
-              content: '';
-              display: block;
-              height: 3px;
-              left: 0;
-              position: absolute;
-              transform: scaleX(0);
-              transform-origin: center left;
-              transition-duration: 0.4s;
-              transition-property: transform;
-              width: 100%;
+            span {
+              position: relative;
+              &:after {
+                background-color: $primary;
+                border-radius: 9999px;
+                bottom: -4px;
+                content: '';
+                display: block;
+                height: 3px;
+                left: 0;
+                position: absolute;
+                transform: scaleX(0);
+                transform-origin: center left;
+                transition-duration: 0.4s;
+                transition-property: transform;
+                width: 100%;
+              }
             }
-            &:hover:after,
-            &.active:after {
+            &:hover span:after,
+            &.active span:after {
               transform: scaleX(1);
             }
           }

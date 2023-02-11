@@ -43,7 +43,8 @@ export default function LabDetail(props) {
           </div>
           {labElement.preview && (
             <div className="buttons has-addons project-buttons-links">
-              <button className="button is-info is-small">
+              <button className="button is-light is-small">
+                <span>Github</span>
                 <span className="icon is-small">
                   <a href={labElement.github} target="_blank">
                     <img src={IconGithub} alt="github" />
@@ -51,6 +52,7 @@ export default function LabDetail(props) {
                 </span>
               </button>
               <button className="button is-info is-small">
+                <span>Preview</span>
                 <span className="icon is-small">
                   <a href={labElement.preview} target="_blank">
                     <img src={IconExternalLink} alt="link" />

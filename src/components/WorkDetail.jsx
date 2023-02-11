@@ -3,13 +3,14 @@ import IconExternalLink from '../assets/icons/icon-external.svg';
 import { motion, useAnimation } from 'framer-motion';
 export default function WorkDetail(props) {
   // get corresponding data for this project
+
   const workElement = props.dataWorkDetail.find(
     (project) => project.id === props.currentProject
   );
 
   // get company name
   const workElementCompany = props.dataText.companies.find((company) => {
-    return company.id === workElement.companyId;
+    return company.id === workElement.companyId || null;
   });
 
   // get tech used for this project
@@ -72,7 +73,7 @@ export default function WorkDetail(props) {
             }}
           />
         </div>
-        <div className=" column is-8">{screensElements.slice(0, 2)}</div>
+        <div className=" column is-8">{screensElements.slice(0, 1)}</div>
       </div>
       <div className="columns">
         <div className="columnsticky column is-4">
@@ -113,7 +114,7 @@ export default function WorkDetail(props) {
             </div>
           )}
         </div>
-        <div className=" column is-8">{screensElements.slice(2)}</div>
+        <div className=" column is-8">{screensElements.slice(1)}</div>
       </div>
     </motion.article>
   );

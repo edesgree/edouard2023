@@ -351,6 +351,13 @@ button.scrollup {
     }
   }
 }
+
+a {
+  color: $mustard;
+  &:hover {
+    color: $pumkin;
+  }
+}
 /*
 @keyframes slideAnimation {
   from {

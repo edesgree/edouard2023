@@ -217,6 +217,13 @@ main {
     p {
       text-align: center;
     }
+    .iconSVG {
+      .background {
+      }
+      .arrow {
+        fill: var(--icons);
+      }
+    }
   }
 
   // WORK AND LAB listing page

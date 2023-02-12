@@ -1,0 +1,28 @@
+$white: #fff;
+$light-white: whitesmoke;
+$black: #2d2d2d;
+$light-grey: #f3f3f3;
+$grey: #ddd;
+$forest: #3a6b35;
+$sage: #cbd18f;
+$mustard: #e3b448;
+$pumkin: #ff6250;
+$primary: $forest;
+$secondary: $sage;
+$vibrant: $pumkin;
+$info: $sage;
+$defaultTxt: $black;
+//dark theme
+$coal: #0f0d0e;
+$charcoal: #231f20;
+$beige: #f9f4da;
+
+::-moz-selection {
+  /* Code for Firefox */
+  background: $mustard;
+  color: $black;
+}
+::selection {
+  background: $mustard;
+  color: $black;
+}

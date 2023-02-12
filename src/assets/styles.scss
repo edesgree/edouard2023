@@ -1,19 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap');
-$tablet: 769px;
 
-$white: #fff;
-$light-white: whitesmoke;
-$black: #2d2d2d;
-$light-grey: #f3f3f3;
-$grey: #ddd;
-$forest: #3a6b35;
-$sage: #cbd18f;
-$mustard: #e3b448;
-$pumkin: #ff6250;
-$primary: $forest;
-$secondary: $sage;
-$vibrant: $pumkin;
-$info: $sage;
+@import './styles/colors';
+$tablet: 769px;
 $family-serif: 'Outfit', sans-serif;
 $family-primary: $family-serif;
 $navbar-breakpoint: $tablet;
@@ -25,21 +13,11 @@ $strong-weight: 600;
 $weight-bold: 800;
 $title-weight: $weight-bold;
 $subtitle-weight: $strong-weight;
-// Import only what you need from Bulma
-// @import 'bulma/sass/utilities/_all.sass';
-// @import 'bulma/sass/base/_all.sass';
-// @import 'bulma/sass/grid/_all.sass';
-// @import 'bulma/sass/elements/button.sass';
-// @import 'bulma/sass/elements/container.sass';
-// @import 'bulma/sass/elements/title.sass';
-// @import 'bulma/sass/form/_all.sass';
-// @import 'bulma/sass/components/navbar.sass';
-// @import 'bulma/sass/components/level.sass';
-// @import 'bulma/sass/layout/hero.sass';
-// @import 'bulma/sass/layout/section.sass';
 
 @import 'bulma/bulma.sass';
 @import 'bulma-tooltip';
+@import './styles/light-dark-theme';
+
 html {
   scroll-behavior: smooth;
 }
@@ -47,22 +25,24 @@ html {
   box-sizing: border-box;
 }
 body {
-  background: $light-white;
-  color: $black;
+  //background: $light-white;
+  background-color: var(--bgBody);
+  color: var(--txtPrimary);
   font-family: $family-primary;
   margin: 0;
   min-height: 100vh;
+  transition: background-color 0.5s ease;
 }
 .pre-line {
   white-space: pre-line;
 }
 main {
   align-items: stretch;
-  background-color: $white;
+  background-color: var(--bgApp);
   border-radius: 15px;
-  -webkit-box-shadow: 0px 0px 114px 0px $grey;
-  -moz-box-shadow: 0px 0px 114px 0px $grey;
-  box-shadow: 0px 0px 114px 0px $grey;
+  -webkit-box-shadow: 0px 0px 114px 0px var(--shadow);
+  -moz-box-shadow: 0px 0px 114px 0px var(--shadow);
+  box-shadow: 0px 0px 114px 0px var(--shadow);
   display: flex;
   flex-direction: column;
   min-height: 250px;
@@ -79,7 +59,7 @@ main {
   header.main-header {
     width: 100%;
     .logo {
-      color: $forest;
+      color: var(--logo);
       font-family: 'Courier New', Courier, monospace;
       font-size: 30px;
       font-weight: bold;
@@ -90,9 +70,11 @@ main {
       }
     }
     .navbar {
+      background-color: transparent;
       width: 100%;
       .navbar-menu {
         align-items: center;
+        background-color: var(--bgApp);
 
         .navbar-end {
           gap: 20px;
@@ -108,6 +90,7 @@ main {
           }
 
           .navbar-item {
+            color: var(--txtPrimary);
             font-size: 1.25rem;
             line-height: 1;
             padding: 0;
@@ -147,13 +130,19 @@ main {
           }
         }
       }
-      .navbar-burger span {
-        height: 2px;
+      .navbar-burger {
+        color: var(--icons);
+        span {
+          height: 2px;
+        }
       }
     }
   }
+  .title {
+    color: var(--txtPrimary);
+  }
   .sup-title {
-    color: $forest;
+    color: var(--txtVibrant);
   }
   header.header-section {
     align-items: center;
@@ -213,6 +202,7 @@ main {
       grid-template: repeat(3, auto) / repeat(3, 1fr);
     }
     .title {
+      color: var(--txtVibrant);
       margin-bottom: 0;
       text-align: center;
     }
@@ -258,6 +248,9 @@ main {
         flex: 1;
         padding: 20px;
         transition: background-color 0.8s ease;
+        .title {
+          color: $black;
+        }
       }
     }
   }
@@ -277,6 +270,7 @@ main {
   .separator-title {
     background: $secondary;
     border-radius: 4px 4px 0 0;
+    color: $defaultTxt;
     margin-bottom: 20px;
     position: relative;
     &:after {
@@ -320,6 +314,7 @@ main {
     }
   }
 }
+// BUTTONS
 button.scrollup {
   bottom: 40px;
   cursor: pointer;
@@ -328,8 +323,24 @@ button.scrollup {
   z-index: 1;
 }
 
-//animation on hover of buttons
 .button {
+  &.is-secondary {
+    background-color: var(--buttonSecondaryBg);
+    border-color: transparent;
+
+    &,
+    icon-text {
+      color: var(--buttonSecondaryTxt);
+      .icon {
+        //svg icon customization
+        svg * {
+          fill: currentColor;
+        }
+      }
+    }
+  }
+
+  //animation on hover of buttons
   &:hover .icon {
     transform: scale(1.1);
   }

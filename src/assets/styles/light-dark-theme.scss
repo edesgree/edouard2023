@@ -1,0 +1,56 @@
+$themes: (
+  bgBody: (
+    darkTheme: $coal,
+    lightTheme: $light-white
+  ),
+  bgApp: (
+    darkTheme: $charcoal,
+    lightTheme: $white
+  ),
+  txtPrimary: (
+    darkTheme: $beige,
+    lightTheme: $black
+  ),
+  txtVibrant: (
+    darkTheme: $secondary,
+    lightTheme: $primary
+  ),
+  shadow: (
+    darkTheme: $black,
+    lightTheme: $grey
+  ),
+  icons: (
+    darkTheme: $beige,
+    lightTheme: $black
+  ),
+  logo: (
+    darkTheme: $mustard,
+    lightTheme: $forest
+  ),
+  buttonSecondaryBg: (
+    darkTheme: $black,
+    lightTheme: $light-white
+  ),
+  buttonSecondaryTxt: (
+    darkTheme: $light-white,
+    lightTheme: $primary
+  )
+);
+
+@mixin styles($mode) {
+  @each $key, $map in $themes {
+    @each $prop, $color in $map {
+      @if $prop == $mode {
+        --#{$key}: #{$color};
+      }
+    }
+  }
+}
+
+.darkMode {
+  @include styles('darkTheme');
+}
+
+.lightMode {
+  @include styles('lightTheme');
+}

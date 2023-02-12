@@ -1,26 +1,27 @@
 import { motion } from 'framer-motion';
 import React, { useState } from 'react';
-import IconSun from './IconSun';
-import IconMoon from './IconMoon';
+import IconSun from './icons/IconSun';
+import IconMoon from './icons/IconMoon';
 import { transitionSpring } from './constants';
 
-export default function DarkModeSwitch2() {
-  const [darkMode, setDarkMode] = useState(() => {
+export default function DarkModeSwitch() {
+  const [darkMode, setDarkMode] = React.useState(() => {
     if (localStorage.getItem('theme') === 'light') {
       return true;
     } else {
       return false;
     }
   });
-  console.log('dark mode:', darkMode);
-  console.log('iconmoon:', IconMoon);
+
   const toggleSwitch = () => setDarkMode(!darkMode);
 
   if (darkMode) {
-    document.body.classList.remove('dark');
+    document.body.classList.remove('darkMode');
+    document.body.classList.add('lightMode');
     localStorage.setItem('theme', 'light');
   } else {
-    document.body.classList.add('dark');
+    document.body.classList.add('darkMode');
+    document.body.classList.remove('lightMode');
     localStorage.setItem('theme', 'dark');
   }
 
@@ -29,9 +30,11 @@ export default function DarkModeSwitch2() {
     (!('theme' in localStorage) &&
       window.matchMedia('(prefers-color-scheme: light)').matches)
   ) {
-    document.body.classList.add('dark');
+    document.body.classList.add('darkMode');
+    document.body.classList.remove('lightMode');
   } else {
-    document.body.classList.remove('dark');
+    document.body.classList.add('lightMode');
+    document.body.classList.remove('darkMode');
   }
 
   return (

@@ -802,6 +802,10 @@ const data = {
       en: `<p>I am based in Nantes (fr) at the moment. I have 10+ years of experience and worked in multiple jobs in the web industry in Ireland, France and Canada. </p>
       <p>I consider myself a hybrid between code and design, i love being able to participate in both design and development process. My recent experiences were mostly focus on frontend development. I am currently in the process of gaining expertise in ReactJS.</p>
 <p>I am available to discuss a project or a new opportunity.</p>`
+    },
+    contactMe: {
+      fr: 'Contactez-moi',
+      en: `Let's talk!`
     }
   }
 };

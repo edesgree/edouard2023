@@ -2,6 +2,7 @@ import React from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import PhotoEd from '../assets/images/about-edouard.webp';
 import DownloadResume from './Ui/DownloadResume';
+import { NavLink } from 'react-router-dom';
 
 export default function About(props) {
   const socialLinkElements = props.dataSocial.map((social) => {
@@ -39,6 +40,11 @@ export default function About(props) {
                 __html: props.dataAbout.text[props.lang]
               }}
             />
+            <p>
+              <NavLink to="/contact">
+                {props.dataAbout.contactMe[props.lang]}
+              </NavLink>
+            </p>
           </div>
         </div>
         <div className="column is-4 col-photo">

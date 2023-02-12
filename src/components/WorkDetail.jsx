@@ -61,84 +61,90 @@ export default function WorkDetail(props) {
           handleTrad={props.handleTrad}
           navBack={true}
         />
-        <div
-          className="content hero is-small is-primary head-project"
-          style={coverCSS}
-        >
-          <div className="hero-body">
-            <div>
-              <p className="title">{currentProject.name}</p>
-              <p className="subtitle">{currentProject.subtitle}</p>
-            </div>
-            {currentProject.url && (
-              <a
-                href={currentProject.url}
-                target="_blank"
-                className="button is-info is-small"
-              >
-                <span>Visit</span>
-                <span className="icon is-small">
-                  <img src={IconExternalLink} />
-                </span>
-              </a>
-            )}
-          </div>
-        </div>
-        <div className="columns">
-          <div className="columnsticky column is-4 content">
-            <h4 className="title  is-4"></h4>
+        {currentProject ? (
+          <>
             <div
-              className="content"
-              dangerouslySetInnerHTML={{
-                __html: currentProject.description[props.lang]
-              }}
-            />
-          </div>
-          <div className="column is-8">{screensElements.slice(0, 1)}</div>
-        </div>
-        <div className="columns">
-          <div className="columnsticky column is-4">
-            {currentProject.mywork[props.lang] && (
-              <div className="block">
-                <h4 className="title  is-4">
-                  {props.dataText.workMyworkTitle[props.lang]}
-                </h4>
-                <p
+              className="content hero is-small is-primary head-project"
+              style={coverCSS}
+            >
+              <div className="hero-body">
+                <div>
+                  <p className="title">{currentProject.name}</p>
+                  <p className="subtitle">{currentProject.subtitle}</p>
+                </div>
+                {currentProject.url && (
+                  <a
+                    href={currentProject.url}
+                    target="_blank"
+                    className="button is-info is-small"
+                  >
+                    <span>Visit</span>
+                    <span className="icon is-small">
+                      <img src={IconExternalLink} />
+                    </span>
+                  </a>
+                )}
+              </div>
+            </div>
+            <div className="columns">
+              <div className="columnsticky column is-4 content">
+                <h4 className="title  is-4"></h4>
+                <div
+                  className="content"
                   dangerouslySetInnerHTML={{
-                    __html: currentProject.mywork[props.lang]
+                    __html: currentProject.description[props.lang]
                   }}
                 />
               </div>
-            )}
+              <div className="column is-8">{screensElements.slice(0, 1)}</div>
+            </div>
+            <div className="columns">
+              <div className="columnsticky column is-4">
+                {currentProject.mywork[props.lang] && (
+                  <div className="block">
+                    <h4 className="title  is-4">
+                      {props.dataText.workMyworkTitle[props.lang]}
+                    </h4>
+                    <p
+                      dangerouslySetInnerHTML={{
+                        __html: currentProject.mywork[props.lang]
+                      }}
+                    />
+                  </div>
+                )}
 
-            {techElements.length > 0 && (
-              <div className="block">
-                <h4 className="title  is-4">
-                  {props.dataText.workTechUsedTitle[props.lang]}
-                </h4>
-                <div className="tags">{techElements}</div>
-              </div>
-            )}
+                {techElements.length > 0 && (
+                  <div className="block">
+                    <h4 className="title  is-4">
+                      {props.dataText.workTechUsedTitle[props.lang]}
+                    </h4>
+                    <div className="tags">{techElements}</div>
+                  </div>
+                )}
 
-            {currentProject.date && (
-              <div className="block">
-                <div className="tags has-addons">
-                  <span className="tag is-dark">
-                    Made in {currentProject.date}
-                  </span>
-                  {currentProjectCompany && (
-                    <span className="tag is-light">
-                      <a href={currentProjectCompany.url} target="_blank">
-                        @{currentProjectCompany.name}
-                      </a>
-                    </span>
-                  )}
-                </div>
+                {currentProject.date && (
+                  <div className="block">
+                    <div className="tags has-addons">
+                      <span className="tag is-dark">
+                        Made in {currentProject.date}
+                      </span>
+                      {currentProjectCompany && (
+                        <span className="tag is-light">
+                          <a href={currentProjectCompany.url} target="_blank">
+                            @{currentProjectCompany.name}
+                          </a>
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                )}
               </div>
-            )}
-          </div>
-          <div className=" column is-8">{screensElements.slice(1)}</div>
-        </div>
+              <div className=" column is-8">{screensElements.slice(1)}</div>
+            </div>
+          </>
+        ) : (
+          'loading...'
+        )}
       </motion.article>
     </section>
   );

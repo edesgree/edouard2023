@@ -49,68 +49,74 @@ export default function LabDetail(props) {
           handleTrad={props.handleTrad}
           navBack={true}
         />
-        <div className="content hero is-small is-primary head-project">
-          <div className="hero-body">
-            <div>
-              <p className="title">{currentProject.name}</p>
-              <p className="subtitle">{currentProject.subtitle}</p>
-            </div>
-            {currentProject.preview && (
-              <div className="buttons has-addons project-buttons-links">
-                <a
-                  href={currentProject.github}
-                  target="_blank"
-                  className="button is-light is-small"
-                >
-                  <span>Github</span>
-                  <span className="icon is-small">
-                    <img src={IconGithub} alt="github" />
-                  </span>
-                </a>
-                <a
-                  href={currentProject.preview}
-                  target="_blank"
-                  className="button is-info is-small"
-                >
-                  <span>Preview</span>
-                  <span className="icon is-small">
-                    <img src={IconExternalLink} alt="link" />
-                  </span>
-                </a>
+        {currentProject ? (
+          <>
+            <div className="content hero is-small is-primary head-project">
+              <div className="hero-body">
+                <div>
+                  <p className="title">{currentProject.name}</p>
+                  <p className="subtitle">{currentProject.subtitle}</p>
+                </div>
+                {currentProject.preview && (
+                  <div className="buttons has-addons project-buttons-links">
+                    <a
+                      href={currentProject.github}
+                      target="_blank"
+                      className="button is-light is-small"
+                    >
+                      <span>Github</span>
+                      <span className="icon is-small">
+                        <img src={IconGithub} alt="github" />
+                      </span>
+                    </a>
+                    <a
+                      href={currentProject.preview}
+                      target="_blank"
+                      className="button is-info is-small"
+                    >
+                      <span>Preview</span>
+                      <span className="icon is-small">
+                        <img src={IconExternalLink} alt="link" />
+                      </span>
+                    </a>
+                  </div>
+                )}
               </div>
-            )}
-          </div>
-        </div>
-        <div className="columns">
-          <div className="columnsticky column is-4 ">
-            <div className="content">
-              <div
-                className="content"
-                dangerouslySetInnerHTML={{
-                  __html: currentProject.description[props.lang]
-                }}
-              />
-              {currentProject.mywork && (
-                <div className="block">
-                  <h4 className="title  is-4">
-                    {props.dataText.workMyworkTitle[props.lang]}
-                  </h4>
-                  <p>{currentProject.mywork}</p>
-                </div>
-              )}
-
-              {techElements.length > 0 && (
-                <div className="block">
-                  <h4 className="title  is-4">
-                    {props.dataText.workTechUsedTitle[props.lang]}
-                  </h4>
-                  <div className="tags">{techElements}</div>
-                </div>
-              )}
             </div>
-          </div>
-          <div className=" column is-8">{screensElements}</div>
-        </div>
+            <div className="columns">
+              <div className="columnsticky column is-4 ">
+                <div className="content">
+                  <div
+                    className="content"
+                    dangerouslySetInnerHTML={{
+                      __html: currentProject.description[props.lang]
+                    }}
+                  />
+                  {currentProject.mywork && (
+                    <div className="block">
+                      <h4 className="title  is-4">
+                        {props.dataText.workMyworkTitle[props.lang]}
+                      </h4>
+                      <p>{currentProject.mywork}</p>
+                    </div>
+                  )}
+
+                  {techElements.length > 0 && (
+                    <div className="block">
+                      <h4 className="title  is-4">
+                        {props.dataText.workTechUsedTitle[props.lang]}
+                      </h4>
+                      <div className="tags">{techElements}</div>
+                    </div>
+                  )}
+                </div>
+              </div>
+              <div className=" column is-8">{screensElements}</div>
+            </div>
+          </>
+        ) : (
+          'loading...'
+        )}
       </motion.article>
     </section>
   );

@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { transitionSpring } from './constants';
+import { transitionSpring } from '../constants';
 
 export default function IconSun() {
   const whileTap = { scale: 0.95, rotate: 15 };

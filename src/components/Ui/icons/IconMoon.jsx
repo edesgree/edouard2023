@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { transitionSpring } from './constants';
+import { transitionSpring } from '../constants';
 
 export default function IconMoon() {
   const variants = {

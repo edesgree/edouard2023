@@ -1,5 +1,8 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { ReactComponent as IconUp } from '../assets/icons/icon-arrow-up.svg';
+import { ReactComponent as IconGrid } from '../assets/icons/icon-grid.svg';
+
 const scrollVariants = {
   initial: { y: '.5rem', opacity: 0 },
   animate: {
@@ -38,16 +41,20 @@ export default function ScrollButton(props) {
   return (
     <AnimatePresence>
       {visible && (
-        <motion.button
-          className="scrollup is-small button is-info"
+        <motion.span
+          className="scrollup "
           onClick={scrollToTop}
           variants={scrollVariants}
           initial="initial"
           animate="animate"
           exit="initial"
         >
-          {props.dataText.labelUp[props.lang]}
-        </motion.button>
+          <IconUp
+            width="24px"
+            height="24px"
+            name={props.dataText.labelUp[props.lang]}
+          />
+        </motion.span>
       )}
     </AnimatePresence>
   );

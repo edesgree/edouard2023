@@ -125,8 +125,13 @@ main {
               transform: scaleX(1);
             }
           }
-          .icon-svg {
-            display: flex;
+          .navbar-options {
+            .icon-svg {
+              display: flex;
+            }
+            .button {
+              height: 1.75em;
+            }
           }
         }
       }
@@ -315,12 +320,15 @@ main {
   }
 }
 // BUTTONS
-button.scrollup {
+.scrollup {
   bottom: 40px;
   cursor: pointer;
   position: fixed;
   right: 20px;
   z-index: 1;
+  svg * {
+    fill: var(--icons);
+  }
 }
 
 .button {

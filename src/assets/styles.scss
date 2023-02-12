@@ -169,7 +169,8 @@ main {
     }
   }
   //HOMEPAGE
-  .section-presentation {
+  .section-presentation,
+  .section-about {
     .col-photo {
       @include mobile {
         align-items: center;

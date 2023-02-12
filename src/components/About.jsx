@@ -21,7 +21,7 @@ export default function About(props) {
   });
   return (
     <motion.section
-      className="section"
+      className="section section-about"
       animate="visible"
       initial="hidden"
       variants={props.anim}
@@ -38,14 +38,14 @@ export default function About(props) {
                 __html: props.dataAbout.text[props.lang]
               }}
             />
-
-            <div className="buttons has-addons project-buttons-links">
-              {socialLinkElements}
-            </div>
           </div>
         </div>
-        <div className="column is-4">
+        <div className="column is-4 col-photo">
           <img className="mb-4" src={PhotoEd} alt={props.dataText.myName} />
+
+          <div className="buttons has-addons project-buttons-links">
+            {socialLinkElements}
+          </div>
         </div>
       </div>
     </motion.section>

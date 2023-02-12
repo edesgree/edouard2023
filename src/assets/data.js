@@ -805,7 +805,9 @@ const data = {
   about: {
     text: {
       fr: `TODO: texte fr`,
-      en: `<p>I am a frontend developer with a strong background in UX/UI. I try to make things simple and modern using best practices and newest industry trends. I am always looking for new things to learn whether it be in web development or my personal interests.</p>`
+      en: `<p>I am based in Nantes (fr) at the moment. I have 10+ years of experience and worked in multiple jobs in the web industry in Ireland, France and Canada. </p>
+      <p>I consider myself a hybrid between code and design, i love being able to participate in both design and development process. My recent experiences were mostly focus on frontend development. I am currently in the process of gaining expertise in ReactJS.</p>
+<p>I am available to discuss a project or a new opportunity.</p>`
     }
   }
 };

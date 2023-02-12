@@ -51,6 +51,15 @@ function App() {
                   lang={lang}
                   handleTrad={handleTrad}
                 />
+
+                <About
+                  lang={lang}
+                  handleTrad={handleTrad}
+                  anim={animShowContentVariant}
+                  dataAbout={data.about}
+                  dataSocial={data.socials}
+                  dataText={data.common}
+                />
               </>
             }
           />
@@ -110,19 +119,7 @@ function App() {
               </>
             }
           />
-          <Route
-            path="/about"
-            element={
-              <About
-                lang={lang}
-                handleTrad={handleTrad}
-                anim={animShowContentVariant}
-                dataAbout={data.about}
-                dataSocial={data.socials}
-                dataText={data.common}
-              />
-            }
-          />
+
           <Route
             path="/contact"
             element={

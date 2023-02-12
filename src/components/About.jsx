@@ -11,11 +11,11 @@ export default function About(props) {
           href={social.url}
           target="_blank"
           className="button is-light is-small"
+          data-tooltip={social.name}
         >
           <span className="icon is-small">
             <img src={social.icon} alt={social.name} />
           </span>
-          <span>{social.name}</span>
         </a>
       </>
     );

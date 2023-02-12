@@ -1,15 +1,53 @@
 import React from 'react';
 import { motion, useAnimation } from 'framer-motion';
+import PhotoEd from '../assets/images/home-edouard.png';
+
 export default function About(props) {
+  const socialLinkElements = props.dataSocial.map((social) => {
+    return (
+      <>
+        <a
+          href={social.url}
+          target="_blank"
+          className="button is-light is-small"
+        >
+          <span className="icon is-small">
+            <img src={social.icon} alt={social.name} />
+          </span>
+          <span>{social.name}</span>
+        </a>
+      </>
+    );
+  });
   return (
-    <motion.section animate="visible" initial="hidden" variants={props.anim}>
-      <h2 className="is-2 title">About</h2>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam iusto
-        dignissimos ea sequi ut, eum sunt quas doloremque quisquam quos
-        voluptate, fugiat molestias necessitatibus, reiciendis animi quibusdam
-        temporibus voluptatum hic!
-      </p>
+    <motion.section
+      className="section"
+      animate="visible"
+      initial="hidden"
+      variants={props.anim}
+    >
+      <div className="columns">
+        <div className="column is-8">
+          <h2 className="is-2 title">
+            {props.dataText.aboutTitle[props.lang]}
+          </h2>
+          <div className="content">
+            <div
+              className="block"
+              dangerouslySetInnerHTML={{
+                __html: props.dataAbout.text[props.lang]
+              }}
+            />
+
+            <div className="buttons has-addons project-buttons-links">
+              {socialLinkElements}
+            </div>
+          </div>
+        </div>
+        <div className="column is-4">
+          <img className="mb-4" src={PhotoEd} alt={props.dataText.myName} />
+        </div>
+      </div>
     </motion.section>
   );
 }

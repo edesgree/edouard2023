@@ -87,7 +87,8 @@ import skillsIcontwig from './icons/skills/icon-twig.svg';
 import skillsIconvscode from './icons/skills/icon-vscode.svg';
 import skillsIconw3c from './icons/skills/icon-w3c.svg';
 import skillsIconwordpres from './icons/skills/icon-wordpress.svg';
-
+import socialsIconGithub from '../assets/icons/icon-github.svg';
+import socialsIconLinkedin from '../assets/icons/icon-linkedin.svg';
 const data = {
   common: {
     myName: 'Edouard Desgrée',
@@ -243,12 +244,20 @@ const data = {
       slug: 'contact'
     }
   ],
-  social: [
-    { id: nanoid(), name: 'Github', url: 'https://github.com/edesgree' },
+  socials: [
+    {
+      id: nanoid(),
+      name: 'Github',
+      slug: 'github',
+      url: 'https://github.com/edesgree',
+      icon: socialsIconGithub
+    },
     {
       id: nanoid(),
       name: 'Linkedin',
-      url: 'https://www.linkedin.com/in/edouarddesgree/'
+      slug: 'linkedin',
+      url: 'https://www.linkedin.com/in/edouarddesgree/',
+      icon: socialsIconLinkedin
     }
   ],
   work: [

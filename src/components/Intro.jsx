@@ -1,17 +1,18 @@
 import React from 'react';
 import PhotoEd from '../assets/images/home-edouard.png';
-import ItemGreen from '../assets/images/item-green.svg';
-import ItemMustard from '../assets/images/item-mustard.svg';
-import ItemSage from '../assets/images/item-sage.svg';
+import { ReactComponent as IconGreen } from '../assets/images/item-green.svg';
+import { ReactComponent as IconMustard } from '../assets/images/item-mustard.svg';
+import { ReactComponent as IconSage } from '../assets/images/item-sage.svg';
+
 import { decode } from 'html-entities';
 import { NavLink } from 'react-router-dom';
 import { motion, useAnimation } from 'framer-motion';
-const IconsServices = [ItemGreen, ItemMustard, ItemSage];
+const IconsServices = [<IconGreen />, <IconMustard />, <IconSage />];
 export default function Intro(props) {
   const servicesElements = props.dataIntro.services.map((item, index) => {
     return (
       <React.Fragment key={index}>
-        <img src={IconsServices[index]} alt="" />
+        {IconsServices[index]}
         <h3 className="title is-5">{item.title[props.lang]}</h3>
         <p>{item.text[props.lang]}</p>
       </React.Fragment>
@@ -23,13 +24,6 @@ export default function Intro(props) {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 100 }}
     >
-      <motion.div
-        initial={{ opacity: 0, x: 20 }}
-        animate={{ opacity: 1, x: 500 }}
-        exit={{ opacity: 0, x: 200 }}
-      >
-        hello
-      </motion.div>
       <section className="section columns section-presentation">
         <div className="column is-two-thirds">
           <h2 className="subtitle is-5 sup-title is-spaced">

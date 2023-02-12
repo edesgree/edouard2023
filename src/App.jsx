@@ -118,6 +118,7 @@ function App() {
                 handleTrad={handleTrad}
                 anim={animShowContentVariant}
                 dataAbout={data.about}
+                dataSocial={data.socials}
                 dataText={data.common}
               />
             }

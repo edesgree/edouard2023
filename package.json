@@ -7,8 +7,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "build": "vite build --base=/edouard/",
+    "preview": "vite preview --port 8080"
   },
   "dependencies": {
     "framer-motion": "^9.0.2",

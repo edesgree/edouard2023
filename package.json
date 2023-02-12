@@ -1,7 +1,9 @@
 {
   "name": "edouard-2023",
+  "homepage": "http://edouard.desgree.com",
+  "description": "my portfolio in react",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",

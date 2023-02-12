@@ -126,6 +126,9 @@ main {
             }
           }
           .navbar-options {
+            .control {
+              display: inline-flex;
+            }
             .icon-svg {
               display: flex;
             }

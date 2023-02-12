@@ -11,6 +11,7 @@ import Contact from './components/Contact';
 import Skills from './components/Skills';
 import InfiniteLooper from './components/InfiniteLooper';
 import ScrollUpButton from './components/Ui/ScrollUpButton';
+import { animShowContentVariant } from './components/Ui/constants';
 import {
   motion,
   useAnimation,
@@ -23,10 +24,7 @@ function App() {
   const handleTrad = () => {
     lang === 'fr' ? setLang('en') : setLang('fr');
   };
-  const animShowContentVariant = {
-    visible: { opacity: 1, transition: { duration: 0.8 } },
-    hidden: { opacity: 0 }
-  };
+
   const page = useRoutes([
     {
       path: '/',

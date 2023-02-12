@@ -54,10 +54,10 @@ export default function Header(props) {
         >
           <div className="navbar-end">
             {menuElements}
-            <div className="field has-addons">
+            <div className="navbar-options field has-addons">
               <p className="control">
                 <button
-                  className="button is-small is-primary is-inverted"
+                  className="button is-small is-secondary"
                   onClick={props.handleTrad}
                 >
                   <span>{props.lang === 'fr' ? 'en' : 'fr'}</span>

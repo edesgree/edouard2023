@@ -38,10 +38,7 @@ export default function DarkModeSwitch() {
   }
 
   return (
-    <button
-      onClick={toggleSwitch}
-      className="button is-primary is-inverted is-small"
-    >
+    <button onClick={toggleSwitch} className="button is-secondary is-small">
       <span className="icon is-small">
         <motion.div className="icon-svg" transition={transitionSpring}>
           {darkMode ? <IconSun /> : <IconMoon />}

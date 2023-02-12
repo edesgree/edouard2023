@@ -1,5 +1,8 @@
 import React from 'react';
 import LabDetail from './LabDetail';
+import LabHead from './LabHead';
+import { NavLink, Routes, Route, Outlet } from 'react-router-dom';
+
 import { ReactComponent as IconGrid } from '../assets/icons/icon-grid.svg';
 import { motion, useIsPresent, useScroll, useSpring } from 'framer-motion';
 export default function Lab(props) {
@@ -14,15 +17,24 @@ export default function Lab(props) {
   };
   const labElements = props.dataLab.map((item) => {
     return (
-      <li key={item.id} id={item.id} onClick={handleChoice} href="#topLab">
-        <div className="media">
-          <img src={`${item.images.cover}`} alt={item.name} />
-        </div>
-        <div className="project-info">
-          <h4 className="is-4 title">{item.name}</h4>
-          <p className="subtitle is-6">{item.subtitle}</p>
-        </div>
-      </li>
+      <motion.li
+        initial={{ scale: 0, opacity: 0 }}
+        transition={{ duration: 0.5 }}
+        whileInView={{ scale: 1, opacity: 1 }}
+        viewport={{ once: true }}
+        key={item.id}
+        id={item.id}
+      >
+        <NavLink to={item.slug}>
+          <div className="media">
+            <img src={`${item.images.cover}`} alt={item.name} />
+          </div>
+          <div className="project-info">
+            <h4 className="is-4 title">{item.name}</h4>
+            <p className="subtitle is-6">{item.subtitle}</p>
+          </div>
+        </NavLink>
+      </motion.li>
     );
   });
   const { scrollYProgress } = useScroll();
@@ -35,50 +47,22 @@ export default function Lab(props) {
   return (
     <section className="section">
       <a id="topLab"></a>
-      <header className="header-section">
-        <div>
-          <h2 className="is-2 title">{props.dataText.labTitle[props.lang]}</h2>
-          <p className="block">{props.dataText.labSubTitle[props.lang]}</p>
-        </div>
+      <LabHead
+        dataText={props.dataText}
+        lang={props.lang}
+        handleTrad={props.handleTrad}
+        navBack={false}
+      />
 
-        {currentProject && (
-          <>
-            <a
-              className="button is-secondary"
-              href="#topLab"
-              onClick={handleCloseProject}
-            >
-              <span className="icon-text">
-                <span>{props.dataText.labelBack[props.lang]}</span>
-                <span className="icon">
-                  <IconGrid />
-                </span>
-              </span>
-            </a>
-          </>
-        )}
-      </header>
+      <motion.ul
+        animate="visible"
+        initial="hidden"
+        variants={props.anim}
+        className="project-list"
+      >
+        {labElements}
+      </motion.ul>
 
-      {!currentProject && (
-        <motion.ul
-          animate="visible"
-          initial="hidden"
-          variants={props.anim}
-          className="project-list"
-        >
-          {labElements}
-        </motion.ul>
-      )}
-      {currentProject && (
-        <LabDetail
-          dataLabDetail={props.dataLab}
-          dataText={props.dataText}
-          currentProject={currentProject}
-          handleCloseProject={handleCloseProject}
-          lang={props.lang}
-          anim={props.anim}
-        />
-      )}
       <motion.div
         initial={{ scaleX: 1 }}
         animate={{ scaleX: 0, transition: { duration: 0.5, ease: 'circOut' } }}

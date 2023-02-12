@@ -33,7 +33,6 @@ export default function Work(props) {
         viewport={{ once: true }}
         key={item.id}
         id={item.id}
-        href="#topWork"
       >
         <NavLink to={item.slug}>
           <div className="media">
@@ -66,7 +65,6 @@ export default function Work(props) {
         navBack={false}
       />
 
-      <hr />
       <>
         <motion.ul
           animate="visible"
@@ -77,7 +75,7 @@ export default function Work(props) {
           {workElements}
         </motion.ul>
       </>
-      <Outlet />
+
       {/* 
       <Routes>
         <Route

@@ -6,17 +6,15 @@ import WorkHead from './WorkHead';
 export default function WorkDetail(props) {
   // get params from Route in App ('/work/:projectName')
   const { projectName } = useParams();
-  console.log('projectName', projectName);
+
   //const [currentProject, setCurrentProject] = React.useState([]);
 
   // get corresponding data for this project
   const currentProject = props.dataWorkDetail.find((project) => {
-    console.log(project);
     return project.slug === projectName;
   });
-  console.log('current', currentProject);
-  // get company name
 
+  // get company name
   const currentProjectCompany = props.dataText.companies.find((company) => {
     return company.id === currentProject.companyId || null;
   });

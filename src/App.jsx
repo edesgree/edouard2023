@@ -6,6 +6,7 @@ import Intro from './components/Intro';
 import Work from './components/Work';
 import WorkDetail from './components/WorkDetail';
 import Lab from './components/Lab';
+import LabDetail from './components/LabDetail';
 import Test from './components/Test';
 import About from './components/About';
 import Contact from './components/Contact';
@@ -92,6 +93,21 @@ function App() {
                 handleTrad={handleTrad}
                 anim={animShowContentVariant}
               />
+            }
+          />
+          <Route
+            path="lab/:projectName"
+            element={
+              <>
+                <AnimatePresence mode="wait" initial={false}>
+                  <LabDetail
+                    dataLabDetail={data.lab}
+                    dataText={data.common}
+                    lang={lang}
+                    anim={animShowContentVariant}
+                  />
+                </AnimatePresence>
+              </>
             }
           />
           <Route

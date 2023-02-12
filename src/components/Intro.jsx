@@ -1,5 +1,5 @@
 import React from 'react';
-import PhotoEd from '../assets/images/home-edouard.png';
+import PhotoEd from '../assets/images/home-edouard.webp';
 import { ReactComponent as IconGreen } from '../assets/images/item-green.svg';
 import { ReactComponent as IconMustard } from '../assets/images/item-mustard.svg';
 import { ReactComponent as IconSage } from '../assets/images/item-sage.svg';

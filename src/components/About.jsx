@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion, useAnimation } from 'framer-motion';
-import PhotoEd from '../assets/images/home-edouard.png';
+import PhotoEd from '../assets/images/about-edouard.webp';
 import DownloadResume from './Ui/DownloadResume';
 
 export default function About(props) {

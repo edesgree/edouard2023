@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import PhotoEd from '../assets/images/home-edouard.png';
+import DownloadResume from './Ui/DownloadResume';
 
 export default function About(props) {
   const socialLinkElements = props.dataSocial.map((social) => {
@@ -45,6 +46,7 @@ export default function About(props) {
 
           <div className="buttons has-addons project-buttons-links">
             {socialLinkElements}
+            <DownloadResume lang={props.lang} />
           </div>
         </div>
       </div>

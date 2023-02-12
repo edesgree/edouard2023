@@ -131,8 +131,8 @@ const data = {
       en: `Back`
     },
     labelUp: {
-      fr: `Haut`,
-      en: `Up`
+      fr: `Allez en haut`,
+      en: `Go Up`
     },
     labelSeeWork: {
       fr: `Mon portfolio`,
@@ -563,6 +563,7 @@ const data = {
           { image: workCdfMobile, title: '' }
         ]
       },
+      companyId: 'version10',
       url: ''
     },
     {
@@ -590,6 +591,7 @@ const data = {
           { image: workExploraMobile, title: '' }
         ]
       },
+      companyId: 'version10',
       url: ''
     },
     {
@@ -789,7 +791,13 @@ const data = {
       slug: 'confluence',
       icon: skillsIconconfluence
     }
-  ]
+  ],
+  about: {
+    text: {
+      fr: `TODO: texte fr`,
+      en: `<p>I am a frontend developer with a strong background in UX/UI. I try to make things simple and modern using best practices and newest industry trends. I am always looking for new things to learn whether it be in web development or my personal interests.</p>`
+    }
+  }
 };
 
 export default data;

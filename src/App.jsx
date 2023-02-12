@@ -4,11 +4,13 @@ import data from './assets/data';
 import Header from './components/Header';
 import Intro from './components/Intro';
 import Work from './components/Work';
+import WorkDetail from './components/WorkDetail';
 import Lab from './components/Lab';
 import Test from './components/Test';
 import About from './components/About';
 import Contact from './components/Contact';
 import Skills from './components/Skills';
+import NotFound from './components/NotFound';
 import InfiniteLooper from './components/InfiniteLooper';
 import ScrollUpButton from './components/Ui/ScrollUpButton';
 import { animShowContentVariant } from './components/Ui/constants';
@@ -25,83 +27,98 @@ function App() {
     lang === 'fr' ? setLang('en') : setLang('fr');
   };
 
-  const page = useRoutes([
-    {
-      path: '/',
-      element: (
-        <>
-          <Intro
-            dataCommon={data.common}
-            dataIntro={data.home}
-            lang={lang}
-            handleTrad={handleTrad}
-            anim={animShowContentVariant}
-          />
-
-          <Skills
-            dataSkills={data.skills}
-            dataText={data.common}
-            lang={lang}
-            handleTrad={handleTrad}
-          />
-        </>
-      )
-    },
-    {
-      path: '/work',
-      element: (
-        <Work
-          dataWork={data.work}
-          dataText={data.common}
-          lang={lang}
-          handleTrad={handleTrad}
-          anim={animShowContentVariant}
-        />
-      )
-    },
-    {
-      path: '/lab',
-      element: (
-        <Lab
-          dataLab={data.lab}
-          dataText={data.common}
-          lang={lang}
-          handleTrad={handleTrad}
-          anim={animShowContentVariant}
-        />
-      )
-    },
-    {
-      path: '/about',
-      element: (
-        <About
-          lang={lang}
-          handleTrad={handleTrad}
-          anim={animShowContentVariant}
-          dataAbout={data.about}
-          dataText={data.common}
-        />
-      )
-    },
-    {
-      path: '/contact',
-      element: (
-        <Contact
-          dataText={data.common}
-          lang={lang}
-          handleTrad={handleTrad}
-          anim={animShowContentVariant}
-        />
-      )
-    }
-  ]);
-  const location = useLocation();
-  if (!page) return null;
   return (
     <main className=" container is-max-desktop">
       <Header dataMenu={data.menu} lang={lang} handleTrad={handleTrad} />
       <AnimatePresence mode="wait" initial={false}>
-        {React.cloneElement(page, { key: location.pathname })}
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Intro
+                  dataCommon={data.common}
+                  dataIntro={data.home}
+                  lang={lang}
+                  handleTrad={handleTrad}
+                  anim={animShowContentVariant}
+                />
+
+                <Skills
+                  dataSkills={data.skills}
+                  dataText={data.common}
+                  lang={lang}
+                  handleTrad={handleTrad}
+                />
+              </>
+            }
+          />
+
+          <Route
+            path="/work/*"
+            element={
+              <Work
+                dataWork={data.work}
+                dataText={data.common}
+                lang={lang}
+                handleTrad={handleTrad}
+                anim={animShowContentVariant}
+              />
+            }
+          />
+
+          <Route
+            path="work/:projectName"
+            element={
+              <>
+                <AnimatePresence mode="wait" initial={false}>
+                  <WorkDetail
+                    dataWorkDetail={data.work}
+                    dataText={data.common}
+                    lang={lang}
+                    anim={animShowContentVariant}
+                  />
+                </AnimatePresence>
+              </>
+            }
+          />
+          <Route
+            path="/lab"
+            element={
+              <Lab
+                dataLab={data.lab}
+                dataText={data.common}
+                lang={lang}
+                handleTrad={handleTrad}
+                anim={animShowContentVariant}
+              />
+            }
+          />
+          <Route
+            path="/about"
+            element={
+              <About
+                lang={lang}
+                handleTrad={handleTrad}
+                anim={animShowContentVariant}
+                dataAbout={data.about}
+                dataText={data.common}
+              />
+            }
+          />
+          <Route
+            path="/contact"
+            element={
+              <Contact
+                dataText={data.common}
+                lang={lang}
+                handleTrad={handleTrad}
+                anim={animShowContentVariant}
+              />
+            }
+          />
+          <Route path="/*" element={<NotFound />} />
+        </Routes>
       </AnimatePresence>
       <ScrollUpButton
         lang={lang}

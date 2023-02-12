@@ -1,6 +1,7 @@
 import React from 'react';
 import WorkDetail from './WorkDetail';
-import { ReactComponent as IconGrid } from '../assets/icons/icon-grid.svg';
+import WorkHead from './WorkHead';
+import { NavLink, Routes, Route, Outlet } from 'react-router-dom';
 
 import {
   motion,
@@ -11,6 +12,8 @@ import {
 } from 'framer-motion';
 
 export default function Work(props) {
+  {
+    /* 
   const [currentProject, setCurrentProject] = React.useState(null);
   const handleChoice = (event) => {
     event.preventDefault();
@@ -19,7 +22,8 @@ export default function Work(props) {
   const handleCloseProject = (event) => {
     event.preventDefault();
     setCurrentProject(null);
-  };
+  };*/
+  }
   const workElements = props.dataWork.map((item) => {
     return (
       <motion.li
@@ -29,16 +33,17 @@ export default function Work(props) {
         viewport={{ once: true }}
         key={item.id}
         id={item.id}
-        onClick={handleChoice}
         href="#topWork"
       >
-        <div className="media">
-          <img src={`${item.images.cover}`} alt={item.name} />
-        </div>
-        <div className="project-info">
-          <h4 className="is-4 title">{item.name}</h4>
-          <p className="subtitle is-6">{item.subtitle}</p>
-        </div>
+        <NavLink to={item.slug}>
+          <div className="media">
+            <img src={`${item.images.cover}`} alt={item.name} />
+          </div>
+          <div className="project-info">
+            <h4 className="is-4 title">{item.name}</h4>
+            <p className="subtitle is-6">{item.subtitle}</p>
+          </div>
+        </NavLink>
       </motion.li>
     );
   });
@@ -54,30 +59,15 @@ export default function Work(props) {
   return (
     <motion.section className="section">
       <a id="topWork"></a>
-      <header className="header-section">
-        <div>
-          <h2 className="is-2 title">{props.dataText.workTitle[props.lang]}</h2>
-          <p className="block">{props.dataText.workSubTitle[props.lang]}</p>
-        </div>
-        {currentProject && (
-          <>
-            <a
-              className="button is-secondary"
-              href="#topWork"
-              onClick={handleCloseProject}
-            >
-              <span className="icon-text">
-                <span>{props.dataText.labelBack[props.lang]}</span>
-                <span className="icon">
-                  <IconGrid />
-                </span>
-              </span>
-            </a>
-          </>
-        )}
-      </header>
+      <WorkHead
+        dataText={props.dataText}
+        lang={props.lang}
+        handleTrad={props.handleTrad}
+        navBack={false}
+      />
 
-      {!currentProject && (
+      <hr />
+      <>
         <motion.ul
           animate="visible"
           initial="hidden"
@@ -86,21 +76,28 @@ export default function Work(props) {
         >
           {workElements}
         </motion.ul>
-      )}
-      {currentProject && (
-        <>
-          <AnimatePresence mode="wait" initial={false}>
-            <WorkDetail
-              dataWorkDetail={props.dataWork}
-              dataText={props.dataText}
-              currentProject={currentProject}
-              handleCloseProject={handleCloseProject}
-              lang={props.lang}
-              anim={props.anim}
-            />
-          </AnimatePresence>
-        </>
-      )}
+      </>
+      <Outlet />
+      {/* 
+      <Routes>
+        <Route
+          path=":workId/*"
+          element={
+            <>
+              <AnimatePresence mode="wait" initial={false}>
+                <WorkDetail
+                  dataWorkDetail={props.dataWork}
+                  dataText={props.dataText}
+                  currentProject={currentProject}
+                  handleCloseProject={handleCloseProject}
+                  lang={props.lang}
+                  anim={props.anim}
+                />
+              </AnimatePresence>
+            </>
+          }
+        />
+        </Routes>*/}
       <motion.div
         initial={{ scaleX: 1 }}
         animate={{ scaleX: 0, transition: { duration: 0.5, ease: 'circOut' } }}

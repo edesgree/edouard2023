@@ -73,7 +73,7 @@ export default function WorkDetail(props) {
       </div>
       <div className="columns">
         <div className="columnsticky column is-4 content">
-          <h4 className="title  is-4">Resume</h4>
+          <h4 className="title  is-4"></h4>
           <div
             className="content"
             dangerouslySetInnerHTML={{
@@ -81,7 +81,7 @@ export default function WorkDetail(props) {
             }}
           />
         </div>
-        <div className=" column is-8">{screensElements.slice(0, 1)}</div>
+        <div className="column is-8">{screensElements.slice(0, 1)}</div>
       </div>
       <div className="columns">
         <div className="columnsticky column is-4">

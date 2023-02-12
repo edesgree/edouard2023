@@ -1,6 +1,8 @@
 import React from 'react';
 import WorkDetail from './WorkDetail';
-import IconGrid from '../assets/icons/icon-grid.svg';
+//import IconGrid from '../assets/icons/icon-grid.svg';
+import { ReactComponent as IconGrid } from '../assets/icons/icon-grid.svg';
+
 import { motion, useIsPresent, useScroll, useSpring } from 'framer-motion';
 
 export default function Work(props) {
@@ -55,14 +57,14 @@ export default function Work(props) {
         {currentProject && (
           <>
             <a
-              className="button is-light is-info"
+              className="button is-secondary"
               href="#topWork"
               onClick={handleCloseProject}
             >
               <span className="icon-text">
                 <span>{props.dataText.labelBack[props.lang]}</span>
                 <span className="icon">
-                  <img src={IconGrid} />
+                  <IconGrid />
                 </span>
               </span>
             </a>

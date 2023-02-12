@@ -10,7 +10,7 @@ import About from './components/About';
 import Contact from './components/Contact';
 import Skills from './components/Skills';
 import InfiniteLooper from './components/InfiniteLooper';
-import ScrollUpButton from './components/ScrollUpButton';
+import ScrollUpButton from './components/Ui/ScrollUpButton';
 import {
   motion,
   useAnimation,
@@ -80,6 +80,8 @@ function App() {
           lang={lang}
           handleTrad={handleTrad}
           anim={animShowContentVariant}
+          dataAbout={data.about}
+          dataText={data.common}
         />
       )
     },

@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ReactComponent as IconUp } from '../assets/icons/icon-arrow-up.svg';
-import { ReactComponent as IconGrid } from '../assets/icons/icon-grid.svg';
+import { ReactComponent as IconUp } from '../../assets/icons/icon-arrow-up.svg';
 
 const scrollVariants = {
   initial: { y: '.5rem', opacity: 0 },

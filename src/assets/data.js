@@ -375,6 +375,7 @@ const data = {
           { image: workPranaProduct, title: 'Product page' }
         ]
       },
+      companyId: 'abso',
       url: 'https://pranafoods.ca/'
     },
     {

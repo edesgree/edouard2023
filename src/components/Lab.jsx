@@ -54,14 +54,7 @@ export default function Lab(props) {
         navBack={false}
       />
 
-      <motion.ul
-        animate="visible"
-        initial="hidden"
-        variants={props.anim}
-        className="project-list"
-      >
-        {labElements}
-      </motion.ul>
+      <ul className="project-list">{labElements}</ul>
 
       <motion.div
         initial={{ scaleX: 1 }}

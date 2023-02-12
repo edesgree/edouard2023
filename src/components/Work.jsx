@@ -56,7 +56,7 @@ export default function Work(props) {
   const isPresent = useIsPresent();
 
   return (
-    <motion.section className="section">
+    <section className="section">
       <a id="topWork"></a>
       <WorkHead
         dataText={props.dataText}
@@ -66,14 +66,7 @@ export default function Work(props) {
       />
 
       <>
-        <motion.ul
-          animate="visible"
-          initial="hidden"
-          variants={props.anim}
-          className="project-list"
-        >
-          {workElements}
-        </motion.ul>
+        <ul className="project-list">{workElements}</ul>
       </>
 
       {/* 
@@ -103,6 +96,6 @@ export default function Work(props) {
         style={{ originX: isPresent ? 0 : 1 }}
         className="privacy-screen"
       />
-    </motion.section>
+    </section>
   );
 }

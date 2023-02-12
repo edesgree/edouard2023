@@ -18,7 +18,18 @@ export default function Intro(props) {
     );
   });
   return (
-    <motion.div animate="visible" initial="hidden" variants={props.anim}>
+    <motion.div
+      initial={{ opacity: 0, y: 100 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: 100 }}
+    >
+      <motion.div
+        initial={{ opacity: 0, x: 20 }}
+        animate={{ opacity: 1, x: 500 }}
+        exit={{ opacity: 0, x: 200 }}
+      >
+        hello
+      </motion.div>
       <section className="section columns section-presentation">
         <div className="column is-two-thirds">
           <h2 className="subtitle is-5 sup-title is-spaced">

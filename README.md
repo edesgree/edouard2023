@@ -20,6 +20,7 @@ It is bootstraped with Vite.js.
 ### Tools
 
 - Vite
+- Bulma
 
 ## Features
 

@@ -230,14 +230,6 @@ const data = {
     {
       id: nanoid(),
       name: {
-        fr: `À propos`,
-        en: `About`
-      },
-      slug: 'about'
-    },
-    {
-      id: nanoid(),
-      name: {
         fr: `Contact`,
         en: `Contact`
       },

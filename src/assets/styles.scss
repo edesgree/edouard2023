@@ -275,7 +275,7 @@ main {
   }
   .head-project {
     .hero-body {
-      align-items: flex-start;
+      align-items: center;
       display: flex;
       justify-content: space-between;
       @include mobile {

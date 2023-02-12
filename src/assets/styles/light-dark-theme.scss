@@ -28,11 +28,11 @@ $themes: (
     lightTheme: $forest
   ),
   buttonSecondaryBg: (
-    darkTheme: red,
+    darkTheme: $black,
     lightTheme: $light-white
   ),
   buttonSecondaryTxt: (
-    darkTheme: $light-white,
+    darkTheme: $beige,
     lightTheme: $primary
   )
 );

@@ -1,6 +1,5 @@
 import React from 'react';
 import WorkDetail from './WorkDetail';
-//import IconGrid from '../assets/icons/icon-grid.svg';
 import { ReactComponent as IconGrid } from '../assets/icons/icon-grid.svg';
 
 import { motion, useIsPresent, useScroll, useSpring } from 'framer-motion';

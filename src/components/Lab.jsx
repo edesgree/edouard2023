@@ -1,6 +1,6 @@
 import React from 'react';
 import LabDetail from './LabDetail';
-import IconGrid from '../assets/icons/icon-grid.svg';
+import { ReactComponent as IconGrid } from '../assets/icons/icon-grid.svg';
 import { motion, useIsPresent, useScroll, useSpring } from 'framer-motion';
 export default function Lab(props) {
   const [currentProject, setCurrentProject] = React.useState(null);
@@ -44,14 +44,14 @@ export default function Lab(props) {
         {currentProject && (
           <>
             <a
-              className="button is-light is-info"
+              className="button is-secondary"
               href="#topLab"
               onClick={handleCloseProject}
             >
               <span className="icon-text">
                 <span>{props.dataText.labelBack[props.lang]}</span>
                 <span className="icon">
-                  <img src={IconGrid} />
+                  <IconGrid />
                 </span>
               </span>
             </a>

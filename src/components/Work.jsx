@@ -2,7 +2,13 @@ import React from 'react';
 import WorkDetail from './WorkDetail';
 import { ReactComponent as IconGrid } from '../assets/icons/icon-grid.svg';
 
-import { motion, useIsPresent, useScroll, useSpring } from 'framer-motion';
+import {
+  motion,
+  useIsPresent,
+  useScroll,
+  useSpring,
+  AnimatePresence
+} from 'framer-motion';
 
 export default function Work(props) {
   const [currentProject, setCurrentProject] = React.useState(null);
@@ -83,14 +89,16 @@ export default function Work(props) {
       )}
       {currentProject && (
         <>
-          <WorkDetail
-            dataWorkDetail={props.dataWork}
-            dataText={props.dataText}
-            currentProject={currentProject}
-            handleCloseProject={handleCloseProject}
-            lang={props.lang}
-            anim={props.anim}
-          />
+          <AnimatePresence mode="wait" initial={false}>
+            <WorkDetail
+              dataWorkDetail={props.dataWork}
+              dataText={props.dataText}
+              currentProject={currentProject}
+              handleCloseProject={handleCloseProject}
+              lang={props.lang}
+              anim={props.anim}
+            />
+          </AnimatePresence>
         </>
       )}
       <motion.div

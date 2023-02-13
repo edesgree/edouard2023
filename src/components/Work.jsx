@@ -12,18 +12,6 @@ import {
 } from 'framer-motion';
 
 export default function Work(props) {
-  {
-    /* 
-  const [currentProject, setCurrentProject] = React.useState(null);
-  const handleChoice = (event) => {
-    event.preventDefault();
-    setCurrentProject(event.currentTarget.id);
-  };
-  const handleCloseProject = (event) => {
-    event.preventDefault();
-    setCurrentProject(null);
-  };*/
-  }
   const workElements = props.dataWork.map((item) => {
     return (
       <motion.li
@@ -69,26 +57,6 @@ export default function Work(props) {
         <ul className="project-list">{workElements}</ul>
       </>
 
-      {/* 
-      <Routes>
-        <Route
-          path=":workId/*"
-          element={
-            <>
-              <AnimatePresence mode="wait" initial={false}>
-                <WorkDetail
-                  dataWorkDetail={props.dataWork}
-                  dataText={props.dataText}
-                  currentProject={currentProject}
-                  handleCloseProject={handleCloseProject}
-                  lang={props.lang}
-                  anim={props.anim}
-                />
-              </AnimatePresence>
-            </>
-          }
-        />
-        </Routes>*/}
       <motion.div
         initial={{ scaleX: 1 }}
         animate={{ scaleX: 0, transition: { duration: 0.5, ease: 'circOut' } }}

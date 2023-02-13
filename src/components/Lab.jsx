@@ -1,9 +1,7 @@
 import React from 'react';
-import LabDetail from './LabDetail';
 import LabHead from './LabHead';
 import { NavLink, Routes, Route, Outlet } from 'react-router-dom';
 
-import { ReactComponent as IconGrid } from '../assets/icons/icon-grid.svg';
 import { motion, useIsPresent, useScroll, useSpring } from 'framer-motion';
 export default function Lab(props) {
   const [currentProject, setCurrentProject] = React.useState(null);

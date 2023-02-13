@@ -37,3 +37,7 @@ It is bootstraped with Vite.js.
 👤 **Edouard Desgrée**
 
 - GitHub: [edesgree](https://github.com/edesgree)
+
+## Deploy
+
+To deploy @ https://edouard.desgree.com/ use in package.json the base pathh like :`"build": "vite build --base=/",`

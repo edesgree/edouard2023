@@ -1,7 +1,8 @@
 import React from 'react';
+import Layout from './Ui/Layout';
 export default function Contact(props) {
   return (
-    <>
+    <Layout key="contact">
       <section className="hero">
         <div className="hero-body">
           <h1 className="title has-text-centered is-1 pre-line ">
@@ -28,6 +29,6 @@ export default function Contact(props) {
           </svg>
         </div>
       </section>
-    </>
+    </Layout>
   );
 }

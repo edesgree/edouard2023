@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PhotoEd from '../assets/images/about-edouard.webp';
 import DownloadResume from './Ui/DownloadResume';
 import { NavLink } from 'react-router-dom';
 
 export default function About(props) {
-  const socialLinkElements = props.dataSocial.map((social) => {
+  const socialLinkElements = props.dataSocial.map((social, index) => {
     return (
-      <>
+      <Fragment key={index}>
         <a
           href={social.url}
           target="_blank"
@@ -17,7 +17,7 @@ export default function About(props) {
             <img src={social.icon} alt={social.name} />
           </span>
         </a>
-      </>
+      </Fragment>
     );
   });
   return (

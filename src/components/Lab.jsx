@@ -1,7 +1,7 @@
 import React from 'react';
 import LabHead from './LabHead';
 import { NavLink } from 'react-router-dom';
-
+import Layout from './Ui/Layout';
 import { motion } from 'framer-motion';
 export default function Lab(props) {
   const [currentProject, setCurrentProject] = React.useState(null);
@@ -37,16 +37,18 @@ export default function Lab(props) {
   });
 
   return (
-    <section className="section">
-      <a id="topLab"></a>
-      <LabHead
-        dataText={props.dataText}
-        lang={props.lang}
-        handleTrad={props.handleTrad}
-        navBack={false}
-      />
+    <Layout key="lab">
+      <section className="section">
+        <a id="topLab"></a>
+        <LabHead
+          dataText={props.dataText}
+          lang={props.lang}
+          handleTrad={props.handleTrad}
+          navBack={false}
+        />
 
-      <ul className="project-list">{labElements}</ul>
-    </section>
+        <ul className="project-list">{labElements}</ul>
+      </section>
+    </Layout>
   );
 }

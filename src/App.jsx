@@ -32,7 +32,7 @@ function App() {
   return (
     <main className=" container is-max-desktop">
       <Header dataMenu={data.menu} lang={lang} handleTrad={handleTrad} />
-      <AnimatePresence mode="wait" initial={false}>
+      <AnimatePresence mode="wait">
         <Routes>
           <Route
             path="/"
@@ -68,15 +68,13 @@ function App() {
           <Route
             path="/work/*"
             element={
-              <Layout key="work">
-                <Work
-                  dataWork={data.work}
-                  dataText={data.common}
-                  lang={lang}
-                  handleTrad={handleTrad}
-                  anim={animShowContentVariant}
-                />
-              </Layout>
+              <Work
+                dataWork={data.work}
+                dataText={data.common}
+                lang={lang}
+                handleTrad={handleTrad}
+                anim={animShowContentVariant}
+              />
             }
           />
 
@@ -85,14 +83,12 @@ function App() {
             element={
               <>
                 <AnimatePresence mode="wait" initial={false}>
-                  <Layout key=":projectName">
-                    <WorkDetail
-                      dataWorkDetail={data.work}
-                      dataText={data.common}
-                      lang={lang}
-                      anim={animShowContentVariant}
-                    />
-                  </Layout>
+                  <WorkDetail
+                    dataWorkDetail={data.work}
+                    dataText={data.common}
+                    lang={lang}
+                    anim={animShowContentVariant}
+                  />
                 </AnimatePresence>
               </>
             }
@@ -100,15 +96,13 @@ function App() {
           <Route
             path="/lab"
             element={
-              <Layout key="lab">
-                <Lab
-                  dataLab={data.lab}
-                  dataText={data.common}
-                  lang={lang}
-                  handleTrad={handleTrad}
-                  anim={animShowContentVariant}
-                />
-              </Layout>
+              <Lab
+                dataLab={data.lab}
+                dataText={data.common}
+                lang={lang}
+                handleTrad={handleTrad}
+                anim={animShowContentVariant}
+              />
             }
           />
           <Route
@@ -116,14 +110,12 @@ function App() {
             element={
               <>
                 <AnimatePresence mode="wait" initial={false}>
-                  <Layout key=":projectName">
-                    <LabDetail
-                      dataLabDetail={data.lab}
-                      dataText={data.common}
-                      lang={lang}
-                      anim={animShowContentVariant}
-                    />
-                  </Layout>
+                  <LabDetail
+                    dataLabDetail={data.lab}
+                    dataText={data.common}
+                    lang={lang}
+                    anim={animShowContentVariant}
+                  />
                 </AnimatePresence>
               </>
             }
@@ -132,14 +124,12 @@ function App() {
           <Route
             path="/contact"
             element={
-              <Layout key="contact">
-                <Contact
-                  dataText={data.common}
-                  lang={lang}
-                  handleTrad={handleTrad}
-                  anim={animShowContentVariant}
-                />
-              </Layout>
+              <Contact
+                dataText={data.common}
+                lang={lang}
+                handleTrad={handleTrad}
+                anim={animShowContentVariant}
+              />
             }
           />
           <Route path="/*" element={<NotFound />} key="404" />

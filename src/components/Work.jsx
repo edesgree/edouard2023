@@ -4,7 +4,7 @@ import WorkHead from './WorkHead';
 import { NavLink } from 'react-router-dom';
 
 import { motion } from 'framer-motion';
-
+import Layout from './Ui/Layout';
 export default function Work(props) {
   const workElements = props.dataWork.map((item) => {
     return (
@@ -30,18 +30,18 @@ export default function Work(props) {
   });
 
   return (
-    <section className="section">
-      <a id="topWork"></a>
-      <WorkHead
-        dataText={props.dataText}
-        lang={props.lang}
-        handleTrad={props.handleTrad}
-        navBack={false}
-      />
+    <Layout key="work">
+      <section className="section">
+        <a id="topWork"></a>
+        <WorkHead
+          dataText={props.dataText}
+          lang={props.lang}
+          handleTrad={props.handleTrad}
+          navBack={false}
+        />
 
-      <>
         <ul className="project-list">{workElements}</ul>
-      </>
-    </section>
+      </section>
+    </Layout>
   );
 }

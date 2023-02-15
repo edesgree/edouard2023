@@ -1,0 +1,433 @@
+html {
+  scroll-behavior: smooth;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--bgBody);
+  color: var(--txtPrimary);
+  font-family: $family-primary;
+  margin: 0;
+  min-height: 100vh;
+  transition: background-color 0.5s ease;
+}
+.pre-line {
+  white-space: pre-line;
+}
+main {
+  align-items: stretch;
+  background-color: var(--bgApp);
+  border-radius: 15px;
+  -webkit-box-shadow: 0px 0px 114px 0px var(--shadow);
+  -moz-box-shadow: 0px 0px 114px 0px var(--shadow);
+  box-shadow: 0px 0px 114px 0px var(--shadow);
+  display: flex;
+  flex-direction: column;
+  min-height: 250px;
+  min-width: 250px;
+  padding: 20px;
+  .content {
+    max-width: 100%;
+  }
+  .section {
+    @include mobile {
+      padding: 1em 0;
+    }
+  }
+
+  /* 
+    HEADER & NAV 
+    */
+  header.main-header {
+    width: 100%;
+    .logo {
+      color: var(--logo);
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 30px;
+      font-weight: bold;
+      line-height: 30px;
+      transition: color 0.4s ease;
+      &:hover {
+        color: $pumkin;
+      }
+    }
+    .navbar {
+      background-color: transparent;
+      width: 100%;
+      .navbar-menu {
+        align-items: center;
+        background-color: var(--bgApp);
+        .navbar-end {
+          gap: 20px;
+          @include mobile {
+            align-items: stretch;
+            display: flex;
+            flex-direction: column;
+            padding: 0 20px;
+            .button {
+              padding-left: 0;
+            }
+          }
+
+          .navbar-item {
+            color: var(--txtPrimary);
+            font-size: 1.25rem;
+            line-height: 1;
+            padding: 0;
+            position: relative;
+            white-space: nowrap;
+            &:active,
+            &:hover,
+            &:focus {
+              background: none;
+              color: $primary;
+            }
+            span {
+              position: relative;
+              &:after {
+                background-color: $primary;
+                border-radius: 9999px;
+                bottom: -4px;
+                content: '';
+                display: block;
+                height: 3px;
+                left: 0;
+                position: absolute;
+                transform: scaleX(0);
+                transform-origin: center left;
+                transition-duration: 0.4s;
+                transition-property: transform;
+                width: 100%;
+              }
+            }
+            &:hover span:after,
+            &.active span:after {
+              transform: scaleX(1);
+            }
+          }
+          .navbar-options {
+            .control {
+              display: inline-flex;
+            }
+            .icon-svg {
+              display: flex;
+            }
+            .button {
+              height: 1.75em;
+            }
+          }
+        }
+      }
+      .navbar-burger {
+        color: var(--icons);
+        span {
+          height: 2px;
+        }
+      }
+    }
+  }
+
+  /* 
+    TITLES
+    */
+  .title {
+    color: var(--txtPrimary);
+  }
+  .sup-title {
+    color: var(--txtVibrant);
+  }
+  header.header-section {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    @include mobile {
+      flex-direction: column;
+      .button {
+        align-self: flex-end;
+      }
+    }
+    .title {
+      margin-bottom: 0;
+    }
+  }
+
+  /* 
+    HOMEPAGE
+    */
+  .section-presentation,
+  .section-about {
+    .col-photo {
+      @include mobile {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+      }
+      .buttons {
+        justify-content: center;
+      }
+    }
+  }
+  //Services
+  .services-list {
+    display: grid;
+    gap: 20px;
+    justify-items: center;
+
+    @include tablet {
+      align-items: start;
+      grid-auto-flow: column;
+      grid-template: repeat(3, auto) / repeat(3, 1fr);
+    }
+    .title {
+      color: var(--txtVibrant);
+      margin-bottom: 0;
+      text-align: center;
+    }
+    p {
+      text-align: center;
+    }
+    .iconSVG {
+      .arrow {
+        fill: var(--icons);
+      }
+    }
+  }
+
+  /* 
+    WORK AND LAB listing page
+    */
+  .project-list {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include mobile {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    li {
+      display: flex;
+      flex-direction: column;
+      &:hover {
+        cursor: pointer;
+        .media img {
+          transform: scale(1.15);
+        }
+        .project-info {
+          background-color: darken($sage, 20%);
+        }
+      }
+      .media {
+        overflow: hidden;
+        img {
+          height: 100%;
+          object-fit: cover;
+          transition: transform 0.8s ease;
+          width: 100%;
+        }
+      }
+      .project-info {
+        background-color: $sage;
+        flex: 1;
+        padding: 20px;
+        transition: background-color 0.8s ease;
+        .title {
+          color: $black;
+        }
+      }
+    }
+  }
+  .head-project {
+    .hero-body {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      @include mobile {
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+      }
+    }
+  }
+  .separator-title {
+    background: $secondary;
+    border-radius: 4px 4px 0 0;
+    color: $defaultTxt;
+    margin-bottom: 20px;
+    position: relative;
+    &:after {
+      $arrow-size: 10px;
+      border-left: $arrow-size solid transparent;
+      border-right: $arrow-size solid transparent;
+      border-top: $arrow-size solid $secondary;
+      bottom: -$arrow-size;
+      clear: both;
+      content: '';
+      height: 0;
+      left: calc(50% - ($arrow-size / 2));
+      position: absolute;
+      width: 0;
+    }
+  }
+  .columnsticky {
+    @include tablet {
+      align-self: flex-start;
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0;
+    }
+  }
+  /* 
+    SKILLS LIST (ICONS)
+    */
+  .skills-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    li {
+      &:hover {
+        img {
+          transform: scale(1.05);
+        }
+      }
+      img {
+        transition: transform 0.29s cubic-bezier(0.53, 1.53, 0.58, 1);
+      }
+    }
+  }
+}
+
+/* 
+  BUTTONS AND LINKS 
+  */
+.scrollup {
+  bottom: 40px;
+  cursor: pointer;
+  position: fixed;
+  right: 20px;
+  z-index: 1;
+  svg * {
+    fill: var(--icons);
+  }
+}
+
+.button {
+  &.is-secondary {
+    background-color: var(--buttonSecondaryBg);
+    border-color: transparent;
+    &,
+    icon-text {
+      color: var(--buttonSecondaryTxt);
+      .icon {
+        //svg icon customization
+        svg * {
+          fill: currentColor;
+        }
+      }
+    }
+  }
+
+  //animation on hover of buttons
+  &:hover .icon {
+    transform: scale(1.1);
+  }
+  .icon {
+    transition: transform 0.1s ease-out;
+    img {
+      display: block;
+    }
+  }
+}
+
+// override bulma link
+a {
+  color: $mustard;
+  &:hover {
+    color: $pumkin;
+  }
+}
+
+/* 
+  CONTACT 
+  */
+// animation text
+
+svg.textContact {
+  display: flex;
+  font-family: $family-primary;
+  font-size: 3em;
+  font-weight: $weight-bold;
+  height: 100%;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100%;
+
+  text {
+    letter-spacing: 10px;
+  }
+  .letter {
+    animation: stroke-offset 5.5s infinite linear;
+    fill: none;
+    stroke: white;
+    stroke-dasharray: 6% 29%;
+    stroke-dashoffset: 0%;
+    stroke-width: 2px;
+
+    &:nth-child(1) {
+      animation-delay: -1;
+      stroke: #f39c12;
+    }
+
+    &:nth-child(2) {
+      animation-delay: -2s;
+      stroke: $grey;
+    }
+
+    &:nth-child(3) {
+      animation-delay: -3s;
+      stroke: $forest;
+    }
+
+    &:nth-child(4) {
+      animation-delay: -4s;
+      stroke: $mustard;
+    }
+
+    &:nth-child(5) {
+      animation-delay: -5s;
+      stroke: $sage;
+    }
+  }
+}
+
+@keyframes stroke-offset {
+  100% {
+    stroke-dashoffset: -35%;
+  }
+}
+
+//svg
+svg:focus {
+  outline: none;
+}
+
+/* 
+TRANSITIONS 
+*/
+// color transition between pages
+.privacy-screen {
+  background-color: $vibrant;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 50;
+}

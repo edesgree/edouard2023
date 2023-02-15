@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion, useAnimation } from 'framer-motion';
 import PhotoEd from '../assets/images/about-edouard.webp';
 import DownloadResume from './Ui/DownloadResume';
 import { NavLink } from 'react-router-dom';
@@ -22,12 +21,7 @@ export default function About(props) {
     );
   });
   return (
-    <motion.section
-      className="section section-about"
-      animate="visible"
-      initial="hidden"
-      variants={props.anim}
-    >
+    <section className="section section-about">
       <div className="columns">
         <div className="column is-8">
           <h2 className="is-2 title">
@@ -56,6 +50,6 @@ export default function About(props) {
           </div>
         </div>
       </div>
-    </motion.section>
+    </section>
   );
 }

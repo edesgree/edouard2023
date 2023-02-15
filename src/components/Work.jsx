@@ -1,15 +1,9 @@
 import React from 'react';
 import WorkDetail from './WorkDetail';
 import WorkHead from './WorkHead';
-import { NavLink, Routes, Route, Outlet } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
-import {
-  motion,
-  useIsPresent,
-  useScroll,
-  useSpring,
-  AnimatePresence
-} from 'framer-motion';
+import { motion } from 'framer-motion';
 
 export default function Work(props) {
   const workElements = props.dataWork.map((item) => {
@@ -34,14 +28,6 @@ export default function Work(props) {
       </motion.li>
     );
   });
-  // use for the transition (big empty colored div#privacy-screen)
-  const { scrollYProgress } = useScroll();
-  const scaleX = useSpring(scrollYProgress, {
-    stiffness: 100,
-    damping: 30,
-    restDelta: 0.001
-  });
-  const isPresent = useIsPresent();
 
   return (
     <section className="section">
@@ -56,14 +42,6 @@ export default function Work(props) {
       <>
         <ul className="project-list">{workElements}</ul>
       </>
-
-      <motion.div
-        initial={{ scaleX: 1 }}
-        animate={{ scaleX: 0, transition: { duration: 0.5, ease: 'circOut' } }}
-        exit={{ scaleX: 1, transition: { duration: 0.5, ease: 'circIn' } }}
-        style={{ originX: isPresent ? 0 : 1 }}
-        className="privacy-screen"
-      />
     </section>
   );
 }

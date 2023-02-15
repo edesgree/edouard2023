@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Route, Routes, useLocation, useRoutes } from 'react-router-dom';
 import data from './assets/data';
 import Header from './components/Header';
@@ -12,6 +12,7 @@ import About from './components/About';
 import Contact from './components/Contact';
 import Skills from './components/Skills';
 import NotFound from './components/NotFound';
+import Layout from './components/Ui/Layout';
 import InfiniteLooper from './components/InfiniteLooper';
 import ScrollUpButton from './components/Ui/ScrollUpButton';
 import { animShowContentVariant } from './components/Ui/constants';
@@ -23,7 +24,7 @@ import {
 } from 'framer-motion';
 function App() {
   const [lang, setLang] = React.useState('fr');
-  const isPresent = useIsPresent();
+
   const handleTrad = () => {
     lang === 'fr' ? setLang('en') : setLang('fr');
   };
@@ -36,7 +37,7 @@ function App() {
           <Route
             path="/"
             element={
-              <>
+              <Layout key="home">
                 <Intro
                   dataCommon={data.common}
                   dataIntro={data.home}
@@ -60,20 +61,22 @@ function App() {
                   dataSocial={data.socials}
                   dataText={data.common}
                 />
-              </>
+              </Layout>
             }
           />
 
           <Route
             path="/work/*"
             element={
-              <Work
-                dataWork={data.work}
-                dataText={data.common}
-                lang={lang}
-                handleTrad={handleTrad}
-                anim={animShowContentVariant}
-              />
+              <Layout key="work">
+                <Work
+                  dataWork={data.work}
+                  dataText={data.common}
+                  lang={lang}
+                  handleTrad={handleTrad}
+                  anim={animShowContentVariant}
+                />
+              </Layout>
             }
           />
 
@@ -82,12 +85,14 @@ function App() {
             element={
               <>
                 <AnimatePresence mode="wait" initial={false}>
-                  <WorkDetail
-                    dataWorkDetail={data.work}
-                    dataText={data.common}
-                    lang={lang}
-                    anim={animShowContentVariant}
-                  />
+                  <Layout key=":projectName">
+                    <WorkDetail
+                      dataWorkDetail={data.work}
+                      dataText={data.common}
+                      lang={lang}
+                      anim={animShowContentVariant}
+                    />
+                  </Layout>
                 </AnimatePresence>
               </>
             }
@@ -95,13 +100,15 @@ function App() {
           <Route
             path="/lab"
             element={
-              <Lab
-                dataLab={data.lab}
-                dataText={data.common}
-                lang={lang}
-                handleTrad={handleTrad}
-                anim={animShowContentVariant}
-              />
+              <Layout key="lab">
+                <Lab
+                  dataLab={data.lab}
+                  dataText={data.common}
+                  lang={lang}
+                  handleTrad={handleTrad}
+                  anim={animShowContentVariant}
+                />
+              </Layout>
             }
           />
           <Route
@@ -109,12 +116,14 @@ function App() {
             element={
               <>
                 <AnimatePresence mode="wait" initial={false}>
-                  <LabDetail
-                    dataLabDetail={data.lab}
-                    dataText={data.common}
-                    lang={lang}
-                    anim={animShowContentVariant}
-                  />
+                  <Layout key=":projectName">
+                    <LabDetail
+                      dataLabDetail={data.lab}
+                      dataText={data.common}
+                      lang={lang}
+                      anim={animShowContentVariant}
+                    />
+                  </Layout>
                 </AnimatePresence>
               </>
             }
@@ -123,28 +132,23 @@ function App() {
           <Route
             path="/contact"
             element={
-              <Contact
-                dataText={data.common}
-                lang={lang}
-                handleTrad={handleTrad}
-                anim={animShowContentVariant}
-              />
+              <Layout key="contact">
+                <Contact
+                  dataText={data.common}
+                  lang={lang}
+                  handleTrad={handleTrad}
+                  anim={animShowContentVariant}
+                />
+              </Layout>
             }
           />
-          <Route path="/*" element={<NotFound />} />
+          <Route path="/*" element={<NotFound />} key="404" />
         </Routes>
       </AnimatePresence>
       <ScrollUpButton
         lang={lang}
         dataText={data.common}
         handleTrad={handleTrad}
-      />
-      <motion.div
-        initial={false}
-        animate={{ scaleX: 0, transition: { duration: 0.5, ease: 'circOut' } }}
-        exit={{ scaleX: 1, transition: { duration: 0.5, ease: 'circIn' } }}
-        style={{ originX: isPresent ? 0 : 1 }}
-        className="privacy-screen"
       />
     </main>
   );

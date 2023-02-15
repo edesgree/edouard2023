@@ -1,8 +1,8 @@
 import React from 'react';
 import LabHead from './LabHead';
-import { NavLink, Routes, Route, Outlet } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
-import { motion, useIsPresent, useScroll, useSpring } from 'framer-motion';
+import { motion } from 'framer-motion';
 export default function Lab(props) {
   const [currentProject, setCurrentProject] = React.useState(null);
   const handleChoice = (event) => {
@@ -35,13 +35,7 @@ export default function Lab(props) {
       </motion.li>
     );
   });
-  const { scrollYProgress } = useScroll();
-  const scaleX = useSpring(scrollYProgress, {
-    stiffness: 100,
-    damping: 30,
-    restDelta: 0.001
-  });
-  const isPresent = useIsPresent();
+
   return (
     <section className="section">
       <a id="topLab"></a>
@@ -53,14 +47,6 @@ export default function Lab(props) {
       />
 
       <ul className="project-list">{labElements}</ul>
-
-      <motion.div
-        initial={{ scaleX: 1 }}
-        animate={{ scaleX: 0, transition: { duration: 0.5, ease: 'circOut' } }}
-        exit={{ scaleX: 1, transition: { duration: 0.5, ease: 'circIn' } }}
-        style={{ originX: isPresent ? 0 : 1 }}
-        className="privacy-screen"
-      />
     </section>
   );
 }

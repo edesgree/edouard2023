@@ -13,15 +13,16 @@ import Contact from './components/Contact';
 import Skills from './components/Skills';
 import NotFound from './components/NotFound';
 import Layout from './components/Ui/Layout';
+import LayoutInView from './components/Ui/LayoutInView';
 import InfiniteLooper from './components/InfiniteLooper';
 import ScrollUpButton from './components/Ui/ScrollUpButton';
-import { animShowContentVariant } from './components/Ui/constants';
-import {
-  motion,
-  useAnimation,
-  AnimatePresence,
-  useIsPresent
-} from 'framer-motion';
+import { animShowContentVariant, animPop } from './components/Ui/constants';
+
+import { motion, AnimatePresence } from 'framer-motion';
+
+function Square() {
+  return <motion.div className="square"></motion.div>;
+}
 function App() {
   const [lang, setLang] = React.useState('fr');
 
@@ -32,6 +33,7 @@ function App() {
   return (
     <main className=" container is-max-desktop">
       <Header dataMenu={data.menu} lang={lang} handleTrad={handleTrad} />
+
       <AnimatePresence mode="wait">
         <Routes>
           <Route
@@ -43,7 +45,6 @@ function App() {
                   dataIntro={data.home}
                   lang={lang}
                   handleTrad={handleTrad}
-                  anim={animShowContentVariant}
                 />
 
                 <Skills
@@ -56,7 +57,6 @@ function App() {
                 <About
                   lang={lang}
                   handleTrad={handleTrad}
-                  anim={animShowContentVariant}
                   dataAbout={data.about}
                   dataSocial={data.socials}
                   dataText={data.common}

@@ -15,6 +15,11 @@ body {
 .pre-line {
   white-space: pre-line;
 }
+#root {
+  @include tablet {
+    padding: 20px;
+  }
+}
 main {
   align-items: stretch;
   background-color: var(--bgApp);

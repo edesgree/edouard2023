@@ -10,6 +10,8 @@ export default function Contact(props) {
           <h1 className="title has-text-centered is-1 pre-line ">
             {props.dataText.contactTitle[props.lang]}
           </h1>
+
+          {/*
           <motion.svg
             initial="hidden"
             animate="visible"
@@ -178,123 +180,124 @@ export default function Contact(props) {
               fill="#47516B"
             />
           </motion.svg>
-
-          <motion.svg
-            width="600"
-            height="600"
-            viewBox="0 0 600 600"
-            initial="hidden"
-            animate="visible"
-          >
-            <motion.circle
-              cx="100"
-              cy="100"
-              r="80"
-              stroke="#ff0055"
-              variants={animDraw}
-              custom={1}
-            />
-            <motion.line
-              x1="220"
-              y1="30"
-              x2="360"
-              y2="170"
-              stroke="#00cc88"
-              variants={animDraw}
-              custom={2}
-            />
-            <motion.line
-              x1="220"
-              y1="170"
-              x2="360"
-              y2="30"
-              stroke="#00cc88"
-              variants={animDraw}
-              custom={2.5}
-            />
-            <motion.rect
-              width="140"
-              height="140"
-              x="410"
-              y="30"
-              rx="20"
-              stroke="#0099ff"
-              variants={animDraw}
-              custom={3}
-            />
-            <motion.circle
-              cx="100"
-              cy="300"
-              r="80"
-              stroke="#0099ff"
-              variants={animDraw}
-              custom={2}
-            />
-            <motion.line
-              x1="220"
-              y1="230"
-              x2="360"
-              y2="370"
-              stroke="#ff0055"
-              custom={3}
-              variants={animDraw}
-            />
-            <motion.line
-              x1="220"
-              y1="370"
-              x2="360"
-              y2="230"
-              stroke="#ff0055"
-              custom={3.5}
-              variants={animDraw}
-            />
-            <motion.rect
-              width="140"
-              height="140"
-              x="410"
-              y="230"
-              rx="20"
-              stroke="#00cc88"
-              custom={4}
-              variants={animDraw}
-            />
-            <motion.circle
-              cx="100"
-              cy="500"
-              r="80"
-              stroke="#00cc88"
-              variants={animDraw}
-              custom={3}
-            />
-            <motion.line
-              x1="220"
-              y1="430"
-              x2="360"
-              y2="570"
-              stroke="#0099ff"
-              variants={animDraw}
-              custom={4}
-            />
-            <motion.line
-              x1="220"
-              y1="570"
-              x2="360"
-              y2="430"
-              stroke="#0099ff"
-              variants={animDraw}
-              custom={4.5}
-            />
-            <motion.rect
-              width="140"
-              height="140"
-              x="410"
-              y="430"
-              rx="20"
-              stroke="#ff0055"
-              variants={animDraw}
-              custom={5}
-            />
-          </motion.svg>
+           
+            <motion.svg
+              width="600"
+              height="600"
+              viewBox="0 0 600 600"
+              initial="hidden"
+              animate="visible"
+            >
+              <motion.circle
+                cx="100"
+                cy="100"
+                r="80"
+                stroke="#ff0055"
+                variants={animDraw}
+                custom={1}
+              />
+              <motion.line
+                x1="220"
+                y1="30"
+                x2="360"
+                y2="170"
+                stroke="#00cc88"
+                variants={animDraw}
+                custom={2}
+              />
+              <motion.line
+                x1="220"
+                y1="170"
+                x2="360"
+                y2="30"
+                stroke="#00cc88"
+                variants={animDraw}
+                custom={2.5}
+              />
+              <motion.rect
+                width="140"
+                height="140"
+                x="410"
+                y="30"
+                rx="20"
+                stroke="#0099ff"
+                variants={animDraw}
+                custom={3}
+              />
+              <motion.circle
+                cx="100"
+                cy="300"
+                r="80"
+                stroke="#0099ff"
+                variants={animDraw}
+                custom={2}
+              />
+              <motion.line
+                x1="220"
+                y1="230"
+                x2="360"
+                y2="370"
+                stroke="#ff0055"
+                custom={3}
+                variants={animDraw}
+              />
+              <motion.line
+                x1="220"
+                y1="370"
+                x2="360"
+                y2="230"
+                stroke="#ff0055"
+                custom={3.5}
+                variants={animDraw}
+              />
+              <motion.rect
+                width="140"
+                height="140"
+                x="410"
+                y="230"
+                rx="20"
+                stroke="#00cc88"
+                custom={4}
+                variants={animDraw}
+              />
+              <motion.circle
+                cx="100"
+                cy="500"
+                r="80"
+                stroke="#00cc88"
+                variants={animDraw}
+                custom={3}
+              />
+              <motion.line
+                x1="220"
+                y1="430"
+                x2="360"
+                y2="570"
+                stroke="#0099ff"
+                variants={animDraw}
+                custom={4}
+              />
+              <motion.line
+                x1="220"
+                y1="570"
+                x2="360"
+                y2="430"
+                stroke="#0099ff"
+                variants={animDraw}
+                custom={4.5}
+              />
+              <motion.rect
+                width="140"
+                height="140"
+                x="410"
+                y="430"
+                rx="20"
+                stroke="#ff0055"
+                variants={animDraw}
+                custom={5}
+              />
+            </motion.svg>
+            
           <motion.svg
             className="textContact2"
             width="97"
@@ -311,6 +314,7 @@ export default function Contact(props) {
               fill="#47516B"
             />
           </motion.svg>
+    */}
           <svg
             className="textContact"
             viewBox="0 0 960 100"

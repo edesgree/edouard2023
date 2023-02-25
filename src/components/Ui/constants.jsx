@@ -1,4 +1,4 @@
-// constants.jsx
+// animation parameters to use with Framer Motion module
 const transitionSpring = {
   type: 'spring',
   stiffness: 700,

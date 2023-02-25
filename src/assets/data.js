@@ -140,7 +140,7 @@ const data = {
       en: `See my work`
     },
     contactTitle: {
-      fr: `Contactez-moi 👋\n⬇️`,
+      fr: `Contactez-moi 👋`,
       en: `Say Hi 👋`
     },
     companies: [

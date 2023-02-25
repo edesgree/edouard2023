@@ -28,8 +28,13 @@ export default function Header(props) {
         aria-label="main navigation"
       >
         <div className="navbar-brand">
-          <NavLink exact="true" to="/" className="navbar-item">
-            <span className="logo">{`<Ed/>`}</span>
+          <NavLink
+            exact="true"
+            to="/"
+            aria-label="homepage"
+            className="navbar-item"
+          >
+            <span aria-label="homepage" className="logo">{`<Ed/>`}</span>
           </NavLink>
 
           <a
@@ -60,7 +65,9 @@ export default function Header(props) {
                   className="button is-small is-secondary"
                   onClick={props.handleTrad}
                 >
-                  <span>{props.lang === 'fr' ? 'en' : 'fr'}</span>
+                  <span aria-label={props.lang === 'fr' ? 'english' : 'french'}>
+                    {props.lang === 'fr' ? 'en' : 'fr'}
+                  </span>
                 </button>
               </p>
               <p className="control">

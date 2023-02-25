@@ -38,7 +38,12 @@ export default function Intro(props) {
         <div className="column is-one-thirds col-photo">
           <img className="mb-4" src={PhotoEd} alt={props.dataCommon.myName} />
           <div className="block has-text-centered">
-            <NavLink exact="true" to="/work" className="button is-primary">
+            <NavLink
+              exact="true"
+              to="/work"
+              aria-label="Go to portfolio"
+              className="button is-primary"
+            >
               {props.dataCommon.labelSeeWork[props.lang]}
             </NavLink>
           </div>

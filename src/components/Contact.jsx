@@ -2,16 +2,15 @@ import React from 'react';
 import Layout from './Ui/Layout';
 export default function Contact(props) {
   //spam proof mailto links
-  const links = document.querySelectorAll(
-    '[data-part1][data-part2][data-part3]'
-  );
+  const links = document.querySelectorAll('[data-mailto]');
+
   for (const link of links) {
-    const attrs = link.dataset;
     link.setAttribute(
       'href',
-      `mailto:${attrs.part1}@${attrs.part2}.${attrs.part3}?subject='contact from desgree.com'`
+      `mailto:${link.dataset.part1}@${link.dataset.part2}.${link.dataset.part3}?subject='contact from desgree.com'`
     );
   }
+
   return (
     <Layout key="contact">
       <section className="hero">
@@ -19,7 +18,13 @@ export default function Contact(props) {
           <h1 className="title has-text-centered is-1 pre-line ">
             {props.dataText.contactTitle[props.lang]}
           </h1>
-          <a href="" data-part1="edouard" data-part2="desgree" data-part3="com">
+          <a
+            data-mailto
+            href=""
+            data-part1="edouard"
+            data-part2="desgree"
+            data-part3="com"
+          >
             <svg
               className="textContact"
               viewBox="0 0 960 100"

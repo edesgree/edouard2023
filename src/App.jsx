@@ -1,24 +1,24 @@
 import React, { Suspense, lazy } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import data from './assets/data';
+import Loading from './components/Ui/Loading';
 import Header from './components/Header';
-import Intro from './components/Intro';
-import About from './components/About';
-import Contact from './components/Contact';
-import Skills from './components/Skills';
+
 import NotFound from './components/NotFound';
 import Layout from './components/Ui/Layout';
 import ScrollUpButton from './components/Ui/ScrollUpButton';
 import { animShowContentVariant } from './components/Ui/constants';
 import { AnimatePresence } from 'framer-motion';
+//PAGES
+const Intro = lazy(() => import('./components/Intro'));
+const About = lazy(() => import('./components/About'));
+const Skills = lazy(() => import('./components/Skills'));
+const Contact = lazy(() => import('./components/Contact'));
 const Work = lazy(() => import('./components/Work'));
 const WorkDetail = lazy(() => import('./components/WorkDetail'));
 const Lab = lazy(() => import('./components/Lab'));
 const LabDetail = lazy(() => import('./components/LabDetail'));
 
-function Loading() {
-  return <h2>Loading...⌛</h2>;
-}
 function App() {
   const [lang, setLang] = React.useState('fr');
 
@@ -29,43 +29,44 @@ function App() {
   return (
     <main className=" container is-max-desktop">
       <Header dataMenu={data.menu} lang={lang} handleTrad={handleTrad} />
-      <AnimatePresence mode="wait">
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <Layout key="home">
-                <Intro
-                  dataCommon={data.common}
-                  dataIntro={data.home}
-                  lang={lang}
-                  handleTrad={handleTrad}
-                  anim={animShowContentVariant}
-                />
 
-                <Skills
-                  dataSkills={data.skills}
-                  dataText={data.common}
-                  lang={lang}
-                  handleTrad={handleTrad}
-                />
+      <Suspense fallback={<Loading />}>
+        <AnimatePresence mode="wait">
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <Layout key="home">
+                  <Intro
+                    dataCommon={data.common}
+                    dataIntro={data.home}
+                    lang={lang}
+                    handleTrad={handleTrad}
+                    anim={animShowContentVariant}
+                  />
 
-                <About
-                  lang={lang}
-                  handleTrad={handleTrad}
-                  anim={animShowContentVariant}
-                  dataAbout={data.about}
-                  dataSocial={data.socials}
-                  dataText={data.common}
-                />
-              </Layout>
-            }
-          />
+                  <Skills
+                    dataSkills={data.skills}
+                    dataText={data.common}
+                    lang={lang}
+                    handleTrad={handleTrad}
+                  />
 
-          <Route
-            path="/work/*"
-            element={
-              <Suspense fallback={<Loading />}>
+                  <About
+                    lang={lang}
+                    handleTrad={handleTrad}
+                    anim={animShowContentVariant}
+                    dataAbout={data.about}
+                    dataSocial={data.socials}
+                    dataText={data.common}
+                  />
+                </Layout>
+              }
+            />
+
+            <Route
+              path="/work/*"
+              element={
                 <Work
                   dataWork={data.work}
                   dataText={data.common}
@@ -73,15 +74,13 @@ function App() {
                   handleTrad={handleTrad}
                   anim={animShowContentVariant}
                 />
-              </Suspense>
-            }
-          />
+              }
+            />
 
-          <Route
-            path="work/:projectName"
-            element={
-              <>
-                <Suspense fallback={<Loading />}>
+            <Route
+              path="work/:projectName"
+              element={
+                <>
                   <AnimatePresence mode="wait" initial={false}>
                     <WorkDetail
                       dataWorkDetail={data.work}
@@ -90,14 +89,12 @@ function App() {
                       anim={animShowContentVariant}
                     />
                   </AnimatePresence>
-                </Suspense>
-              </>
-            }
-          />
-          <Route
-            path="/lab"
-            element={
-              <Suspense fallback={<Loading />}>
+                </>
+              }
+            />
+            <Route
+              path="/lab"
+              element={
                 <Lab
                   dataLab={data.lab}
                   dataText={data.common}
@@ -105,14 +102,12 @@ function App() {
                   handleTrad={handleTrad}
                   anim={animShowContentVariant}
                 />
-              </Suspense>
-            }
-          />
-          <Route
-            path="lab/:projectName"
-            element={
-              <>
-                <Suspense fallback={<Loading />}>
+              }
+            />
+            <Route
+              path="lab/:projectName"
+              element={
+                <>
                   <AnimatePresence mode="wait" initial={false}>
                     <LabDetail
                       dataLabDetail={data.lab}
@@ -121,25 +116,26 @@ function App() {
                       anim={animShowContentVariant}
                     />
                   </AnimatePresence>
-                </Suspense>
-              </>
-            }
-          />
+                </>
+              }
+            />
 
-          <Route
-            path="/contact"
-            element={
-              <Contact
-                dataText={data.common}
-                lang={lang}
-                handleTrad={handleTrad}
-                anim={animShowContentVariant}
-              />
-            }
-          />
-          <Route path="/*" element={<NotFound />} key="404" />
-        </Routes>
-      </AnimatePresence>
+            <Route
+              path="/contact"
+              element={
+                <Contact
+                  dataText={data.common}
+                  lang={lang}
+                  handleTrad={handleTrad}
+                  anim={animShowContentVariant}
+                />
+              }
+            />
+            <Route path="/*" element={<NotFound />} key="404" />
+          </Routes>
+        </AnimatePresence>
+      </Suspense>
+
       <ScrollUpButton
         lang={lang}
         dataText={data.common}

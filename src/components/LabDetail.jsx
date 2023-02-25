@@ -5,6 +5,9 @@ import { motion, useAnimation } from 'framer-motion';
 import { useParams } from 'react-router-dom';
 import LabHead from './LabHead';
 import Layout from './Ui/Layout';
+import PlaceholderListImage from '../assets/images/placeholder-project-list.svg';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+
 export default function LabDetail(props) {
   // get params from Route in App ('/lab/:projectName')
   const { projectName } = useParams();
@@ -28,10 +31,10 @@ export default function LabDetail(props) {
     (screenItem, index) => {
       return (
         <div key={index}>
-          <img
+          <LazyLoadImage
             src={`${screenItem}`}
             alt={`${currentProject.name} ${currentProject.subtitle}`}
-            className="img-responsive"
+            placeholderSrc={PlaceholderListImage}
           />
         </div>
       );

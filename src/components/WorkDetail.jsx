@@ -4,11 +4,12 @@ import { motion, useAnimation } from 'framer-motion';
 import { useParams } from 'react-router-dom';
 import WorkHead from './WorkHead';
 import Layout from './Ui/Layout';
+import PlaceholderListImage from '../assets/images/placeholder-project-list.svg';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+
 export default function WorkDetail(props) {
   // get params from Route in App ('/work/:projectName')
   const { projectName } = useParams();
-
-  //const [currentProject, setCurrentProject] = React.useState([]);
 
   // get corresponding data for this project
   const currentProject = props.dataWorkDetail.find((project) => {
@@ -36,9 +37,10 @@ export default function WorkDetail(props) {
           <h5 className="separator-title has-text-centered">{screen.title}</h5>
         )}
 
-        <img
+        <LazyLoadImage
           src={`${screen.image}`}
           alt={`${currentProject.name} ${currentProject.subtitle}`}
+          placeholderSrc={PlaceholderListImage}
           className="img-responsive"
         />
       </div>

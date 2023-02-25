@@ -3,16 +3,10 @@ import LabHead from './LabHead';
 import { NavLink } from 'react-router-dom';
 import Layout from './Ui/Layout';
 import { motion } from 'framer-motion';
+import PlaceholderListImage from '../assets/images/placeholder-project-list.svg';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+
 export default function Lab(props) {
-  const [currentProject, setCurrentProject] = React.useState(null);
-  const handleChoice = (event) => {
-    event.preventDefault();
-    setCurrentProject(event.currentTarget.id);
-  };
-  const handleCloseProject = (event) => {
-    event.preventDefault();
-    setCurrentProject(null);
-  };
   const labElements = props.dataLab.map((item) => {
     return (
       <motion.li
@@ -25,7 +19,11 @@ export default function Lab(props) {
       >
         <NavLink to={item.slug}>
           <div className="media">
-            <img src={`${item.images.cover}`} alt={item.name} />
+            <LazyLoadImage
+              src={`${item.images.cover}`}
+              placeholderSrc={PlaceholderListImage}
+              alt={item.name}
+            />
           </div>
           <div className="project-info">
             <h4 className="is-4 title">{item.name}</h4>

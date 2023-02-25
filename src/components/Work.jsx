@@ -1,10 +1,11 @@
 import React from 'react';
-import WorkDetail from './WorkDetail';
 import WorkHead from './WorkHead';
 import { NavLink } from 'react-router-dom';
-
 import { motion } from 'framer-motion';
 import Layout from './Ui/Layout';
+import PlaceholderListImage from '../assets/images/placeholder-project-list.svg';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+
 export default function Work(props) {
   const workElements = props.dataWork.map((item) => {
     return (
@@ -18,7 +19,11 @@ export default function Work(props) {
       >
         <NavLink to={item.slug}>
           <div className="media">
-            <img src={`${item.images.cover}`} alt={item.name} />
+            <LazyLoadImage
+              src={`${item.images.cover}`}
+              placeholderSrc={PlaceholderListImage}
+              alt={item.name}
+            />
           </div>
           <div className="project-info">
             <h4 className="is-4 title">{item.name}</h4>

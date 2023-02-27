@@ -26,7 +26,7 @@ export default function Lab(props) {
             />
           </div>
           <div className="project-info">
-            <h4 className="is-4 title">{item.name}</h4>
+            <h2 className="is-4 title">{item.name}</h2>
             <p className="subtitle is-6">{item.subtitle}</p>
           </div>
         </NavLink>
@@ -37,7 +37,6 @@ export default function Lab(props) {
   return (
     <Layout key="lab">
       <section className="section">
-        <a id="topLab"></a>
         <LabHead
           dataText={props.dataText}
           lang={props.lang}

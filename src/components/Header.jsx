@@ -64,10 +64,13 @@ export default function Header(props) {
                 <button
                   className="button is-small is-secondary"
                   onClick={props.handleTrad}
+                  aria-label={
+                    props.lang === 'fr'
+                      ? 'english version'
+                      : 'version française'
+                  }
                 >
-                  <span aria-label={props.lang === 'fr' ? 'english' : 'french'}>
-                    {props.lang === 'fr' ? 'en' : 'fr'}
-                  </span>
+                  <span>{props.lang === 'fr' ? 'en' : 'fr'}</span>
                 </button>
               </p>
               <p className="control">

@@ -26,7 +26,7 @@ export default function Work(props) {
             />
           </div>
           <div className="project-info">
-            <h4 className="is-4 title">{item.name}</h4>
+            <h2 className="is-4 title">{item.name}</h2>
             <p className="subtitle is-6">{item.subtitle}</p>
           </div>
         </NavLink>
@@ -37,7 +37,6 @@ export default function Work(props) {
   return (
     <Layout key="work">
       <section className="section">
-        <a id="topWork"></a>
         <WorkHead
           dataText={props.dataText}
           lang={props.lang}

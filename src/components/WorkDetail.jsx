@@ -32,9 +32,11 @@ export default function WorkDetail(props) {
   // get screenshots images
   const screensElements = currentProject.images.screens.map((screen, index) => {
     return (
-      <div key={index}>
+      <figure key={index}>
         {screen.title && (
-          <h5 className="separator-title has-text-centered">{screen.title}</h5>
+          <figcaption className="separator-title has-text-centered">
+            {screen.title}
+          </figcaption>
         )}
 
         <LazyLoadImage
@@ -43,7 +45,7 @@ export default function WorkDetail(props) {
           placeholderSrc={PlaceholderListImage}
           className="img-responsive"
         />
-      </div>
+      </figure>
     );
   });
   // custom css for header
@@ -77,7 +79,8 @@ export default function WorkDetail(props) {
               >
                 <div className="hero-body">
                   <div>
-                    <p className="title">{currentProject.name}</p>
+                    <h2 className="is-3 title">{currentProject.name}</h2>
+
                     <p className="subtitle">{currentProject.subtitle}</p>
                   </div>
                   {currentProject.url && (
@@ -85,9 +88,10 @@ export default function WorkDetail(props) {
                       href={currentProject.url}
                       target="_blank"
                       className="button is-info is-small"
+                      aria-label="link to preview"
                     >
                       <span>Visit</span>
-                      <span className="icon is-small">
+                      <span className="icon is-small" aria-hidden="true">
                         <img src={IconExternalLink} />
                       </span>
                     </a>
@@ -96,7 +100,6 @@ export default function WorkDetail(props) {
               </div>
               <div className="columns">
                 <div className="columnsticky column is-4 content">
-                  <h4 className="title  is-4"></h4>
                   <div
                     className="content"
                     dangerouslySetInnerHTML={{
@@ -110,9 +113,9 @@ export default function WorkDetail(props) {
                 <div className="columnsticky column is-4">
                   {currentProject.mywork[props.lang] && (
                     <div className="block">
-                      <h4 className="title  is-4">
+                      <h3 className="title  is-4">
                         {props.dataText.workMyworkTitle[props.lang]}
-                      </h4>
+                      </h3>
                       <p
                         dangerouslySetInnerHTML={{
                           __html: currentProject.mywork[props.lang]
@@ -123,9 +126,9 @@ export default function WorkDetail(props) {
 
                   {techElements.length > 0 && (
                     <div className="block">
-                      <h4 className="title  is-4">
+                      <h3 className="title  is-4">
                         {props.dataText.workTechUsedTitle[props.lang]}
-                      </h4>
+                      </h3>
                       <div className="tags">{techElements}</div>
                     </div>
                   )}

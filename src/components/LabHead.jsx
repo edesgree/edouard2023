@@ -6,7 +6,7 @@ export default function LabHead(props) {
   return (
     <header className="header-section">
       <div>
-        <h2 className="is-2 title">{props.dataText.labTitle[props.lang]}</h2>
+        <h1 className="is-2 title">{props.dataText.labTitle[props.lang]}</h1>
         <p className="block">{props.dataText.labSubTitle[props.lang]}</p>
       </div>
 

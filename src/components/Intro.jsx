@@ -26,13 +26,13 @@ export default function Intro(props) {
     >
       <section className="section columns section-presentation">
         <div className="column is-two-thirds">
-          <h2 className="subtitle is-5 sup-title is-spaced">
+          <h1 className="subtitle is-5 sup-title is-spaced">
             {props.dataIntro.introSubtitle[props.lang]}
-          </h2>
-
-          <h1 className="title is-1 pre-line ">
-            {decode(props.dataIntro.introTitle[props.lang])}
           </h1>
+
+          <h2 className="title is-1 pre-line ">
+            {decode(props.dataIntro.introTitle[props.lang])}
+          </h2>
           <p>{props.dataIntro.introTxt[props.lang]}</p>
         </div>
         <div className="column is-one-thirds col-photo">

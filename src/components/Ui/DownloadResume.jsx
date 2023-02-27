@@ -9,6 +9,7 @@ export default function DownloadResume(props) {
       className="button is-light is-small"
       href={`${props.lang === 'fr' ? ResumeFR : ResumeEN}`}
       target="_blank"
+      aria-label="Download CV"
       data-tooltip={props.lang === 'fr' ? 'Télécharger CV' : 'Download CV'}
     >
       <span className="icon is-small">

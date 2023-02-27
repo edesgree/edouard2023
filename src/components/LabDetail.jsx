@@ -30,13 +30,13 @@ export default function LabDetail(props) {
   const screensElements = currentProject.images.screens.map(
     (screenItem, index) => {
       return (
-        <div key={index}>
+        <figure key={index}>
           <LazyLoadImage
             src={`${screenItem}`}
             alt={`${currentProject.name} ${currentProject.subtitle}`}
             placeholderSrc={PlaceholderListImage}
           />
-        </div>
+        </figure>
       );
     }
   );
@@ -63,7 +63,7 @@ export default function LabDetail(props) {
               <div className="content hero is-small is-primary head-project">
                 <div className="hero-body">
                   <div>
-                    <p className="title">{currentProject.name}</p>
+                    <h2 className="is-3 title">{currentProject.name}</h2>
                     <p className="subtitle">{currentProject.subtitle}</p>
                   </div>
                   {currentProject.preview && (
@@ -72,9 +72,10 @@ export default function LabDetail(props) {
                         href={currentProject.github}
                         target="_blank"
                         className="button is-light is-small"
+                        aria-label="github account"
                       >
                         <span>Github</span>
-                        <span className="icon is-small">
+                        <span className="icon is-small" aria-hidden="true">
                           <img src={IconGithub} alt="github" />
                         </span>
                       </a>
@@ -82,9 +83,10 @@ export default function LabDetail(props) {
                         href={currentProject.preview}
                         target="_blank"
                         className="button is-info is-small"
+                        aria-label="link to preview"
                       >
                         <span>Preview</span>
-                        <span className="icon is-small">
+                        <span className="icon is-small" aria-hidden="true">
                           <img src={IconExternalLink} alt="link" />
                         </span>
                       </a>
@@ -103,18 +105,18 @@ export default function LabDetail(props) {
                     />
                     {currentProject.mywork && (
                       <div className="block">
-                        <h4 className="title  is-4">
+                        <h3 className="title  is-4">
                           {props.dataText.workMyworkTitle[props.lang]}
-                        </h4>
+                        </h3>
                         <p>{currentProject.mywork}</p>
                       </div>
                     )}
 
                     {techElements.length > 0 && (
                       <div className="block">
-                        <h4 className="title  is-4">
+                        <h3 className="title  is-4">
                           {props.dataText.workTechUsedTitle[props.lang]}
-                        </h4>
+                        </h3>
                         <div className="tags">{techElements}</div>
                       </div>
                     )}

@@ -24,7 +24,7 @@ export default function About(props) {
     <section className="section section-about">
       <div className="columns">
         <div className="column is-8">
-          <h2 className="is-2 title">
+          <h2 className="is-3 title">
             {props.dataText.aboutTitle[props.lang]}
           </h2>
           <div className="content">

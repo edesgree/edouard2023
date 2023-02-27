@@ -24,6 +24,8 @@ export default function Contact(props) {
             data-part1="edouard"
             data-part2="desgree"
             data-part3="com"
+            aria-label="send me an email"
+            rel="nofollow"
           >
             <svg
               className="textContact"

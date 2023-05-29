@@ -41,3 +41,6 @@ It is bootstraped with Vite.js.
 ## Deploy
 
 To deploy @ https://edouard.desgree.com/ use in package.json the base pathh like :`"build": "vite build --base=/",`
+
+Upload site to /home/xxxxxx/domains/desgree.com/public_html/edouard
+CV pdf directly to pdf/ (without npm run build)

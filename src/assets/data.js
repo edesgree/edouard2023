@@ -57,6 +57,7 @@ import workRupturesTablet2 from './images/work/ruptures/ruptures-tablet2.webp';
 
 import socialsIconGithub from '../assets/icons/icon-github.svg';
 import socialsIconLinkedin from '../assets/icons/icon-linkedin.svg';
+import skillsAccessibility from './icons/skills/icon-accessibility.svg';
 import skillsIconbootstrap from './icons/skills/icon-bootstrap.svg';
 import skillsIconconfluence from './icons/skills/icon-confluence.svg';
 import skillsIconfigma from './icons/skills/icon-figma.svg';
@@ -74,9 +75,12 @@ import skillsIconpython from './icons/skills/icon-python.svg';
 import skillsIconreact from './icons/skills/icon-react.svg';
 import skillsIconsass from './icons/skills/icon-sass.svg';
 import skillsIconsketch from './icons/skills/icon-sketch.svg';
+import skillsIconsymfony from './icons/skills/icon-symfony.svg';
+import skillsIcontailwind from './icons/skills/icon-tailwind.svg';
 import skillsIcontrello from './icons/skills/icon-trello.svg';
 import skillsIcontwig from './icons/skills/icon-twig.svg';
 import skillsIconvscode from './icons/skills/icon-vscode.svg';
+import skillsIconvuejs from './icons/skills/icon-vuejs.svg';
 import skillsIconw3c from './icons/skills/icon-w3c.svg';
 import skillsIconwordpres from './icons/skills/icon-wordpress.svg';
 import labEtchCover from './images/lab/etch/etch-cover.webp';
@@ -801,10 +805,14 @@ The project is using <a href="https://reactjs.org/" target="_blank">ReactJS</a>,
         { id: nanoid(), name: 'SASS', slug: 'sass', icon: skillsIconsass },
         { id: nanoid(), name: 'Javascript', slug: 'js', icon: skillsIconjs },
         { id: nanoid(), name: 'React', slug: 'react', icon: skillsIconreact },
+        { id: nanoid(), name: 'Vuejs', slug: 'vuejs', icon: skillsIconvuejs },
         { id: nanoid(), name: 'Git', slug: 'git', icon: skillsIcongit },
         { id: nanoid(), name: 'Figma', slug: 'figma', icon: skillsIconfigma },
         { id: nanoid(), name: 'Sketch', slug: 'sketch', icon: skillsIconsketch },
         { id: nanoid(), name: 'Photoshop', slug: 'psd', icon: skillsIconpsd },
+        { id: nanoid(), name: 'Accessibility', slug: 'accessibility', icon: skillsAccessibility },
+        { id: nanoid(), name: 'Symfony', slug: 'symfony', icon: skillsIconsymfony },
+        { id: nanoid(), name: 'TailwindCSS', slug: 'tailwind', icon: skillsIcontailwind },
         {
             id: nanoid(),
             name: 'Bootstrap',

@@ -31,19 +31,7 @@ export default function DarkModeSwitch() {
             setDarkMode(true);
         }
     }, []);
-    /* 
-      if (
-        localStorage.theme === 'light' ||
-        (!('theme' in localStorage) &&
-          window.matchMedia('(prefers-color-scheme: light)').matches)
-      ) {
-        document.body.classList.add('darkMode');
-        document.body.classList.remove('lightMode');
-      } else {
-        document.body.classList.add('lightMode');
-        document.body.classList.remove('darkMode');
-      }
-    */
+
     return (
         <button
             onClick={toggleSwitch}

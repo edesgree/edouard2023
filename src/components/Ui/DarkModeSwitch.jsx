@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import React, { useEffect } from 'react';
+import React from 'react';
 import { transitionSpring } from './constants';
 import IconMoon from './icons/IconMoon';
 import IconSun from './icons/IconSun';
@@ -11,7 +11,7 @@ export default function DarkModeSwitch() {
 
     const toggleSwitch = () => setDarkMode(prevDarkMode => !prevDarkMode);
 
-    useEffect(() => {
+    React.useEffect(() => {
         if (darkMode) {
             document.body.classList.remove('darkMode');
             document.body.classList.add('lightMode');
@@ -23,7 +23,7 @@ export default function DarkModeSwitch() {
         }
     }, [darkMode]);
 
-    useEffect(() => {
+    React.useEffect(() => {
         const prefersLightMode = window.matchMedia('(prefers-color-scheme: light)').matches;
         if (localStorage.getItem('theme') === 'light' || (!localStorage.getItem('theme') && prefersLightMode)) {
             setDarkMode(false);

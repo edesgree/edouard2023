@@ -79,9 +79,11 @@ import skillsIconsymfony from './icons/skills/icon-symfony.svg';
 import skillsIcontailwind from './icons/skills/icon-tailwind.svg';
 import skillsIcontrello from './icons/skills/icon-trello.svg';
 import skillsIcontwig from './icons/skills/icon-twig.svg';
+import skillsIconvite from './icons/skills/icon-vite.svg';
 import skillsIconvscode from './icons/skills/icon-vscode.svg';
 import skillsIconvuejs from './icons/skills/icon-vuejs.svg';
 import skillsIconw3c from './icons/skills/icon-w3c.svg';
+import skillsIconwebpack from './icons/skills/icon-webpack.svg';
 import skillsIconwordpres from './icons/skills/icon-wordpress.svg';
 import labEtchCover from './images/lab/etch/etch-cover.webp';
 import labEtchScreenshot from './images/lab/etch/etch-screenshot.webp';
@@ -91,6 +93,8 @@ import labMyLibraryCover from './images/lab/mylibrary/mylibrary-cover.webp';
 import labMyLibraryScreenshot from './images/lab/mylibrary/mylibrary-screenshot.webp';
 import labQuizzyCover from './images/lab/quizzy/quizzy-cover.webp';
 import labQuizzyScreenshot from './images/lab/quizzy/quizzy-screenshot.webp';
+import labSoundscapeCover from './images/lab/soundscape/soundscape-cover.webp';
+import labSoundscapeScreenshot from './images/lab/soundscape/soundscape-screenshot.webp';
 import labTenziesCover from './images/lab/tenzies/tenzies-cover.webp';
 import labTenziesScreenshot from './images/lab/tenzies/tenzies-screenshot.webp';
 import labTictactoeCover from './images/lab/tictactoe/tictactoe-cover.webp';
@@ -648,10 +652,7 @@ const data = {
             date: '14-10-2023',
             description: {
                 fr: `Ce projet est une web app qui permet de créer une watchlist de films à voir. Il est possible de marquer les films comme ayant été vu ou les retirer de la liste. Le projet utilise <a href="https://vuejs.org/" target="_blank">VueJS</a>. Les donnèes sont récupérées à partir de l'API de <a href="https://developer.themoviedb.org/reference/intro/getting-started" target="_blank">themoviedb.org</a>. Il est installé avec <a href="https://vitejs.dev/" target="_blank">Vite.js</a>. `,
-                en: `
-          The project is to build a small app to keep a list of movies i want to watch. It is bootstraped with Vite.js. It uses <a href="https://developer.themoviedb.org/reference/intro/getting-started" target="_blank">themoviedb.org</a> API to fetch movies data.
-         
-        `
+                en: `The project is to build a small app to keep a list of movies i want to watch. It is bootstraped with Vite.js. It uses <a href="https://developer.themoviedb.org/reference/intro/getting-started" target="_blank">themoviedb.org</a> API to fetch movies data.`
             },
 
             tech: ['VueJS', 'HTML', 'SCSS', 'Vite'],
@@ -664,16 +665,31 @@ const data = {
         },
         {
             id: nanoid(),
+            name: 'Soundscape',
+            slug: 'soundscape',
+            subtitle: 'React & Vue Soundscape app',
+            date: '14-02-2024',
+            description: {
+                fr: `Ce projet est une web app qui permet de jouer des ambiances sonores. Chaque ambiance a plusieurs pistes audio qui peuvent être controlées indépendamment. Je l'ai d'abord réalisé en <a href="https://reactjs.org/" target="_blank">ReactJS</a> puis pour le fun, en <a href="https://vuejs.org/" target="_blank">VueJS</a>. Il est installé avec <a href="https://vitejs.dev/" target="_blank">Vite.js</a>. `,
+                en: `The project is to build an app that can play different sound ambiances. Each ambiance has several audio tracks that can be turned on and off and the volume adjusted. I first did it in <a href="https://reactjs.org/" target="_blank">ReactJS</a> and then i translated it to <a href="https://vuejs.org/" target="_blank">VueJS</a>.It is bootstraped with Vite.js.`
+            },
+            tech: ['ReactJS', 'VueJS', 'MirageJS', 'HTML', 'SCSS', 'Vite'],
+            images: {
+                cover: labSoundscapeCover,
+                screens: [labSoundscapeScreenshot]
+            },
+            github: 'https://github.com/edesgree/vuejs-focus-app',
+            preview: 'https://lovely-nasturtium-31d13d.netlify.app/'
+        },
+        {
+            id: nanoid(),
             name: 'Mind Quiz',
             slug: 'mindquiz',
             subtitle: 'React personality assessment app',
             date: '11-06-2023',
             description: {
                 fr: `Ce projet est un test de personnalité. Le résultat reflète vos traits de caractères. Le projet utilise <a href="https://reactjs.org/" target="_blank">ReactJS</a>, codé en TypeScript. Les questions sont récupérées à partir d'un fichier <code>json</code> local. Le contenu image et texte a été généré par IA. Il est installé avec <a href="https://vitejs.dev/" target="_blank">Vite.js</a>. `,
-                en: `
-        Personality assessment test with results based on majority of answers by categories.
-The project is using <a href="https://reactjs.org/" target="_blank">ReactJS</a>, coded in TypeScript, on a <a href="https://vitejs.dev/" target="_blank">Vite.js</a> base. It uses Framer motion for animations. The data is coming from a json file. The images and texts were generated by AI.
-      `
+                en: `Personality assessment test with results based on majority of answers by categories. The project is using <a href="https://reactjs.org/" target="_blank">ReactJS</a>, coded in TypeScript, on a <a href="https://vitejs.dev/" target="_blank">Vite.js</a> base. It uses Framer motion for animations. The data is coming from a json file. The images and texts were generated by AI.`
             },
 
             tech: ['React', 'TypeScript', 'Framer Motion', 'HTML', 'SCSS', 'Vite'],
@@ -786,9 +802,7 @@ The project is using <a href="https://reactjs.org/" target="_blank">ReactJS</a>,
             subtitle: 'Rect weather app',
             date: '02-10-2022',
             description: {
-                fr: `<p>Ce projet consiste à créer une application météo en utilisant différentes API. L'application renvoie une prévision météo pour un nom de ville fourni par l'utilisateur ainsi qu'un GIF associé à la météo.</p>
-        
-        `,
+                fr: `<p>Ce projet consiste à créer une application météo en utilisant différentes API. L'application renvoie une prévision météo pour un nom de ville fourni par l'utilisateur ainsi qu'un GIF associé à la météo.</p>`,
                 en: `<p>This project is to create an weather app using different API. The app return a weather forecast and a animated GIF for a provided city name.`
             },
             tech: ['Vanilla JS', 'Async/await', 'API calls', 'Giphy'],
@@ -801,54 +815,34 @@ The project is using <a href="https://reactjs.org/" target="_blank">ReactJS</a>,
         }
     ],
     skills: [
-        { id: nanoid(), name: 'HTML', slug: 'html', icon: skillsIconhtml },
-        { id: nanoid(), name: 'SASS', slug: 'sass', icon: skillsIconsass },
-        { id: nanoid(), name: 'Javascript', slug: 'js', icon: skillsIconjs },
-        { id: nanoid(), name: 'React', slug: 'react', icon: skillsIconreact },
-        { id: nanoid(), name: 'Vuejs', slug: 'vuejs', icon: skillsIconvuejs },
-        { id: nanoid(), name: 'Git', slug: 'git', icon: skillsIcongit },
-        { id: nanoid(), name: 'Figma', slug: 'figma', icon: skillsIconfigma },
-        { id: nanoid(), name: 'Sketch', slug: 'sketch', icon: skillsIconsketch },
-        { id: nanoid(), name: 'Photoshop', slug: 'psd', icon: skillsIconpsd },
-        { id: nanoid(), name: 'Accessibility', slug: 'accessibility', icon: skillsAccessibility },
-        { id: nanoid(), name: 'Symfony', slug: 'symfony', icon: skillsIconsymfony },
-        { id: nanoid(), name: 'TailwindCSS', slug: 'tailwind', icon: skillsIcontailwind },
-        {
-            id: nanoid(),
-            name: 'Bootstrap',
-            slug: 'bootstrap',
-            icon: skillsIconbootstrap
-        },
-        {
-            id: nanoid(),
-            name: 'Foundation',
-            slug: 'foundation',
-            icon: skillsIconfoundation
-        },
-        {
-            id: nanoid(),
-            name: 'Wordpress',
-            slug: 'wordpress',
-            icon: skillsIconwordpres
-        },
-        { id: nanoid(), name: 'Magento', slug: 'magento', icon: skillsIconmagento },
-        { id: nanoid(), name: 'LESS', slug: 'less', icon: skillsIconless },
-
-        { id: nanoid(), name: 'Flask', slug: 'flask', icon: skillsIconflask },
-        { id: nanoid(), name: 'Twig', slug: 'twig', icon: skillsIcontwig },
-        { id: nanoid(), name: 'PHP', slug: 'php', icon: skillsIconphp },
-        { id: nanoid(), name: 'Python', slug: 'python', icon: skillsIconpython },
-
-        { id: nanoid(), name: 'VSCode', slug: 'vscode', icon: skillsIconvscode },
-        { id: nanoid(), name: 'W3C', slug: 'w3c', icon: skillsIconw3c },
-        { id: nanoid(), name: 'Jira', slug: 'jira', icon: skillsIconjira },
-        { id: nanoid(), name: 'Trello', slug: 'trello', icon: skillsIcontrello },
-        {
-            id: nanoid(),
-            name: 'Confluence',
-            slug: 'confluence',
-            icon: skillsIconconfluence
-        }
+        { name: 'HTML', slug: 'html', icon: skillsIconhtml },
+        { name: 'SASS', slug: 'sass', icon: skillsIconsass },
+        { name: 'Javascript', slug: 'js', icon: skillsIconjs },
+        { name: 'React', slug: 'react', icon: skillsIconreact },
+        { name: 'Vuejs', slug: 'vuejs', icon: skillsIconvuejs },
+        { name: 'Git', slug: 'git', icon: skillsIcongit },
+        { name: 'Figma', slug: 'figma', icon: skillsIconfigma },
+        { name: 'Sketch', slug: 'sketch', icon: skillsIconsketch },
+        { name: 'Photoshop', slug: 'psd', icon: skillsIconpsd },
+        { name: 'Accessibility', slug: 'accessibility', icon: skillsAccessibility },
+        { name: 'Symfony', slug: 'symfony', icon: skillsIconsymfony },
+        { name: 'TailwindCSS', slug: 'tailwind', icon: skillsIcontailwind },
+        { name: 'Bootstrap', slug: 'bootstrap', icon: skillsIconbootstrap },
+        { name: 'Foundation', slug: 'foundation', icon: skillsIconfoundation },
+        { name: 'Wordpress', slug: 'wordpress', icon: skillsIconwordpres },
+        { name: 'Magento', slug: 'magento', icon: skillsIconmagento },
+        { name: 'LESS', slug: 'less', icon: skillsIconless },
+        { name: 'Flask', slug: 'flask', icon: skillsIconflask },
+        { name: 'Twig', slug: 'twig', icon: skillsIcontwig },
+        { name: 'PHP', slug: 'php', icon: skillsIconphp },
+        { name: 'Python', slug: 'python', icon: skillsIconpython },
+        { name: 'VSCode', slug: 'vscode', icon: skillsIconvscode },
+        { name: 'W3C', slug: 'w3c', icon: skillsIconw3c },
+        { name: 'Jira', slug: 'jira', icon: skillsIconjira },
+        { name: 'Trello', slug: 'trello', icon: skillsIcontrello },
+        { name: 'Confluence', slug: 'confluence', icon: skillsIconconfluence },
+        { name: 'Vite', slug: 'vite', icon: skillsIconvite },
+        { name: 'Webpack', slug: 'webpack', icon: skillsIconwebpack },
     ],
     about: {
         text: {

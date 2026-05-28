@@ -6,31 +6,22 @@ import IconSun from './icons/IconSun';
 
 export default function DarkModeSwitch() {
     const [darkMode, setDarkMode] = React.useState(() => {
-        return localStorage.getItem('theme') === 'light';
+        const saved = localStorage.getItem('theme');
+        if (saved) return saved === 'dark';
+        return window.matchMedia('(prefers-color-scheme: dark)').matches;
     });
 
     const toggleSwitch = () => setDarkMode(prevDarkMode => !prevDarkMode);
 
     React.useEffect(() => {
-        if (darkMode) {
-            document.body.classList.remove('darkMode');
-            document.body.classList.add('lightMode');
-            localStorage.setItem('theme', 'light');
-        } else {
-            document.body.classList.add('darkMode');
-            document.body.classList.remove('lightMode');
-            localStorage.setItem('theme', 'dark');
-        }
+
+        document.body.classList.toggle('darkMode', darkMode);
+        document.body.classList.toggle('lightMode', !darkMode);
+
+        localStorage.setItem('theme', darkMode ? 'dark' : 'light');
     }, [darkMode]);
 
-    React.useEffect(() => {
-        const prefersLightMode = window.matchMedia('(prefers-color-scheme: light)').matches;
-        if (localStorage.getItem('theme') === 'light' || (!localStorage.getItem('theme') && prefersLightMode)) {
-            setDarkMode(false);
-        } else {
-            setDarkMode(true);
-        }
-    }, []);
+
 
     return (
         <button

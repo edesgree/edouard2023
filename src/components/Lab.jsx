@@ -27,7 +27,7 @@ export default function Lab(props) {
                     </div>
                     <div className="project-info">
                         <h2 className="is-4 title">{item.name}</h2>
-                        <p className="subtitle is-6">{item.subtitle}</p>
+                        <p className="subtitle is-6 has-text-dark">{item.subtitle}</p>
                     </div>
                 </NavLink>
             </motion.li>

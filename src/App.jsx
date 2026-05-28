@@ -26,6 +26,7 @@ function App() {
         lang === 'fr' ? setLang('en') : setLang('fr');
     };
 
+
     return (
         <main className=" container is-max-desktop">
             <Header dataMenu={data.menu} lang={lang} handleTrad={handleTrad} />

@@ -6,7 +6,7 @@ export default function WorkHead(props) {
   return (
     <header className="header-section">
       <div>
-        <h1 className="is-2 title">{props.dataText.workTitle[props.lang]}</h1>
+        <h1 className="is-1 title">{props.dataText.workTitle[props.lang]}</h1>
         <p className="block">{props.dataText.workSubTitle[props.lang]}</p>
       </div>
 

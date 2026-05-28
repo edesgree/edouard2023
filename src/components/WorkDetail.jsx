@@ -24,7 +24,7 @@ export default function WorkDetail(props) {
   // get tech used for this project
   const techElements = currentProject.tech.map((techItem, index) => {
     return (
-      <span key={index} className="tag is-info">
+      <span key={index} className="tag has-background-info has-text-info-dark ">
         {techItem}
       </span>
     );
@@ -74,20 +74,21 @@ export default function WorkDetail(props) {
           {currentProject ? (
             <>
               <div
-                className="content hero is-small is-primary head-project"
+                className="content hero is-small has-background-primary head-project"
                 style={coverCSS}
               >
                 <div className="hero-body">
                   <div>
-                    <h2 className="is-3 title">{currentProject.name}</h2>
+                    <h2 className="is-3 title has-text-white">{currentProject.name}</h2>
 
-                    <p className="subtitle">{currentProject.subtitle}</p>
+                    <p className="subtitle has-text-white">{currentProject.subtitle}</p>
                   </div>
+                  
                   {currentProject.url && (
                     <a
                       href={currentProject.url}
                       target="_blank"
-                      className="button is-info is-small"
+                      className="button has-background-info has-text-info-dark is-small"
                       aria-label="link to preview"
                     >
                       <span>Visit</span>

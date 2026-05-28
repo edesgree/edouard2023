@@ -1,10 +1,12 @@
+@use './colors' as colors;
+
 $tablet: 769px;
 $family-serif: 'Outfit', sans-serif;
 $family-primary: $family-serif;
 $navbar-breakpoint: $tablet;
-$navbar-item-active-color: $primary;
-$navbar-item-active-background-color: $secondary;
-$body-size: 20px;
+$navbar-item-active-color: colors.$primary;
+$navbar-item-active-background-color: colors.$secondary;
+
 $weight-normal: 400;
 $strong-weight: 600;
 $weight-bold: 800;
@@ -15,8 +17,8 @@ $subtitle-weight: $strong-weight;
 $animation-speed: 2s;
 /*    Spinner Variables */
 $spinner-size: 10;
-$line-color: $mustard;
+$line-color: colors.$mustard;
 $line-alpha: 0.73;
-$ring-color: $sage;
+$ring-color: colors.$sage;
 $ring-alpha: 0.2;
 $ring-size: 4;

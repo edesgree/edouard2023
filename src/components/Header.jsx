@@ -13,7 +13,7 @@ export default function Header(props) {
         to={item.slug}
         key={item.id}
         onClick={() => setIsComponentVisible(!isComponentVisible)}
-        className="navbar-item"
+        className="navbar-item  is-size-4"
       >
         <span>{item.name[props.lang]}</span>
       </NavLink>

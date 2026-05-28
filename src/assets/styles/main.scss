@@ -1,3 +1,8 @@
+@use "bulma/sass/utilities/mixins";
+@use  './variables' as *;
+@use './colors' as colors;
+@use "sass:color";
+
 html {
   scroll-behavior: smooth;
 }
@@ -16,7 +21,7 @@ body {
   white-space: pre-line;
 }
 #root {
-  @include tablet {
+  @include mixins.tablet {
     padding: 20px;
   }
 }
@@ -36,7 +41,7 @@ main {
     max-width: 100%;
   }
   .section {
-    @include mobile {
+    @include mixins.mobile {
       padding: 1em 0;
     }
   }
@@ -59,7 +64,7 @@ main {
       line-height: 30px;
       transition: color 0.4s ease;
       &:hover {
-        color: $pumkin;
+        color: colors.$pumkin;
       }
     }
     .navbar {
@@ -70,7 +75,7 @@ main {
         background-color: var(--bgApp);
         .navbar-end {
           gap: 20px;
-          @include mobile {
+          @include mixins.mobile {
             align-items: stretch;
             display: flex;
             flex-direction: column;
@@ -79,8 +84,8 @@ main {
 
           .navbar-item {
             color: var(--txtPrimary);
-            font-size: 1.25rem;
-            line-height: 1;
+            // font-size: 1.25rem;
+            // line-height: 1;
             padding: 0;
             position: relative;
             white-space: nowrap;
@@ -88,12 +93,12 @@ main {
             &:hover,
             &:focus {
               background: none;
-              color: $primary;
+              color: colors.$primary;
             }
             span {
               position: relative;
               &:after {
-                background-color: $primary;
+                background-color: colors.$primary;
                 border-radius: 9999px;
                 bottom: -4px;
                 content: '';
@@ -150,7 +155,7 @@ main {
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 1.5rem;
-    @include mobile {
+    @include mixins.mobile {
       flex-direction: column;
       .button {
         align-self: flex-end;
@@ -167,7 +172,7 @@ main {
   .section-presentation,
   .section-about {
     .col-photo {
-      @include mobile {
+      @include mixins.mobile {
         align-items: center;
         display: flex;
         flex-direction: column;
@@ -183,7 +188,7 @@ main {
     gap: 20px;
     justify-items: center;
 
-    @include tablet {
+    @include mixins.tablet {
       align-items: start;
       grid-auto-flow: column;
       grid-template: repeat(3, auto) / repeat(3, 1fr);
@@ -210,10 +215,10 @@ main {
     display: grid;
     gap: 20px;
     grid-template-columns: repeat(3, 1fr);
-    @include tablet {
+    @include mixins.tablet {
       grid-template-columns: repeat(2, 1fr);
     }
-    @include mobile {
+    @include mixins.mobile {
       grid-template-columns: repeat(1, 1fr);
     }
     li {
@@ -225,7 +230,7 @@ main {
           transform: scale(1.15);
         }
         .project-info {
-          background-color: darken($sage, 20%);
+          background-color: color.adjust(colors.$sage, $lightness: -20%);
         }
       }
       .media {
@@ -239,12 +244,12 @@ main {
         }
       }
       .project-info {
-        background-color: $sage;
+        background-color: colors.$sage;
         flex: 1;
         padding: 20px;
         transition: background-color 0.8s ease;
         .title {
-          color: $black;
+          color: colors.$black;
         }
       }
     }
@@ -254,7 +259,7 @@ main {
       align-items: center;
       display: flex;
       justify-content: space-between;
-      @include mobile {
+      @include mixins.mobile {
         align-items: center;
         flex-direction: column;
         gap: 20px;
@@ -263,16 +268,16 @@ main {
     }
   }
   .separator-title {
-    background: $secondary;
+    background: colors.$secondary;
     border-radius: 4px 4px 0 0;
-    color: $defaultTxt;
+    color: colors.$defaultTxt;
     margin-bottom: 20px;
     position: relative;
     &:after {
       $arrow-size: 10px;
       border-left: $arrow-size solid transparent;
       border-right: $arrow-size solid transparent;
-      border-top: $arrow-size solid $secondary;
+      border-top: $arrow-size solid colors.$secondary;
       bottom: -$arrow-size;
       clear: both;
       content: '';
@@ -283,7 +288,7 @@ main {
     }
   }
   .columnsticky {
-    @include tablet {
+    @include mixins.tablet {
       align-self: flex-start;
       position: -webkit-sticky;
       position: sticky;
@@ -327,7 +332,21 @@ main {
 }
 
 .button {
-  &.is-secondary {
+  &.is-primary {
+    background-color: var(--buttonPrimaryBg);
+    border-color: transparent;
+    &,
+    icon-text {
+      color: var(--buttonPrimaryTxt);
+      .icon {
+        //svg icon customization
+        svg * {
+          fill: currentColor;
+        }
+      }
+    }
+  }
+  &.is-secondary,&.is-info {
     background-color: var(--buttonSecondaryBg);
     border-color: transparent;
     &,
@@ -356,9 +375,9 @@ main {
 
 // override bulma link
 a {
-  color: $mustard;
+  color: colors.$mustard;
   &:hover {
-    color: $pumkin;
+    color: colors.$pumkin;
   }
 }
 
@@ -395,22 +414,22 @@ svg.textContact {
 
     &:nth-child(2) {
       animation-delay: -2s;
-      stroke: $grey;
+      stroke: colors.$grey;
     }
 
     &:nth-child(3) {
       animation-delay: -3s;
-      stroke: $forest;
+      stroke: colors.$forest;
     }
 
     &:nth-child(4) {
       animation-delay: -4s;
-      stroke: $mustard;
+      stroke: colors.$mustard;
     }
 
     &:nth-child(5) {
       animation-delay: -5s;
-      stroke: $sage;
+      stroke: colors.$sage;
     }
   }
 }
@@ -431,7 +450,7 @@ TRANSITIONS
 */
 // color transition between pages
 .privacy-screen {
-  background-color: $vibrant;
+  background-color: colors.$vibrant;
   bottom: 0;
   left: 0;
   position: fixed;

@@ -1,43 +1,43 @@
 /* 
 THEMES FOR DARK AND LIGHT MODE 
 */
-
+@use './colors' as colors;
 $themes: (
   bgBody: (
-    darkTheme: $coal,
-    lightTheme: $light-white
+    darkTheme: colors.$coal,
+    lightTheme: colors.$light-white
   ),
   bgApp: (
-    darkTheme: $charcoal,
-    lightTheme: $white
+    darkTheme: colors.$charcoal,
+    lightTheme: colors.$white
   ),
   txtPrimary: (
-    darkTheme: $beige,
-    lightTheme: $black
+    darkTheme: colors.$beige,
+    lightTheme: colors.$black
   ),
   txtVibrant: (
-    darkTheme: $secondary,
-    lightTheme: $primary
+    darkTheme: colors.$secondary,
+    lightTheme: colors.$primary
   ),
   shadow: (
-    darkTheme: $black,
-    lightTheme: $grey
+    darkTheme: colors.$black,
+    lightTheme: colors.$grey
   ),
   icons: (
-    darkTheme: $beige,
-    lightTheme: $black
+    darkTheme: colors.$beige,
+    lightTheme: colors.$black
   ),
   logo: (
-    darkTheme: $mustard,
-    lightTheme: $forest
+    darkTheme: colors.$mustard,
+    lightTheme: colors.$forest
   ),
   buttonSecondaryBg: (
-    darkTheme: $black,
-    lightTheme: $light-white
+    darkTheme: colors.$black,
+    lightTheme: colors.$light-white
   ),
   buttonSecondaryTxt: (
-    darkTheme: $beige,
-    lightTheme: $primary
+    darkTheme: colors.$beige,
+    lightTheme: colors.$primary
   )
 );
 

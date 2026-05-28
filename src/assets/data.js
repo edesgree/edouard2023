@@ -193,8 +193,8 @@ const data = {
                     en: `Frontend development`
                 },
                 text: {
-                    fr: `Je conçois des expériences intéractives en utilisant les derniers outils et standards web`,
-                    en: `I implement visuals and interactive elements using latest web tech and trends`
+                    fr: `Je conçois des expériences intéractives en utilisant les derniers outils et standards web.`,
+                    en: `I implement visuals and interactive elements using latest web tech and trends.`
                 },
                 icon: 'ItemSage'
             },
@@ -205,18 +205,29 @@ const data = {
                 },
                 text: {
                     fr: `Je crée mes propres solutions design pour afficher des interfaces visuelles riches et cohérentes.`,
-                    en: `I focus on designing user-friendly interfaces using my creativity and technical skills`
+                    en: `I focus on designing user-friendly interfaces using my creativity and technical skills.`
                 },
                 icon: 'ItemSage'
             },
+            // {
+            //     title: {
+            //         fr: `Travail en équipe`,
+            //         en: `Team player`
+            //     },
+            //     text: {
+            //         fr: `Je suis un joueur d'équipe et mes connaissances multidisciplinaires m'aide à collaborer efficacement avec les différents métiers.`,
+            //         en: `My experience in code and design help me collaborate efficiently whithin my team`
+            //     },
+            //     icon: 'ItemSage'
+            // },
             {
                 title: {
-                    fr: `Travail en équipe`,
-                    en: `Team player`
+                    fr: `Audits d’accessibilité`,
+                    en: `Accessibility Audits`
                 },
                 text: {
-                    fr: `Je suis un joueur d'équipe et mes connaissances multidisciplinaires m'aide à collaborer efficacement avec les différents métiers.`,
-                    en: `My experience in code and design help me collaborate efficiently whithin my team`
+                    fr: `J’analyse et évalue les interfaces web afin d’identifier les obstacles d’accessibilité et proposer des améliorations concrètes.`,
+                    en: `I analyze and evaluate web interfaces to identify accessibility barriers and propose concrete improvements.`
                 },
                 icon: 'ItemSage'
             }

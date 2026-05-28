@@ -13,20 +13,22 @@ export default function Intro(props) {
     return (
       <React.Fragment key={index}>
         {IconsServices[index]}
-        <h3 className="title is-5">{item.title[props.lang]}</h3>
+        <h3 className="title is-4">{item.title[props.lang]}</h3>
         <p>{item.text[props.lang]}</p>
       </React.Fragment>
     );
   });
   return (
+    
     <motion.div
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 100 }}
     >
+     
       <section className="section columns section-presentation">
         <div className="column is-two-thirds">
-          <h1 className="subtitle is-5 sup-title is-spaced">
+          <h1 className="subtitle is-4 sup-title is-spaced">
             {props.dataIntro.introSubtitle[props.lang]}
           </h1>
 
@@ -42,7 +44,7 @@ export default function Intro(props) {
               exact="true"
               to="/work"
               aria-label="Go to portfolio"
-              className="button is-primary"
+              className="button has-text-primary-light has-background-primary"
             >
               {props.dataCommon.labelSeeWork[props.lang]}
             </NavLink>

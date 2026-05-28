@@ -1,13 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap');
-
-@import './styles/colors';
-@import './styles/variables';
-
 // BULMA import
-@import 'bulma/bulma.sass';
-@import 'bulma-tooltip';
+
+@use "bulma/sass" as * with (
+  $family-primary: "Outfit" sans-serif
+
+);
+
+
+
+@use "./styles/variables" as *;
 
 // DARK/LIGHT import
-@import './styles/light-dark-theme';
+@use "./styles/light-dark-theme" as *;
 
-@import './styles/main';
+@use "./styles/main";
+
+:root {
+  --bulma-primary-h: 114deg;
+  --bulma-primary-s: 34%;
+  --bulma-primary-l: 31%;
+
+  --bulma-info-h: 65deg;
+  --bulma-info-s: 42%;
+  --bulma-info-l: 69%;
+
+  --bulma-size-normal: 1.25rem;
+  --bulma-size-medium: 1.5rem;
+  --bulma-size-large: 1.75rem;
+  --bulma-body-font-size: 1.25rem;
+}
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap");

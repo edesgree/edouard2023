@@ -101,6 +101,7 @@ import labTictactoeCover from './images/lab/tictactoe/tictactoe-cover.webp';
 import labTictactoeScreenshot from './images/lab/tictactoe/tictactoe-screenshot.webp';
 import labWeatherCover from './images/lab/weather/weather-cover.webp';
 import labWeatherScreenshot from './images/lab/weather/weather-screenshot.webp';
+
 const data = {
     common: {
         myName: 'Edouard Desgrée',
@@ -858,10 +859,10 @@ const data = {
     about: {
         text: {
             fr: `<p>Je suis actuellement basé à Nantes (fr). J'ai plus de 10 ans d'expérience et j'ai occupé plusieurs postes dans l'industrie du web en Irlande, en France et au Canada. </p>
-      <p>Je me considère comme un hybride entre code et design, j'aime pouvoir participer à la fois au processus de design et de développement. Mes expériences récentes se sont principalement concentrées sur le développement frontend. Je suis actuellement en train d'acquérir une expertise dans ReactJS.</p>
+      <p>Je me considère comme un hybride entre code et design, j'aime pouvoir participer à la fois au processus de design et de développement. Mes expériences récentes se sont principalement concentrées sur le design produit. Je suis actuellement en sur une mission de design produit pour un acteur de la santé publique.</p>
 <p>Je suis disponible pour discuter d'un projet ou d'une nouvelle opportunité.</p>`,
             en: `<p>I am based in Nantes (fr) at the moment. I have 10+ years of experience and worked in multiple jobs in the web industry in Ireland, France and Canada. </p>
-      <p>I consider myself a hybrid between code and design, i love being able to participate in both design and development process. My recent experiences were mostly focus on frontend development. I am currently in the process of gaining expertise in ReactJS.</p>
+      <p>I consider myself a hybrid between code and design, i love being able to participate in both design and development process. My recent experiences were mostly focus on product design. I am currently designing a product for an health organization.</p>
 <p>I am available to discuss a project or a new opportunity.</p>`
         },
         contactMe: {

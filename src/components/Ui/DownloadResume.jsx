@@ -1,6 +1,4 @@
 import React from 'react';
-//import ResumeEN from '../../assets/pdf/cv-edouard-en-2023.pdf';
-//import ResumeFR from '../../assets/pdf/cv-edouard-fr-2023.pdf';
 import IconCV from '../../assets/icons/icon-resume.svg';
 
 export default function DownloadResume(props) {
@@ -10,8 +8,8 @@ export default function DownloadResume(props) {
         className="button is-light is-small"
         href={`${
           props.lang === 'fr'
-            ? 'pdf/cv-edouard-fr-2023.pdf'
-            : 'pdf/cv-edouard-en-2023.pdf'
+            ? 'https://edesgree.github.io/resume/'
+            : 'https://edesgree.github.io/resume/en/'
         }`}
         target="_blank"
         aria-label="Download CV"

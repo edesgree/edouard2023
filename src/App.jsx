@@ -147,3 +147,4 @@ function App() {
 }
 
 export default App;
+console.log("Version: ", import.meta.env.VITE_APP_VERSION); 
